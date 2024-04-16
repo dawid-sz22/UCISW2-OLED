@@ -1,0 +1,5 @@
+[Inputs]
+=Addr[9:0]=
+[Outputs]
+=Data[7:0]=
+[BiDir]

@@ -1,0 +1,60 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/Users/lab/Downloads/testoled (1)/testoled/top_top_sch_tb_isim_beh.exe" -prj "C:/Users/lab/Downloads/testoled (1)/testoled/top_top_sch_tb_beh.prj" "work.top_top_sch_tb" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/lab/Downloads/testoled (1)/testoled/../../Test_OLED126x64 (1)/OLED_Ctrl.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/testoled (1)/testoled/../../I2C_Master (1)/I2C_Master.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/testoled (1)/testoled/top.vhf" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/testoled (1)/testoled/TestOledVhdl.vhd" into library work
+Starting static elaboration
+WARNING:HDLCompiler:89 - "C:/Users/lab/Downloads/testoled (1)/testoled/top.vhf" Line 264: <rotaryenc> remains a black-box since it has no binding entity.
+Completed static elaboration
+WARNING:Simulator:648 - "C:/Users/lab/Downloads/testoled (1)/testoled/top.vhf" Line 264. Instance rotaryenc is unbound
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling package textio
+Compiling package std_logic_textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture gnd_v of entity GND [gnd_default]
+Compiling architecture vcc_v of entity VCC [vcc_default]
+Compiling architecture fde_v of entity FDE [\FDE('0')\]
+Compiling architecture fdre_v of entity FDRE [\FDRE('0')\]
+Compiling architecture fdr_v of entity FDR [\FDR('0')\]
+Compiling architecture muxcy_v of entity MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity XORCY [xorcy_default]
+Compiling architecture iobuf_v of entity IOBUF [\IOBUF("DONT_CARE",12,"0",true,"...]
+Compiling architecture fds_v of entity FDS [\FDS('1')\]
+Compiling architecture ram16x1d_v of entity RAM16X1D [\RAM16X1D("0000000000000000")\]
+Compiling architecture lut2_v of entity LUT2 [\LUT2("0110")(0,3)\]
+Compiling architecture lut3_v of entity LUT3 [\LUT3("01101010")(0,7)\]
+Compiling architecture lut4_v of entity LUT4 [\LUT4("0110101010101010")(0,15)\]
+Compiling architecture fdrs_v of entity FDRS [\FDRS('0')\]
+Compiling architecture lut1_v of entity LUT1 [\LUT1("0010")(0,3)\]
+Compiling architecture muxf5_v of entity MUXF5 [muxf5_default]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture lut4_d_v of entity LUT4_D [\LUT4_D("1111111111111110")(0,15...]
+Compiling architecture lut2_l_v of entity LUT2_L [\LUT2_L("1011")(0,3)\]
+Compiling architecture lut3_l_v of entity LUT3_L [\LUT3_L("11110001")(0,7)\]
+Compiling architecture lut4_l_v of entity LUT4_L [\LUT4_L("1100010000000100")(0,15...]
+Compiling architecture lut3_d_v of entity LUT3_D [\LUT3_D("00001000")(0,7)\]
+Compiling architecture lut2_d_v of entity LUT2_D [\LUT2_D("1101")(0,3)\]
+Compiling architecture structure of entity I2C_Master [i2c_master_default]
+Compiling architecture fdce_v of entity FDCE [\FDCE('0')\]
+Compiling architecture ibuf_v of entity IBUF [\IBUF("DONT_CARE","0",true,"AUTO...]
+Compiling architecture behavioral of entity IFD_MXILINX_top [\IFD_MXILINX_top('0')\]
+Compiling architecture behavioral of entity OLED_Ctrl [oled_ctrl_default]
+Compiling architecture buf_v of entity BUF [buf_default]
+Compiling architecture or2_v of entity OR2 [or2_default]
+Compiling architecture behavioral of entity top [top_default]
+Compiling architecture behavioral of entity top_top_sch_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 198 VHDL Units
+Built simulation executable C:/Users/lab/Downloads/testoled (1)/testoled/top_top_sch_tb_isim_beh.exe
+Fuse Memory Usage: 64532 KB
+Fuse CPU Usage: 1124 ms
