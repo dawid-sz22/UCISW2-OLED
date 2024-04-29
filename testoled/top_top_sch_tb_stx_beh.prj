@@ -1,4 +1,0 @@
-vhdl isim_temp "../../Test_OLED126x64 (1)/OLED_Ctrl.vhd"
-vhdl isim_temp "../../I2C_Master (1)/I2C_Master.vhd"
-vhdl isim_temp "top.vhf"
-vhdl isim_temp "TestOledVhdl.vhd"

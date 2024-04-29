@@ -1,8 +1,0 @@
-vhdtdtfi -lib work {../../Test_OLED126x64 (1)/OLED_Ctrl.vhd} -prj testoled -o OLED_Ctrl.spl -module OLED_Ctrl -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e OLED_Ctrl.spl {C:/Users/lab/Downloads/testoled (1)/testoled/OLED_Ctrl.sym} 
-vhdtdtfi -lib work {../../Test_OLED126x64 (1)/OLED_Ctrl.vhd} -prj testoled -o OLED_Ctrl.spl -module OLED_Ctrl -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e OLED_Ctrl.spl {C:/Users/lab/Downloads/testoled (1)/testoled/OLED_Ctrl.sym} 
-vhdtdtfi -lib work {../../Test_OLED126x64 (1)/OLED_Ctrl.vhd} -prj testoled -o OLED_Ctrl.spl -module OLED_Ctrl -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e OLED_Ctrl.spl {C:/Users/lab/Downloads/testoled (1)/testoled/OLED_Ctrl.sym} 
-vhdtdtfi -lib work {../../Test_OLED126x64 (1)/OLED_Ctrl.vhd} -prj testoled -o OLED_Ctrl.spl -module OLED_Ctrl -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e OLED_Ctrl.spl {C:/Users/lab/Downloads/testoled (1)/testoled/OLED_Ctrl.sym} 

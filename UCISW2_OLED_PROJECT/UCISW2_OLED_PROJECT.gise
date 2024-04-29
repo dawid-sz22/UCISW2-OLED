@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="UCISW2_OLED_PROJECT.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VHDL" xil_pn:name="top.vhf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="top_top_sch_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="top_top_sch_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="top_top_sch_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="top_top_sch_tb_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1714393926" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1714393926">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1714394105" xil_pn:in_ck="-5462942223533655228" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1714394105">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <outfile xil_pn:name="sources/I2C_Master.vhd"/>
+      <outfile xil_pn:name="sources/OLED_Ctrl.vhd"/>
+      <outfile xil_pn:name="sources/TEST_OLED_SCHEMATIC.vhd"/>
+      <outfile xil_pn:name="sources/tbw_OLED_Ctrl.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1714394108" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6252512178267259674" xil_pn:start_ts="1714394108">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1714394108" xil_pn:in_ck="7414429753812613138" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8625233719303023716" xil_pn:start_ts="1714394108">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="top.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1714393926" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6134773136095482530" xil_pn:start_ts="1714393926">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1714394108" xil_pn:in_ck="877725002916266409" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1714394108">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="sources/I2C_Master.vhd"/>
+      <outfile xil_pn:name="sources/OLED_Ctrl.vhd"/>
+      <outfile xil_pn:name="sources/TEST_OLED_SCHEMATIC.vhd"/>
+      <outfile xil_pn:name="sources/tbw_OLED_Ctrl.vhd"/>
+      <outfile xil_pn:name="top.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1714394113" xil_pn:in_ck="877725002916266409" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4986213868233042775" xil_pn:start_ts="1714394108">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="top_top_sch_tb_beh.prj"/>
+      <outfile xil_pn:name="top_top_sch_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1714394113" xil_pn:in_ck="-6548252776846483354" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4563061551368577354" xil_pn:start_ts="1714394113">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="top_top_sch_tb_isim_beh.wdb"/>
+    </transform>
+  </transforms>
+
+</generated_project>

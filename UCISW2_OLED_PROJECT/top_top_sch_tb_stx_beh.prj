@@ -1,0 +1,4 @@
+vhdl isim_temp "sources/OLED_Ctrl.vhd"
+vhdl isim_temp "sources/I2C_Master.vhd"
+vhdl isim_temp "top.vhf"
+vhdl isim_temp "sources/TEST_OLED_SCHEMATIC.vhd"

@@ -1,0 +1,4 @@
+vhdl work "sources/OLED_Ctrl.vhd"
+vhdl work "sources/I2C_Master.vhd"
+vhdl work "top.vhf"
+vhdl work "sources/TEST_OLED_SCHEMATIC.vhd"

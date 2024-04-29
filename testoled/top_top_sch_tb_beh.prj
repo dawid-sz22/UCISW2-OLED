@@ -1,4 +1,0 @@
-vhdl work "../../Test_OLED126x64 (1)/OLED_Ctrl.vhd"
-vhdl work "../../I2C_Master (1)/I2C_Master.vhd"
-vhdl work "top.vhf"
-vhdl work "TestOledVhdl.vhd"
