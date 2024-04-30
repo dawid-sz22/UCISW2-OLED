@@ -12,7 +12,9 @@ entity OLED_Ctrl is
            I2C_FIFO_DI : out  STD_LOGIC_VECTOR (7 downto 0);
            I2C_FIFO_Push : out  STD_LOGIC;
            I2C_FIFO_Full : in   STD_LOGIC;
-           I2C_Busy : in  STD_LOGIC);
+           I2C_Busy : in  STD_LOGIC;
+			  Addr : out STD_LOGIC_VECTOR (9 downto 0);
+			  EN_Memory : out STD_LOGIC);
 end OLED_Ctrl;
 
 architecture Behavioral of OLED_Ctrl is
@@ -38,7 +40,10 @@ architecture Behavioral of OLED_Ctrl is
                      sWaitWrite, sGo2, sPush2, sWait2    -- iteration: write data byte
                      );
    signal state, next_state : t_state;
-   
+	
+	-- Licznik adresu pamiêci
+	signal address_memory : unsigned(9 downto 0) := ( others=> '0' );
+	signal enable_memory : std_logic := '1';
 begin
 
    -- The FSM - state register
@@ -74,18 +79,18 @@ begin
          -- Wait for Busy = '0'
          when sWait1 =>
             if I2C_Busy = '0' then 
-               next_state <= sWaitWrite;
-            end if;
-
-         -- Wait for WriteByte input
-         when sWaitWrite =>
-            if WriteByte = '1' then 
                next_state <= sGo2;
             end if;
+
+         -- Wait for WriteByte input  (aktualnie niepotrzebny, gdy¿ odœwie¿amy ca³y czas)
+         when sWaitWrite =>
+            next_state <= sGo2;
 
          -- Send one data byte (with an obligatory prefix)
          when sGo2 =>
             next_state <= sPush2;
+			
+			-- LOOP ROM
          when sPush2 =>
             if cntPush = 1 and I2C_FIFO_Full = '0' then 
                next_state <= sWait2;
@@ -94,9 +99,10 @@ begin
          -- Wait for Busy = '0'
          when sWait2 =>
             if I2C_Busy = '0' then 
-               next_state <= sWaitWrite;
+               next_state <= sPush2; 
             end if;
-
+				
+			-- LOOP ROM
       end case;
    end process;
 
@@ -111,16 +117,31 @@ begin
          end if;
       end if;
    end process;
+	
+	-- Address to ROM
+   process( Clk )
+   begin
+      if rising_edge( Clk ) then
+         if state = sPush2 and I2C_FIFO_Full = '0' then
+            enable_memory <= '1';
+				address_memory <= address_memory + 1;
+         end if;
+      end if;
+   end process;
 
    -- Outputs
    I2C_FIFO_DI <= ROM( to_integer( cntPush ) ) when state = sPush1  else   -- initialization bytes from ROM
-                  X"40" when state = sPush2 and cntPush = 0 else           -- WriteByte: prefix (data byte will follow)
+                  --X"40" when state = sPush2 and cntPush = 0 else           -- WriteByte: prefix (data byte will follow)
                   Byte;                                                    -- WriteByte: pixel mask from the port
 
    I2C_FIFO_Push  <= '1' when ( state = sPush1 or state = sPush2 ) and I2C_FIFO_Full = '0'  else '0';
 
-   I2C_Go <= '1' when state = sGo1 or state = sGo2  else '0';
+   I2C_Go <= '1' when state = sGo1 or state = sGo2 or state = sPush2 else '0'; -- Sta³e 1 przy przesy³aniu
    
    Busy <= '0' when state = sWaitWrite  else '1';
+	
+	Addr <= STD_LOGIC_VECTOR(address_memory); -- daj pamiêci podany adres
+	
+	EN_Memory <= enable_memory;
 
 end Behavioral;

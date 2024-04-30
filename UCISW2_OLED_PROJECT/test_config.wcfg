@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/testbench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="testbench" />
+            <top_module name="textio" />
+            <top_module name="vcomponents" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+            <top_module name="vpkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="25" />
+   <wvobject fp_name="/testbench/sda" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sda</obj_property>
+      <obj_property name="ObjectShortName">sda</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/scl" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">scl</obj_property>
+      <obj_property name="ObjectShortName">scl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/led7" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">led7</obj_property>
+      <obj_property name="ObjectShortName">led7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/btn_south" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">btn_south</obj_property>
+      <obj_property name="ObjectShortName">btn_south</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/clk_50mhz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_50mhz</obj_property>
+      <obj_property name="ObjectShortName">clk_50mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/led0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">led0</obj_property>
+      <obj_property name="ObjectShortName">led0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/btn_south" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">btn_south</obj_property>
+      <obj_property name="ObjectShortName">btn_south</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/clk_50mhz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_50mhz</obj_property>
+      <obj_property name="ObjectShortName">clk_50mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/led0" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">led0</obj_property>
+      <obj_property name="ObjectShortName">led0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/led7" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">led7</obj_property>
+      <obj_property name="ObjectShortName">led7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/scl" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">scl</obj_property>
+      <obj_property name="ObjectShortName">scl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/sda" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sda</obj_property>
+      <obj_property name="ObjectShortName">sda</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/busy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/const" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">const[7:0]</obj_property>
+      <obj_property name="ObjectShortName">const[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/en_memory" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">en_memory</obj_property>
+      <obj_property name="ObjectShortName">en_memory</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/fifo_di" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_di[7:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_di[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/fifo_full" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_full</obj_property>
+      <obj_property name="ObjectShortName">fifo_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/fifo_push" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_push</obj_property>
+      <obj_property name="ObjectShortName">fifo_push</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/go" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">go</obj_property>
+      <obj_property name="ObjectShortName">go</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/xlxi_2_writebyte_opensignal" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxi_2_writebyte_opensignal</obj_property>
+      <obj_property name="ObjectShortName">xlxi_2_writebyte_opensignal</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/xlxi_6_fifo_pop_opensignal" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxi_6_fifo_pop_opensignal</obj_property>
+      <obj_property name="ObjectShortName">xlxi_6_fifo_pop_opensignal</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/xlxi_6_readcnt_opensignal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xlxi_6_readcnt_opensignal[3:0]</obj_property>
+      <obj_property name="ObjectShortName">xlxi_6_readcnt_opensignal[3:0]</obj_property>
+   </wvobject>
+</wave_config>

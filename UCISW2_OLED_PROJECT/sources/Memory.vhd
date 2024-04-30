@@ -32,18 +32,43 @@ use ieee.std_logic_unsigned.all;
 
 entity Memory is
     Port ( Addr : in  STD_LOGIC_VECTOR (9 downto 0);
-           Data : out  STD_LOGIC_VECTOR (7 downto 0));
+           Data : out  STD_LOGIC_VECTOR (7 downto 0);
+			  CLK : in std_logic;
+			  EN : in std_logic);
 end Memory;
 
 architecture Behavioral of Memory is
-	type rom_type is array (1023 downto 0) of std_logic_vector (7 downto 0);                 
-	signal ROM : rom_type:= (X"00",X"00",X"00",X"00",X"00",X"00",X"00",X"FF", others => X"00");
+	type rom_type is array (0 to 1023) of std_logic_vector (7 downto 0);                 
+	signal ROM : rom_type:= (X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF", 
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",									
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+									others => X"11");
 	signal data_out : std_logic_vector(7 downto 0);
 begin
 	data_out <= ROM(conv_integer(Addr));
 	
-	Data <= data_out;
-
+	process (CLK)
+    begin
+        if (CLK'event and CLK = '1') then
+            if (EN = '1') then
+                Data <= data_out;
+            end if;
+        end if;
+    end process;
 
 end Behavioral;
 

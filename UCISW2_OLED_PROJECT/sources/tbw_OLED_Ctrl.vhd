@@ -47,7 +47,9 @@ ARCHITECTURE behavior OF tbw_OLED_Ctrl IS
          I2C_FIFO_DI : OUT  std_logic_vector(7 downto 0);
          I2C_FIFO_Push : OUT  std_logic;
          I2C_FIFO_Full : IN  std_logic;
-         I2C_Busy : IN  std_logic
+         I2C_Busy : IN  std_logic;
+			Addr : out STD_LOGIC_VECTOR (9 downto 0);
+			EN_Memory : out STD_LOGIC
         );
     END COMPONENT;
     
@@ -65,6 +67,8 @@ ARCHITECTURE behavior OF tbw_OLED_Ctrl IS
    signal I2C_Go : std_logic;
    signal I2C_FIFO_DI : std_logic_vector(7 downto 0);
    signal I2C_FIFO_Push : std_logic;
+	signal Addr : STD_LOGIC_VECTOR (9 downto 0);
+	signal EN_Memory : STD_LOGIC;
 
    -- Clock period definitions
    constant Clk_period : time := 20 ns;
@@ -82,7 +86,9 @@ BEGIN
           I2C_FIFO_DI => I2C_FIFO_DI,
           I2C_FIFO_Push => I2C_FIFO_Push,
           I2C_FIFO_Full => I2C_FIFO_Full,
-          I2C_Busy => I2C_Busy
+          I2C_Busy => I2C_Busy,
+			 Addr => Addr,
+			 EN_Memory => EN_Memory
         );
 
    -- Clock definition

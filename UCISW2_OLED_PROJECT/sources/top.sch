@@ -18,24 +18,12 @@
         <signal name="XLXN_12" />
         <signal name="btn_south" />
         <signal name="Clk_50MHz" />
-        <signal name="Byte(7:0)" />
-        <signal name="XLXN_140" />
-        <signal name="XLXN_141" />
-        <signal name="ROT_B" />
-        <signal name="ROT_A" />
-        <signal name="SW(3:0)" />
-        <signal name="Byte(7:4)" />
-        <signal name="Byte(3:0)" />
         <signal name="LED0" />
-        <signal name="XLXN_156" />
         <port polarity="BiDirectional" name="SDA" />
         <port polarity="BiDirectional" name="SCL" />
         <port polarity="Output" name="LED7" />
         <port polarity="Input" name="btn_south" />
         <port polarity="Input" name="Clk_50MHz" />
-        <port polarity="Input" name="ROT_B" />
-        <port polarity="Input" name="ROT_A" />
-        <port polarity="Input" name="SW(3:0)" />
         <port polarity="Output" name="LED0" />
         <blockdef name="I2C_Master">
             <timestamp>2015-11-24T13:12:50</timestamp>
@@ -90,34 +78,6 @@
             <line x2="480" y1="-32" y2="-32" x1="416" />
             <line x2="480" y1="96" y2="96" x1="416" />
         </blockdef>
-        <blockdef name="buf">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="-32" y2="-32" x1="0" />
-            <line x2="128" y1="-32" y2="-32" x1="224" />
-            <line x2="128" y1="0" y2="-32" x1="64" />
-            <line x2="64" y1="-32" y2="-64" x1="128" />
-            <line x2="64" y1="-64" y2="0" x1="64" />
-        </blockdef>
-        <blockdef name="or2">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="-64" y2="-64" x1="0" />
-            <line x2="64" y1="-128" y2="-128" x1="0" />
-            <line x2="192" y1="-96" y2="-96" x1="256" />
-            <arc ex="192" ey="-96" sx="112" sy="-48" r="88" cx="116" cy="-136" />
-            <arc ex="48" ey="-144" sx="48" sy="-48" r="56" cx="16" cy="-96" />
-            <line x2="48" y1="-144" y2="-144" x1="112" />
-            <arc ex="112" ey="-144" sx="192" sy="-96" r="88" cx="116" cy="-56" />
-            <line x2="48" y1="-48" y2="-48" x1="112" />
-        </blockdef>
-        <blockdef name="RotaryEnc">
-            <timestamp>2008-8-28T17:16:17</timestamp>
-            <rect width="256" x="64" y="-256" height="192" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <line x2="0" y1="-160" y2="-160" x1="64" />
-            <line x2="384" y1="-224" y2="-224" x1="320" />
-            <line x2="384" y1="-160" y2="-160" x1="320" />
-            <line x2="0" y1="-96" y2="-96" x1="64" />
-        </blockdef>
         <block symbolname="constant" name="XLXI_7">
             <attr value="78" name="CValue">
                 <trait delete="all:1 sym:0" />
@@ -148,8 +108,8 @@
             <blockpin signalname="XLXN_12" name="Reset" />
             <blockpin signalname="XLXN_53" name="I2C_FIFO_Full" />
             <blockpin signalname="XLXN_25" name="I2C_Busy" />
-            <blockpin signalname="XLXN_156" name="WriteByte" />
-            <blockpin signalname="Byte(7:0)" name="Byte(7:0)" />
+            <blockpin name="WriteByte" />
+            <blockpin name="Byte(7:0)" />
             <blockpin signalname="XLXN_21" name="I2C_Go" />
             <blockpin signalname="XLXN_23" name="I2C_FIFO_Push" />
             <blockpin signalname="XLXN_51(7:0)" name="I2C_FIFO_DI(7:0)" />
@@ -159,26 +119,6 @@
             <blockpin signalname="Clk_50MHz" name="C" />
             <blockpin signalname="btn_south" name="D" />
             <blockpin signalname="XLXN_12" name="Q" />
-        </block>
-        <block symbolname="or2" name="XLXI_23">
-            <blockpin signalname="XLXN_141" name="I0" />
-            <blockpin signalname="XLXN_140" name="I1" />
-            <blockpin signalname="XLXN_156" name="O" />
-        </block>
-        <block symbolname="buf" name="XLXI_9(3:0)">
-            <blockpin signalname="SW(3:0)" name="I" />
-            <blockpin signalname="Byte(7:4)" name="O" />
-        </block>
-        <block symbolname="buf" name="XLXI_10(3:0)">
-            <blockpin signalname="SW(3:0)" name="I" />
-            <blockpin signalname="Byte(3:0)" name="O" />
-        </block>
-        <block symbolname="RotaryEnc" name="XLXI_24">
-            <blockpin signalname="ROT_A" name="ROT_A" />
-            <blockpin signalname="ROT_B" name="ROT_B" />
-            <blockpin signalname="XLXN_140" name="RotL" />
-            <blockpin signalname="XLXN_141" name="RotR" />
-            <blockpin signalname="Clk_50MHz" name="Clk" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -245,78 +185,26 @@
         <branch name="btn_south">
             <wire x2="816" y1="2000" y2="2000" x1="416" />
         </branch>
-        <branch name="Byte(7:0)">
-            <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1504" y="1392" type="branch" />
-            <wire x2="1504" y1="1280" y2="1344" x1="1504" />
-            <wire x2="1504" y1="1344" y2="1392" x1="1504" />
-            <wire x2="1504" y1="1392" y2="1440" x1="1504" />
-            <wire x2="1504" y1="1440" y2="1584" x1="1504" />
-            <wire x2="2128" y1="1584" y2="1584" x1="1504" />
-        </branch>
         <iomarker fontsize="28" x="3152" y="368" name="SDA" orien="R0" />
         <iomarker fontsize="28" x="3152" y="432" name="SCL" orien="R0" />
         <iomarker fontsize="28" x="3136" y="880" name="LED7" orien="R0" />
         <iomarker fontsize="28" x="416" y="2000" name="btn_south" orien="R180" />
         <iomarker fontsize="28" x="432" y="2384" name="Clk_50MHz" orien="R180" />
-        <branch name="XLXN_140">
-            <wire x2="1248" y1="1616" y2="1616" x1="1200" />
-        </branch>
-        <branch name="XLXN_141">
-            <wire x2="1248" y1="1680" y2="1680" x1="1200" />
-        </branch>
         <instance x="816" y="2256" name="XLXI_3" orien="R0" />
         <branch name="Clk_50MHz">
             <wire x2="752" y1="2384" y2="2384" x1="432" />
             <wire x2="2000" y1="2384" y2="2384" x1="752" />
-            <wire x2="752" y1="1744" y2="2128" x1="752" />
             <wire x2="816" y1="2128" y2="2128" x1="752" />
             <wire x2="752" y1="2128" y2="2384" x1="752" />
-            <wire x2="816" y1="1744" y2="1744" x1="752" />
             <wire x2="2112" y1="880" y2="880" x1="2000" />
             <wire x2="2000" y1="880" y2="1776" x1="2000" />
             <wire x2="2128" y1="1776" y2="1776" x1="2000" />
             <wire x2="2000" y1="1776" y2="2384" x1="2000" />
         </branch>
-        <branch name="ROT_B">
-            <wire x2="816" y1="1680" y2="1680" x1="416" />
-        </branch>
-        <branch name="ROT_A">
-            <wire x2="816" y1="1616" y2="1616" x1="416" />
-        </branch>
-        <iomarker fontsize="28" x="416" y="1680" name="ROT_B" orien="R180" />
-        <iomarker fontsize="28" x="416" y="1616" name="ROT_A" orien="R180" />
-        <bustap x2="1408" y1="1440" y2="1440" x1="1504" />
-        <bustap x2="1408" y1="1344" y2="1344" x1="1504" />
-        <branch name="SW(3:0)">
-            <wire x2="1024" y1="1392" y2="1392" x1="400" />
-            <wire x2="1024" y1="1392" y2="1440" x1="1024" />
-            <wire x2="1056" y1="1440" y2="1440" x1="1024" />
-            <wire x2="1056" y1="1344" y2="1344" x1="1024" />
-            <wire x2="1024" y1="1344" y2="1392" x1="1024" />
-        </branch>
-        <branch name="Byte(7:4)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1344" y="1344" type="branch" />
-            <wire x2="1344" y1="1344" y2="1344" x1="1280" />
-            <wire x2="1408" y1="1344" y2="1344" x1="1344" />
-        </branch>
-        <branch name="Byte(3:0)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1344" y="1440" type="branch" />
-            <wire x2="1344" y1="1440" y2="1440" x1="1280" />
-            <wire x2="1408" y1="1440" y2="1440" x1="1344" />
-        </branch>
-        <instance x="1056" y="1376" name="XLXI_9(3:0)" orien="R0" />
-        <instance x="1056" y="1472" name="XLXI_10(3:0)" orien="R0" />
-        <iomarker fontsize="28" x="400" y="1392" name="SW(3:0)" orien="R180" />
-        <instance x="1248" y="1744" name="XLXI_23" orien="R0" />
-        <instance x="816" y="1840" name="XLXI_24" orien="R0">
-        </instance>
         <iomarker fontsize="28" x="3136" y="1712" name="LED0" orien="R0" />
         <branch name="LED0">
             <wire x2="2800" y1="1712" y2="1712" x1="2608" />
             <wire x2="3136" y1="1712" y2="1712" x1="2800" />
-        </branch>
-        <branch name="XLXN_156">
-            <wire x2="2128" y1="1648" y2="1648" x1="1504" />
         </branch>
         <text style="fontsize:64;fontname:Arial" x="2604" y="2256">Test_OLED128x64</text>
         <text style="fontsize:40;fontname:Arial" x="2608" y="2336">J.Sugier 2017</text>

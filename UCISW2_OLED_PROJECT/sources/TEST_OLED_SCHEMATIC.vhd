@@ -31,9 +31,6 @@ ARCHITECTURE behavioral OF top_top_sch_tb IS
           LED7	:	OUT	STD_LOGIC; 
           btn_south	:	IN	STD_LOGIC; 
           Clk_50MHz	:	IN	STD_LOGIC; 
-          ROT_B	:	IN	STD_LOGIC; 
-          ROT_A	:	IN	STD_LOGIC; 
-          SW	:	IN	STD_LOGIC_VECTOR (3 DOWNTO 0); 
           LED0	:	OUT	STD_LOGIC);
    END COMPONENT;
 
@@ -42,9 +39,6 @@ ARCHITECTURE behavioral OF top_top_sch_tb IS
    SIGNAL LED7	:	STD_LOGIC;
    SIGNAL btn_south	:	STD_LOGIC;
    SIGNAL Clk_50MHz	:	STD_LOGIC :='0';
-   SIGNAL ROT_B	:	STD_LOGIC;
-   SIGNAL ROT_A	:	STD_LOGIC;
-   SIGNAL SW	:	STD_LOGIC_VECTOR (3 DOWNTO 0);
    SIGNAL LED0	:	STD_LOGIC;
 
 BEGIN
@@ -55,9 +49,6 @@ BEGIN
 		LED7 => LED7, 
 		btn_south => btn_south, 
 		Clk_50MHz => Clk_50MHz, 
-		ROT_B => ROT_B, 
-		ROT_A => ROT_A, 
-		SW => SW, 
 		LED0 => LED0
    );
 	

@@ -1,29 +1,35 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/top_top_sch_tb_isim_beh.exe -prj C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/top_top_sch_tb_beh.prj work.top_top_sch_tb 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/testbench_isim_beh.exe -prj C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/testbench_beh.prj work.testbench 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
 Determining compilation order of HDL files
 Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" into library work
+Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/Memory.vhd" into library work
 Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/top.vhf" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/TEST_OLED_SCHEMATIC.vhd" into library work
+Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/schemat.vhf" into library work
+Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/TEST.vhd" into library work
 Starting static elaboration
-WARNING:HDLCompiler:89 - "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/top.vhf" Line 264: <rotaryenc> remains a black-box since it has no binding entity.
 Completed static elaboration
-Fuse Memory Usage: 128792 KB
-Fuse CPU Usage: 358 ms
-WARNING:Simulator:648 - "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/top.vhf" Line 264. Instance rotaryenc is unbound
+Fuse Memory Usage: 129496 KB
+Fuse CPU Usage: 109 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
 Compiling package vcomponents
 Compiling package textio
 Compiling package std_logic_textio
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity Memory [memory_default]
+Compiling architecture behavioral of entity OLED_Ctrl [oled_ctrl_default]
 Compiling package vital_timing
+Compiling architecture fdce_v of entity FDCE [\FDCE('0')\]
+Compiling architecture ibuf_v of entity IBUF [\IBUF("DONT_CARE","0",true,"AUTO...]
+Compiling architecture vcc_v of entity VCC [vcc_default]
+Compiling architecture gnd_v of entity GND [gnd_default]
+Compiling architecture behavioral of entity IFD_MXILINX_schemat [\IFD_MXILINX_schemat('0')\]
 Compiling package vital_primitives
 Compiling package vpkg
-Compiling architecture gnd_v of entity GND [gnd_default]
-Compiling architecture vcc_v of entity VCC [vcc_default]
 Compiling architecture fde_v of entity FDE [\FDE('0')\]
 Compiling architecture fdre_v of entity FDRE [\FDRE('0')\]
 Compiling architecture fdr_v of entity FDR [\FDR('0')\]
@@ -46,16 +52,10 @@ Compiling architecture lut4_l_v of entity LUT4_L [\LUT4_L("1100010000000100")(0,
 Compiling architecture lut3_d_v of entity LUT3_D [\LUT3_D("00001000")(0,7)\]
 Compiling architecture lut2_d_v of entity LUT2_D [\LUT2_D("1101")(0,3)\]
 Compiling architecture structure of entity I2C_Master [i2c_master_default]
-Compiling architecture fdce_v of entity FDCE [\FDCE('0')\]
-Compiling architecture ibuf_v of entity IBUF [\IBUF("DONT_CARE","0",true,"AUTO...]
-Compiling architecture behavioral of entity IFD_MXILINX_top [\IFD_MXILINX_top('0')\]
-Compiling architecture behavioral of entity OLED_Ctrl [oled_ctrl_default]
-Compiling architecture buf_v of entity BUF [buf_default]
-Compiling architecture or2_v of entity OR2 [or2_default]
-Compiling architecture behavioral of entity top [top_default]
-Compiling architecture behavioral of entity top_top_sch_tb
+Compiling architecture behavioral of entity schemat [schemat_default]
+Compiling architecture behavioral of entity testbench
 Time Resolution for simulation is 1ps.
 Compiled 198 VHDL Units
-Built simulation executable C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/top_top_sch_tb_isim_beh.exe
-Fuse Memory Usage: 157576 KB
-Fuse CPU Usage: 686 ms
+Built simulation executable C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/testbench_isim_beh.exe
+Fuse Memory Usage: 162632 KB
+Fuse CPU Usage: 374 ms

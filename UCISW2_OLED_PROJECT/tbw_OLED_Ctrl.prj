@@ -1,0 +1,2 @@
+vhdl work "sources/OLED_Ctrl.vhd"
+vhdl work "sources/tbw_OLED_Ctrl.vhd"

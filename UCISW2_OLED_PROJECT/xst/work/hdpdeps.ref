@@ -1,0 +1,15 @@
+V3 7
+FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd 2024/04/30.02:13:35 P.20131013
+EN work/OLED_Ctrl 1714436039 \
+      FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/OLED_Ctrl/Behavioral 1714436040 \
+      FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd \
+      EN work/OLED_Ctrl 1714436039
+FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd 2024/04/29.22:22:24 P.20131013
+EN work/tbw_OLED_Ctrl 0 \
+      FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/tbw_OLED_Ctrl/behavior 0 \
+      FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd \
+      EN work/tbw_OLED_Ctrl 0 CP OLED_Ctrl

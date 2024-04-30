@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2024-04-29T14:30:25</DateModified>
+  <DateModified>2024-04-30T00:21:18</DateModified>
   <ModuleName>tbw_OLED_Ctrl</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2024-04-29T22:54:14</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/iseconfig/tbw_OLED_Ctrl.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT</ImplementationReportsDirectory>
-  <DateInitialized>2024-04-29T14:30:25</DateInitialized>
+  <ImplementationReportsDirectory>C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT\</ImplementationReportsDirectory>
+  <DateInitialized>2024-04-29T23:08:16</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>
