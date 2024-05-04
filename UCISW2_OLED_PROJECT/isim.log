@@ -1,10 +1,7 @@
 ISim log file
-Running: C:\Users\Win7\Desktop\Projekty\UCISW2_OLED_PROJECT\testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/testbench_isim_beh.wdb 
-ISim P.20131013 (signature 0x8ef4fb42)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
+Running: C:\Users\lab\Downloads\UCISW2-OLED\UCISW2_OLED_PROJECT\testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/testbench_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
@@ -31,150 +28,126 @@ Finished circuit initialization process.
 [I2C 206.9101 us] STOP condition
 [I2C 208.8301 us] START condition
 [I2C 229.4501 us] address byte: 78
-[I2C 251.9501 us] byte received: FF
-[I2C 274.4501 us] byte received: FF
-[I2C 279.4501 us] STOP condition
-[I2C 281.3701 us] START condition
-[I2C 301.9901 us] address byte: 78
-[I2C 324.4901 us] byte received: 00
-[I2C 346.9901 us] byte received: 00
-[I2C 369.4901 us] byte received: FF
-[I2C 391.9901 us] byte received: FF
-[I2C 414.4901 us] byte received: 00
-[I2C 436.9901 us] byte received: 00
-[I2C 459.4901 us] byte received: FF
-[I2C 481.9901 us] byte received: FF
-[I2C 486.9901 us] STOP condition
-[I2C 488.9101 us] START condition
-[I2C 509.5301 us] address byte: 78
-[I2C 532.0301 us] byte received: 00
-[I2C 554.5301 us] byte received: 00
-[I2C 577.0301 us] byte received: FF
-[I2C 599.5301 us] byte received: FF
-[I2C 622.0301 us] byte received: 00
-[I2C 644.5301 us] byte received: 00
-[I2C 667.0301 us] byte received: FF
-[I2C 689.5301 us] byte received: FF
-[I2C 694.5301 us] STOP condition
-[I2C 696.4501 us] START condition
-[I2C 717.0701 us] address byte: 78
-[I2C 739.5701 us] byte received: 00
-[I2C 762.0701 us] byte received: 00
-[I2C 784.5701 us] byte received: FF
-[I2C 807.0701 us] byte received: FF
-[I2C 829.5701 us] byte received: 00
-[I2C 852.0701 us] byte received: 00
-[I2C 874.5701 us] byte received: FF
-[I2C 897.0701 us] byte received: FF
-[I2C 902.0701 us] STOP condition
-[I2C 903.9901 us] START condition
-[I2C 924.6101 us] address byte: 78
-[I2C 947.1101 us] byte received: 00
-[I2C 969.6101 us] byte received: 00
-[I2C 992.1101 us] byte received: FF
-[I2C 1014.6101 us] byte received: FF
-[I2C 1037.1101 us] byte received: 00
-[I2C 1059.6101 us] byte received: 00
-[I2C 1082.1101 us] byte received: FF
-[I2C 1104.6101 us] byte received: FF
-[I2C 1109.6101 us] STOP condition
-[I2C 1111.5301 us] START condition
-[I2C 1132.1501 us] address byte: 78
-[I2C 1154.6501 us] byte received: 00
-[I2C 1177.1501 us] byte received: 00
-[I2C 1199.6501 us] byte received: FF
-[I2C 1222.1501 us] byte received: FF
-[I2C 1244.6501 us] byte received: 00
-[I2C 1267.1501 us] byte received: 00
-[I2C 1289.6501 us] byte received: FF
-[I2C 1312.1501 us] byte received: FF
-[I2C 1317.1501 us] STOP condition
-[I2C 1319.0701 us] START condition
-[I2C 1339.6901 us] address byte: 78
-[I2C 1362.1901 us] byte received: 00
-[I2C 1384.6901 us] byte received: 00
-[I2C 1407.1901 us] byte received: FF
-[I2C 1429.6901 us] byte received: FF
-[I2C 1452.1901 us] byte received: 00
-[I2C 1474.6901 us] byte received: 00
-[I2C 1497.1901 us] byte received: FF
-[I2C 1519.6901 us] byte received: FF
-[I2C 1524.6901 us] STOP condition
-[I2C 1526.6101 us] START condition
-[I2C 1547.2301 us] address byte: 78
-[I2C 1569.7301 us] byte received: 00
-[I2C 1592.2301 us] byte received: 00
-[I2C 1614.7301 us] byte received: FF
-[I2C 1637.2301 us] byte received: FF
-[I2C 1659.7301 us] byte received: 00
-[I2C 1682.2301 us] byte received: 00
-[I2C 1704.7301 us] byte received: FF
-[I2C 1727.2301 us] byte received: FF
-[I2C 1732.2301 us] STOP condition
-[I2C 1734.1501 us] START condition
-[I2C 1754.7701 us] address byte: 78
-[I2C 1777.2701 us] byte received: 00
-[I2C 1799.7701 us] byte received: 00
-[I2C 1822.2701 us] byte received: FF
-[I2C 1844.7701 us] byte received: FF
-[I2C 1867.2701 us] byte received: 00
-[I2C 1889.7701 us] byte received: 00
-[I2C 1912.2701 us] byte received: FF
-[I2C 1934.7701 us] byte received: FF
-[I2C 1939.7701 us] STOP condition
-[I2C 1941.6901 us] START condition
-[I2C 1962.3101 us] address byte: 78
-[I2C 1984.8101 us] byte received: 00
-[I2C 2007.3101 us] byte received: 00
-[I2C 2029.8101 us] byte received: FF
-[I2C 2052.3101 us] byte received: FF
-[I2C 2074.8101 us] byte received: 00
-[I2C 2097.3101 us] byte received: 00
-[I2C 2119.8101 us] byte received: FF
-[I2C 2142.3101 us] byte received: FF
-[I2C 2147.3101 us] STOP condition
-[I2C 2149.2301 us] START condition
-[I2C 2169.8501 us] address byte: 78
-[I2C 2192.3501 us] byte received: 00
-[I2C 2214.8501 us] byte received: 00
-[I2C 2237.3501 us] byte received: FF
-[I2C 2259.8501 us] byte received: FF
-[I2C 2282.3501 us] byte received: 00
-[I2C 2304.8501 us] byte received: 00
-[I2C 2327.3501 us] byte received: FF
-[I2C 2349.8501 us] byte received: FF
-[I2C 2354.8501 us] STOP condition
-[I2C 2356.7701 us] START condition
-[I2C 2377.3901 us] address byte: 78
-[I2C 2399.8901 us] byte received: 00
-[I2C 2422.3901 us] byte received: 00
-[I2C 2444.8901 us] byte received: FF
-[I2C 2467.3901 us] byte received: FF
-[I2C 2489.8901 us] byte received: 00
-[I2C 2512.3901 us] byte received: 00
-[I2C 2534.8901 us] byte received: FF
-[I2C 2557.3901 us] byte received: FF
-[I2C 2562.3901 us] STOP condition
-[I2C 2564.3101 us] START condition
-[I2C 2584.9301 us] address byte: 78
-[I2C 2607.4301 us] byte received: 00
-[I2C 2629.9301 us] byte received: 00
-[I2C 2652.4301 us] byte received: FF
-[I2C 2674.9301 us] byte received: FF
-[I2C 2697.4301 us] byte received: 00
-[I2C 2719.9301 us] byte received: 00
-[I2C 2742.4301 us] byte received: FF
-[I2C 2764.9301 us] byte received: FF
-[I2C 2769.9301 us] STOP condition
-[I2C 2771.8501 us] START condition
-[I2C 2792.4701 us] address byte: 78
-[I2C 2814.9701 us] byte received: 00
-[I2C 2837.4701 us] byte received: 00
-[I2C 2859.9701 us] byte received: FF
-[I2C 2882.4701 us] byte received: FF
-[I2C 2904.9701 us] byte received: 00
-[I2C 2927.4701 us] byte received: 00
-[I2C 2949.9701 us] byte received: FF
-[I2C 2972.4701 us] byte received: FF
-[I2C 2977.4701 us] STOP condition
-[I2C 2979.3901 us] START condition
+[I2C 251.9501 us] byte received: 40
+[I2C 274.4501 us] byte received: 88
+[I2C 296.9501 us] byte received: 99
+[I2C 319.4501 us] byte received: AA
+[I2C 341.9501 us] byte received: BB
+[I2C 364.4501 us] byte received: CC
+[I2C 386.9501 us] byte received: DD
+[I2C 409.4501 us] byte received: EE
+[I2C 431.9501 us] byte received: FF
+[I2C 454.4501 us] byte received: 88
+[I2C 476.9501 us] byte received: 99
+[I2C 499.4501 us] byte received: AA
+[I2C 521.9501 us] byte received: BB
+[I2C 544.4501 us] byte received: CC
+[I2C 566.9501 us] byte received: DD
+[I2C 589.4501 us] byte received: EE
+[I2C 611.9501 us] byte received: FF
+[I2C 634.4501 us] byte received: 88
+[I2C 656.9501 us] byte received: 99
+[I2C 679.4501 us] byte received: AA
+[I2C 701.9501 us] byte received: BB
+[I2C 724.4501 us] byte received: CC
+[I2C 746.9501 us] byte received: DD
+[I2C 769.4501 us] byte received: EE
+[I2C 791.9501 us] byte received: FF
+[I2C 814.4501 us] byte received: 88
+[I2C 836.9501 us] byte received: 99
+[I2C 859.4501 us] byte received: AA
+[I2C 881.9501 us] byte received: BB
+[I2C 904.4501 us] byte received: CC
+[I2C 926.9501 us] byte received: DD
+[I2C 949.4501 us] byte received: EE
+[I2C 971.9501 us] byte received: FF
+[I2C 994.4501 us] byte received: 88
+[I2C 1016.9501 us] byte received: 99
+[I2C 1039.4501 us] byte received: AA
+[I2C 1061.9501 us] byte received: BB
+[I2C 1084.4501 us] byte received: CC
+[I2C 1106.9501 us] byte received: DD
+[I2C 1129.4501 us] byte received: EE
+[I2C 1151.9501 us] byte received: FF
+[I2C 1174.4501 us] byte received: 88
+[I2C 1196.9501 us] byte received: 99
+[I2C 1219.4501 us] byte received: AA
+[I2C 1241.9501 us] byte received: BB
+[I2C 1264.4501 us] byte received: CC
+[I2C 1286.9501 us] byte received: DD
+[I2C 1309.4501 us] byte received: EE
+[I2C 1331.9501 us] byte received: FF
+[I2C 1354.4501 us] byte received: 88
+[I2C 1376.9501 us] byte received: 99
+[I2C 1399.4501 us] byte received: AA
+[I2C 1421.9501 us] byte received: BB
+[I2C 1444.4501 us] byte received: CC
+[I2C 1466.9501 us] byte received: DD
+[I2C 1489.4501 us] byte received: EE
+[I2C 1511.9501 us] byte received: FF
+[I2C 1534.4501 us] byte received: 88
+[I2C 1556.9501 us] byte received: 99
+[I2C 1579.4501 us] byte received: AA
+[I2C 1601.9501 us] byte received: BB
+[I2C 1624.4501 us] byte received: CC
+[I2C 1646.9501 us] byte received: DD
+[I2C 1669.4501 us] byte received: EE
+[I2C 1691.9501 us] byte received: FF
+[I2C 1714.4501 us] byte received: 88
+[I2C 1736.9501 us] byte received: 99
+[I2C 1759.4501 us] byte received: AA
+[I2C 1781.9501 us] byte received: BB
+[I2C 1804.4501 us] byte received: CC
+[I2C 1826.9501 us] byte received: DD
+[I2C 1849.4501 us] byte received: EE
+[I2C 1871.9501 us] byte received: FF
+[I2C 1894.4501 us] byte received: 88
+[I2C 1916.9501 us] byte received: 99
+[I2C 1939.4501 us] byte received: AA
+[I2C 1961.9501 us] byte received: BB
+[I2C 1984.4501 us] byte received: CC
+[I2C 2006.9501 us] byte received: DD
+[I2C 2029.4501 us] byte received: EE
+[I2C 2051.9501 us] byte received: FF
+[I2C 2074.4501 us] byte received: 88
+[I2C 2096.9501 us] byte received: 99
+[I2C 2119.4501 us] byte received: AA
+[I2C 2141.9501 us] byte received: BB
+[I2C 2164.4501 us] byte received: CC
+[I2C 2186.9501 us] byte received: DD
+[I2C 2209.4501 us] byte received: EE
+[I2C 2231.9501 us] byte received: FF
+[I2C 2254.4501 us] byte received: 88
+[I2C 2276.9501 us] byte received: 99
+[I2C 2299.4501 us] byte received: AA
+[I2C 2321.9501 us] byte received: BB
+[I2C 2344.4501 us] byte received: CC
+[I2C 2366.9501 us] byte received: DD
+[I2C 2389.4501 us] byte received: EE
+[I2C 2411.9501 us] byte received: FF
+[I2C 2434.4501 us] byte received: 88
+[I2C 2456.9501 us] byte received: 99
+[I2C 2479.4501 us] byte received: AA
+[I2C 2501.9501 us] byte received: BB
+[I2C 2524.4501 us] byte received: CC
+[I2C 2546.9501 us] byte received: DD
+[I2C 2569.4501 us] byte received: EE
+[I2C 2591.9501 us] byte received: FF
+[I2C 2614.4501 us] byte received: 88
+[I2C 2636.9501 us] byte received: 99
+[I2C 2659.4501 us] byte received: AA
+[I2C 2681.9501 us] byte received: BB
+[I2C 2704.4501 us] byte received: CC
+[I2C 2726.9501 us] byte received: DD
+[I2C 2749.4501 us] byte received: EE
+[I2C 2771.9501 us] byte received: FF
+[I2C 2794.4501 us] byte received: 88
+[I2C 2816.9501 us] byte received: 99
+[I2C 2839.4501 us] byte received: AA
+[I2C 2861.9501 us] byte received: BB
+[I2C 2884.4501 us] byte received: CC
+[I2C 2906.9501 us] byte received: DD
+[I2C 2929.4501 us] byte received: EE
+[I2C 2951.9501 us] byte received: FF
+[I2C 2974.4501 us] byte received: 88
+[I2C 2996.9501 us] byte received: 99

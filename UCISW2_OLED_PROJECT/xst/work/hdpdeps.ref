@@ -1,15 +1,49 @@
-V3 7
-FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd 2024/04/30.02:13:35 P.20131013
-EN work/OLED_Ctrl 1714436039 \
-      FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd \
+V3 49
+FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf 2024/04/30.10:27:40 P.20131013
+EN work/IFD_MXILINX_schemat 1714474574 \
+      FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/IFD_MXILINX_schemat/BEHAVIORAL 1714474575 \
+      FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf \
+      EN work/IFD_MXILINX_schemat 1714474574 CP FDCE CP IBUF CP VCC CP GND
+EN work/schemat 1714474576 \
+      FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/schemat/BEHAVIORAL 1714474577 \
+      FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf \
+      EN work/schemat 1714474576 CP Memory CP OLED_Ctrl CP IFD_MXILINX_schemat \
+      CP I2C_Master
+FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd 2024/04/30.03:07:45 P.20131013
+EN work/I2C_Master 1714474572 \
+      FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd \
+      PB ieee/std_logic_1164 1381692176 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/I2C_Master/STRUCTURE 1714474573 \
+      FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd \
+      EN work/I2C_Master 1714474572 CP GND CP VCC CP FDE CP FDRE CP FDR CP MUXCY \
+      CP XORCY CP IOBUF CP FDS CP RAM16X1D CP LUT2 CP LUT3 CP LUT4 CP FDRS CP LUT1 \
+      CP MUXF5 CP INV CP LUT4_D CP LUT2_L CP LUT3_L CP LUT4_L CP LUT3_D CP LUT2_D
+FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Memory.vhd 2024/04/30.12:46:53 P.20131013
+EN work/Memory 1714474568 \
+      FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Memory.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Memory/Behavioral 1714474569 \
+      FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Memory.vhd \
+      EN work/Memory 1714474568
+FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd 2024/04/30.12:56:05 P.20131013
+EN work/OLED_Ctrl 1714474570 \
+      FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/OLED_Ctrl/Behavioral 1714436040 \
-      FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd \
-      EN work/OLED_Ctrl 1714436039
-FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd 2024/04/29.22:22:24 P.20131013
+AR work/OLED_Ctrl/Behavioral 1714474571 \
+      FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd \
+      EN work/OLED_Ctrl 1714474570
+FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd 2024/04/30.03:07:45 P.20131013
 EN work/tbw_OLED_Ctrl 0 \
-      FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd \
+      FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
 AR work/tbw_OLED_Ctrl/behavior 0 \
-      FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd \
+      FL C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd \
       EN work/tbw_OLED_Ctrl 0 CP OLED_Ctrl
+FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd 2024/04/30.02:13:35 P.20131013
+FL C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd 2024/04/29.22:22:24 P.20131013

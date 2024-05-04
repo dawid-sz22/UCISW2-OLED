@@ -39,23 +39,11 @@ end Memory;
 
 architecture Behavioral of Memory is
 	type rom_type is array (0 to 1023) of std_logic_vector (7 downto 0);                 
-	signal ROM : rom_type:= (X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF", 
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",									
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
-									X"FF",X"00",X"00",X"FF",X"FF",X"00",X"00",X"FF",
+	signal ROM : rom_type:= (X"81",X"42",X"24",X"18",X"18",X"18",X"24",X"42", X"81",
+									X"81",X"42",X"24",X"18",X"18",X"18",X"24",X"42", X"81",
+									X"81",X"42",X"24",X"18",X"18",X"18",X"24",X"42", X"81",
+									X"99",X"99",X"99",X"99",X"99",X"99",X"99",X"99", 
+									X"FF",X"FF",X"FF",X"FF",X"FF",X"FF",X"FF",X"FF",
 									others => X"11");
 	signal data_out : std_logic_vector(7 downto 0);
 begin
@@ -63,7 +51,7 @@ begin
 	
 	process (CLK)
     begin
-        if (CLK'event and CLK = '1') then
+        if falling_edge (Clk) then
             if (EN = '1') then
                 Data <= data_out;
             end if;

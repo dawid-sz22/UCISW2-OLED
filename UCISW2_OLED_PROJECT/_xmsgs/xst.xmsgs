@@ -5,16 +5,76 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLParsers" num="1015" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">103</arg>. Wait for statement unsupported.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">202</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FIFO_Empty</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1015" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">113</arg>. Wait for statement unsupported.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">202</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FIFO_DO</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1015" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">121</arg>. Wait for statement unsupported.
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd</arg>&quot; line <arg fmt="%d" index="2">138</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="error" file="HDLParsers" num="1015" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/sources/tbw_OLED_Ctrl.vhd</arg>&quot; Line <arg fmt="%d" index="2">125</arg>. Wait for statement unsupported.
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">enable_memory</arg>&gt; in unit &lt;<arg fmt="%s" index="2">OLED_Ctrl</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="warning" file="Xst" num="1781" delta="old" >Signal &lt;<arg fmt="%s" index="1">ROM</arg>&gt; is used but never assigned. Tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">WriteByte</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">swaitwrite</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">NLW_i_FIFO_Mram_RAM8_SPO_UNCONNECTED</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">NLW_i_FIFO_Mram_RAM7_SPO_UNCONNECTED</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">NLW_i_FIFO_Mram_RAM6_SPO_UNCONNECTED</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">NLW_i_FIFO_Mram_RAM5_SPO_UNCONNECTED</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">NLW_i_FIFO_Mram_RAM4_SPO_UNCONNECTED</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">NLW_i_FIFO_Mram_RAM3_SPO_UNCONNECTED</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">NLW_i_FIFO_Mram_RAM2_SPO_UNCONNECTED</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">NLW_i_FIFO_Mram_RAM1_SPO_UNCONNECTED</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">NLW_IOB2_O_UNCONNECTED</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_6_ReadCnt_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_6_FIFO_Pop_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_2_WriteByte_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="3044" delta="old" >The ROM &lt;<arg fmt="%s" index="1">Mrom_data_out</arg>&gt; will be implemented as a read-only BLOCK RAM, absorbing the register: &lt;<arg fmt="%s" index="2">Data</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3225" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mrom_data_out</arg>&gt; will be implemented as BLOCK RAM
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">XLXI_2/state_FSM_FFd8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">schemat</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;XLXI_6/state_FSM_FFd6&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="616" delta="old" >Invalid property &quot;<arg fmt="%s" index="1">SLEW</arg> <arg fmt="%s" index="2">20</arg>&quot;: Did not attach to <arg fmt="%s" index="3">XLXI_6/IOB2</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="616" delta="old" >Invalid property &quot;<arg fmt="%s" index="1">SLEW</arg> <arg fmt="%s" index="2">20</arg>&quot;: Did not attach to <arg fmt="%s" index="3">XLXI_6/IOB1</arg>.
 </msg>
 
 </messages>

@@ -4,3 +4,4 @@ xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/tbw_O
 xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/tbw_OLED_Ctrl.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/tbw_OLED_Ctrl.syr" 
 xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/tbw_OLED_Ctrl.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/tbw_OLED_Ctrl.syr" 
 xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/tbw_OLED_Ctrl.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/tbw_OLED_Ctrl.syr" 
+xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/tbw_OLED_Ctrl.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/tbw_OLED_Ctrl.syr" 

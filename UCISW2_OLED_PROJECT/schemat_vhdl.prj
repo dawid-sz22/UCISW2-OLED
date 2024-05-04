@@ -1,0 +1,4 @@
+vhdl work "C:\Users\lab\Downloads\UCISW2-OLED\UCISW2_OLED_PROJECT\sources\OLED_Ctrl.vhd"
+vhdl work "C:\Users\lab\Downloads\UCISW2-OLED\UCISW2_OLED_PROJECT\sources\Memory.vhd"
+vhdl work "C:\Users\lab\Downloads\UCISW2-OLED\UCISW2_OLED_PROJECT\sources\I2C_Master.vhd"
+vhdl work "C:\Users\lab\Downloads\UCISW2-OLED\UCISW2_OLED_PROJECT\schemat.vhf"
