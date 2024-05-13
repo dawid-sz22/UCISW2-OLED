@@ -22,6 +22,8 @@
         <signal name="SDA" />
         <signal name="SCL" />
         <signal name="LED7" />
+        <signal name="XLXN_5" />
+        <signal name="XLXN_6(7:0)" />
         <port polarity="Input" name="Clk_50MHz" />
         <port polarity="Output" name="LED0" />
         <port polarity="Input" name="btn_south" />
@@ -29,17 +31,20 @@
         <port polarity="BiDirectional" name="SCL" />
         <port polarity="Output" name="LED7" />
         <blockdef name="Memory">
-            <timestamp>2024-4-29T20:4:55</timestamp>
-            <rect width="256" x="64" y="-192" height="192" />
+            <timestamp>2024-5-13T16:52:28</timestamp>
+            <line x2="0" y1="32" y2="32" x1="64" />
+            <rect width="64" x="0" y="84" height="24" />
+            <line x2="0" y1="96" y2="96" x1="64" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <rect width="64" x="320" y="-172" height="24" />
             <line x2="384" y1="-160" y2="-160" x1="320" />
+            <rect width="256" x="64" y="-192" height="320" />
         </blockdef>
         <blockdef name="OLED_Ctrl">
-            <timestamp>2024-4-29T22:1:22</timestamp>
+            <timestamp>2024-5-13T17:23:6</timestamp>
             <line x2="0" y1="96" y2="96" x1="64" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
@@ -99,6 +104,8 @@
             <blockpin signalname="EN_MEMORY" name="EN" />
             <blockpin signalname="ADDR(9:0)" name="Addr(9:0)" />
             <blockpin signalname="DATA(7:0)" name="Data(7:0)" />
+            <blockpin signalname="XLXN_5" name="WriteEnable" />
+            <blockpin signalname="XLXN_6(7:0)" name="DataIN(7:0)" />
         </block>
         <block symbolname="OLED_Ctrl" name="XLXI_2">
             <blockpin signalname="Clk_50MHz" name="Clk" />
@@ -143,6 +150,22 @@
             <blockpin name="FIFO_DO(7:0)" />
             <blockpin signalname="SDA" name="SDA" />
             <blockpin signalname="SCL" name="SCL" />
+        </block>
+        <block symbolname="constant" name="WriteEnable">
+            <attr value="1" name="CValue">
+                <trait delete="all:1 sym:0" />
+                <trait editname="all:1 sch:0" />
+                <trait valuetype="BitVector 32 Hexadecimal" />
+            </attr>
+            <blockpin signalname="XLXN_5" name="O" />
+        </block>
+        <block symbolname="constant" name="DataIN">
+            <attr value="44" name="CValue">
+                <trait delete="all:1 sym:0" />
+                <trait editname="all:1 sch:0" />
+                <trait valuetype="BitVector 32 Hexadecimal" />
+            </attr>
+            <blockpin signalname="XLXN_6(7:0)" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -261,6 +284,18 @@
         <branch name="LED7">
             <wire x2="2064" y1="224" y2="224" x1="2048" />
             <wire x2="2560" y1="224" y2="224" x1="2064" />
+        </branch>
+        <instance x="1264" y="1952" name="DataIN" orien="R0">
+        </instance>
+        <instance x="1264" y="1792" name="WriteEnable" orien="R0">
+        </instance>
+        <branch name="XLXN_5">
+            <wire x2="1616" y1="1824" y2="1824" x1="1408" />
+        </branch>
+        <branch name="XLXN_6(7:0)">
+            <wire x2="1536" y1="1984" y2="1984" x1="1408" />
+            <wire x2="1536" y1="1888" y2="1984" x1="1536" />
+            <wire x2="1616" y1="1888" y2="1888" x1="1536" />
         </branch>
     </sheet>
 </drawing>

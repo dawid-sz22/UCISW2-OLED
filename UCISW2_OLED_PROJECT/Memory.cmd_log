@@ -1,2 +1,4 @@
 vhdtdtfi -lib work sources/Memory.vhd -prj UCISW2_OLED_PROJECT -o Memory.spl -module Memory -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e Memory.spl C:/Users/Win7/Desktop/Projekty/UCISW2_OLED_PROJECT/Memory.sym 
+vhdtdtfi -lib work sources/Memory.vhd -prj UCISW2_OLED_PROJECT -o Memory.spl -module Memory -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Memory.spl C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/Memory.sym 

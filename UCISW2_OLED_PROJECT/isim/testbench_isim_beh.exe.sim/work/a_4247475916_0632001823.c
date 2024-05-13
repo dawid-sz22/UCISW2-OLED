@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd";
+static const char *ng0 = "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd";
 
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="OLED_Ctrl">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-4-29T22:1:22</timestamp>
+    <timestamp>2024-5-13T17:23:6</timestamp>
     <pin polarity="Input" x="0" y="-352" name="Clk" />
     <pin polarity="Input" x="0" y="-288" name="Reset" />
     <pin polarity="Input" x="0" y="-224" name="WriteByte" />

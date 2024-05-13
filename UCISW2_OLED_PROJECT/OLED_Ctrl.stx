@@ -1,0 +1,36 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/OLED_Ctrl is now defined in a different file.  It was defined in "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd", and is now defined in "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd".
+WARNING:HDLParsers:3607 - Unit work/OLED_Ctrl/Behavioral is now defined in a different file.  It was defined in "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd", and is now defined in "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd".
+Compiling vhdl file "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" in Library work.
+Architecture behavioral of Entity oled_ctrl is up to date.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+
+Total memory usage is 213712 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

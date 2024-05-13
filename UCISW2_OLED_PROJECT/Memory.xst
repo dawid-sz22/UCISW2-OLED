@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/xst"
+elaborate
+-ifn Memory.prj
+-ifmt mixed

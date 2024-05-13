@@ -33,30 +33,37 @@ use ieee.std_logic_unsigned.all;
 entity Memory is
     Port ( Addr : in  STD_LOGIC_VECTOR (9 downto 0);
            Data : out  STD_LOGIC_VECTOR (7 downto 0);
+			  DataIN : in STD_LOGIC_VECTOR (7 downto 0);
+			  WriteEnable : in std_logic;
 			  CLK : in std_logic;
 			  EN : in std_logic);
 end Memory;
 
 architecture Behavioral of Memory is
 	type rom_type is array (0 to 1023) of std_logic_vector (7 downto 0);                 
-	signal ROM : rom_type:= (X"81",X"42",X"24",X"18",X"18",X"18",X"24",X"42", X"81",
+	signal RAM : rom_type:= (X"81",X"42",X"24",X"18",X"18",X"18",X"24",X"42", X"81",
 									X"81",X"42",X"24",X"18",X"18",X"18",X"24",X"42", X"81",
 									X"81",X"42",X"24",X"18",X"18",X"18",X"24",X"42", X"81",
 									X"99",X"99",X"99",X"99",X"99",X"99",X"99",X"99", 
 									X"FF",X"FF",X"FF",X"FF",X"FF",X"FF",X"FF",X"FF",
 									others => X"11");
-	signal data_out : std_logic_vector(7 downto 0);
 begin
-	data_out <= ROM(conv_integer(Addr));
+	
+	process (Addr, WriteEnable, EN, DataIN)
+	begin
+	    if (EN = '1' and WriteEnable = '1') then
+           RAM(conv_integer(Addr)) <= DataIN;
+       end if;
+	end process;
 	
 	process (CLK)
-    begin
+   begin
         if falling_edge (Clk) then
             if (EN = '1') then
-                Data <= data_out;
+					 Data <= RAM(conv_integer(Addr));
             end if;
         end if;
-    end process;
+   end process;
 
 end Behavioral;
 

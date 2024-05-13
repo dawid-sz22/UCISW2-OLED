@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : schemat.vhf
--- /___/   /\     Timestamp : 04/30/2024 10:27:40
+-- /___/   /\     Timestamp : 05/13/2024 19:35:54
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf -w C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf -w C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.sch
 --Design Name: schemat
 --Device: spartan3e
 --Purpose:
@@ -121,14 +121,18 @@ architecture BEHAVIORAL of schemat is
    signal FIFO_PUSH                   : std_logic;
    signal GO                          : std_logic;
    signal Reset                       : std_logic;
+   signal XLXN_5                      : std_logic;
+   signal XLXN_6                      : std_logic_vector (7 downto 0);
    signal XLXI_2_WriteByte_openSignal : std_logic;
    signal XLXI_6_FIFO_Pop_openSignal  : std_logic;
    signal XLXI_6_ReadCnt_openSignal   : std_logic_vector (3 downto 0);
    component Memory
-      port ( CLK  : in    std_logic; 
-             EN   : in    std_logic; 
-             Addr : in    std_logic_vector (9 downto 0); 
-             Data : out   std_logic_vector (7 downto 0));
+      port ( CLK         : in    std_logic; 
+             EN          : in    std_logic; 
+             Addr        : in    std_logic_vector (9 downto 0); 
+             Data        : out   std_logic_vector (7 downto 0); 
+             WriteEnable : in    std_logic; 
+             DataIN      : in    std_logic_vector (7 downto 0));
    end component;
    
    component OLED_Ctrl
@@ -174,10 +178,14 @@ architecture BEHAVIORAL of schemat is
    attribute HU_SET of XLXI_5 : label is "XLXI_5_0";
 begin
    const(7 downto 0) <= x"78";
+   XLXN_5 <= '1';
+   XLXN_6(7 downto 0) <= x"44";
    XLXI_1 : Memory
       port map (Addr(9 downto 0)=>ADDR(9 downto 0),
                 CLK=>Clk_50MHz,
+                DataIN(7 downto 0)=>XLXN_6(7 downto 0),
                 EN=>EN_MEMORY,
+                WriteEnable=>XLXN_5,
                 Data(7 downto 0)=>DATA(7 downto 0));
    
    XLXI_2 : OLED_Ctrl

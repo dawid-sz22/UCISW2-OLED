@@ -1,13 +1,13 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/testbench_isim_beh.exe -prj C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/testbench_beh.prj work.testbench 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/testbench_isim_beh.exe -prj C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/testbench_beh.prj work.testbench 
 ISim P.20131013 (signature 0x7708f090)
-Number of CPUs detected in this system: 12
-Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Memory.vhd" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" into library work
-Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/TEST.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Memory.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" into library work
+Parsing VHDL file "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/TEST.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
@@ -53,8 +53,8 @@ Compiling architecture structure of entity I2C_Master [i2c_master_default]
 Compiling architecture behavioral of entity schemat [schemat_default]
 Compiling architecture behavioral of entity testbench
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
+Waiting for 31 sub-compilation(s) to finish...
 Compiled 198 VHDL Units
-Built simulation executable C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/testbench_isim_beh.exe
-Fuse Memory Usage: 64744 KB
-Fuse CPU Usage: 1265 ms
+Built simulation executable C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/testbench_isim_beh.exe
+Fuse Memory Usage: 59332 KB
+Fuse CPU Usage: 468 ms
