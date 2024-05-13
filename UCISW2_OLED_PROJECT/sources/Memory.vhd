@@ -31,12 +31,12 @@ use ieee.std_logic_unsigned.all;
 --use UNISIM.VComponents.all;
 
 entity Memory is
-    Port ( Addr : in  STD_LOGIC_VECTOR (9 downto 0);
+    Port ( WriteAddr : in  STD_LOGIC_VECTOR (9 downto 0);
+			  ReadAddr : in  STD_LOGIC_VECTOR (9 downto 0);
            Data : out  STD_LOGIC_VECTOR (7 downto 0);
 			  DataIN : in STD_LOGIC_VECTOR (7 downto 0);
 			  WriteEnable : in std_logic;
-			  CLK : in std_logic;
-			  EN : in std_logic);
+			  CLK : in std_logic);
 end Memory;
 
 architecture Behavioral of Memory is
@@ -49,21 +49,16 @@ architecture Behavioral of Memory is
 									others => X"11");
 begin
 	
-	process (Addr, WriteEnable, EN, DataIN)
+	process (CLK)
 	begin
-	    if (EN = '1' and WriteEnable = '1') then
-           RAM(conv_integer(Addr)) <= DataIN;
-       end if;
+		if (CLK'event and CLK = '1') then
+			if (WriteEnable = '1') then
+				RAM(conv_integer(WriteAddr)) <= DataIN;
+			end if;
+		end if;
 	end process;
 	
-	process (CLK)
-   begin
-        if falling_edge (Clk) then
-            if (EN = '1') then
-					 Data <= RAM(conv_integer(Addr));
-            end if;
-        end if;
-   end process;
+	Data <= RAM(conv_integer(ReadAddr));
 
 end Behavioral;
 
