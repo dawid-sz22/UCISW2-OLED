@@ -1,0 +1,8 @@
+[Inputs]
+Clk
+=Data_IN[7:0]=
+[Outputs]
+EnableWrite
+=Addr[9:0]=
+=Data_OUT[7:0]=
+[BiDir]

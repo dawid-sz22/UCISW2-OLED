@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : schemat.vhf
--- /___/   /\     Timestamp : 05/13/2024 20:32:36
+-- /___/   /\     Timestamp : 05/14/2024 11:59:41
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf -w C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf -w C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.sch
 --Design Name: schemat
 --Device: spartan3e
 --Purpose:
@@ -111,45 +111,42 @@ end schemat;
 
 architecture BEHAVIORAL of schemat is
    attribute HU_SET     : string ;
-   signal BUSY                        : std_logic;
-   signal const                       : std_logic_vector (7 downto 0);
-   signal DATA                        : std_logic_vector (7 downto 0);
-   signal FIFO_DI                     : std_logic_vector (7 downto 0);
-   signal FIFO_FULL                   : std_logic;
-   signal FIFO_PUSH                   : std_logic;
-   signal GO                          : std_logic;
-   signal Reset                       : std_logic;
-   signal XLXN_13                     : std_logic_vector (9 downto 0);
-   signal XLXN_23                     : std_logic;
-   signal XLXN_25                     : std_logic_vector (7 downto 0);
-   signal XLXN_26                     : std_logic_vector (9 downto 0);
-   signal XLXI_2_WriteByte_openSignal : std_logic;
-   signal XLXI_6_FIFO_Pop_openSignal  : std_logic;
-   signal XLXI_6_ReadCnt_openSignal   : std_logic_vector (3 downto 0);
+   signal BUSY                       : std_logic;
+   signal const                      : std_logic_vector (7 downto 0);
+   signal DATA                       : std_logic_vector (7 downto 0);
+   signal FIFO_DI                    : std_logic_vector (7 downto 0);
+   signal FIFO_FULL                  : std_logic;
+   signal FIFO_PUSH                  : std_logic;
+   signal GO                         : std_logic;
+   signal Reset                      : std_logic;
+   signal XLXN_13                    : std_logic_vector (9 downto 0);
+   signal XLXN_27                    : std_logic_vector (7 downto 0);
+   signal XLXN_28                    : std_logic;
+   signal XLXN_29                    : std_logic_vector (9 downto 0);
+   signal XLXN_30                    : std_logic_vector (7 downto 0);
+   signal XLXI_6_FIFO_Pop_openSignal : std_logic;
+   signal XLXI_6_ReadCnt_openSignal  : std_logic_vector (3 downto 0);
    component Memory
       port ( WriteEnable : in    std_logic; 
              CLK         : in    std_logic; 
              WriteAddr   : in    std_logic_vector (9 downto 0); 
              ReadAddr    : in    std_logic_vector (9 downto 0); 
              DataIN      : in    std_logic_vector (7 downto 0); 
-             Data        : out   std_logic_vector (7 downto 0));
+             Data        : out   std_logic_vector (7 downto 0); 
+             Data2       : out   std_logic_vector (7 downto 0));
    end component;
    
    component OLED_Ctrl
-      port ( Clk             : in    std_logic; 
-             Reset           : in    std_logic; 
-             WriteByte       : in    std_logic; 
-             I2C_FIFO_Full   : in    std_logic; 
-             I2C_Busy        : in    std_logic; 
-             Byte            : in    std_logic_vector (7 downto 0); 
-             Busy            : out   std_logic; 
-             I2C_Go          : out   std_logic; 
-             I2C_FIFO_Push   : out   std_logic; 
-             I2C_FIFO_DI     : out   std_logic_vector (7 downto 0); 
-             WriteAddr       : out   std_logic_vector (9 downto 0); 
-             ReadAddr        : out   std_logic_vector (9 downto 0); 
-             EN_Write_Memory : out   std_logic; 
-             Data_OUT_RAM    : out   std_logic_vector (7 downto 0));
+      port ( Clk           : in    std_logic; 
+             Reset         : in    std_logic; 
+             I2C_FIFO_Full : in    std_logic; 
+             I2C_Busy      : in    std_logic; 
+             Byte          : in    std_logic_vector (7 downto 0); 
+             Busy          : out   std_logic; 
+             I2C_Go        : out   std_logic; 
+             I2C_FIFO_Push : out   std_logic; 
+             I2C_FIFO_DI   : out   std_logic_vector (7 downto 0); 
+             ReadAddr      : out   std_logic_vector (9 downto 0));
    end component;
    
    component IFD_MXILINX_schemat
@@ -177,16 +174,25 @@ architecture BEHAVIORAL of schemat is
              SCL        : inout std_logic);
    end component;
    
+   component GameModule
+      port ( Clk         : in    std_logic; 
+             Data_IN     : in    std_logic_vector (7 downto 0); 
+             EnableWrite : out   std_logic; 
+             Data_OUT    : out   std_logic_vector (7 downto 0); 
+             Addr        : out   std_logic_vector (9 downto 0));
+   end component;
+   
    attribute HU_SET of XLXI_5 : label is "XLXI_5_0";
 begin
    const(7 downto 0) <= x"78";
    XLXI_1 : Memory
       port map (CLK=>Clk_50MHz,
-                DataIN(7 downto 0)=>XLXN_25(7 downto 0),
+                DataIN(7 downto 0)=>XLXN_27(7 downto 0),
                 ReadAddr(9 downto 0)=>XLXN_13(9 downto 0),
-                WriteAddr(9 downto 0)=>XLXN_26(9 downto 0),
-                WriteEnable=>XLXN_23,
-                Data(7 downto 0)=>DATA(7 downto 0));
+                WriteAddr(9 downto 0)=>XLXN_29(9 downto 0),
+                WriteEnable=>XLXN_28,
+                Data(7 downto 0)=>DATA(7 downto 0),
+                Data2(7 downto 0)=>XLXN_30(7 downto 0));
    
    XLXI_2 : OLED_Ctrl
       port map (Byte(7 downto 0)=>DATA(7 downto 0),
@@ -194,15 +200,11 @@ begin
                 I2C_Busy=>BUSY,
                 I2C_FIFO_Full=>FIFO_FULL,
                 Reset=>Reset,
-                WriteByte=>XLXI_2_WriteByte_openSignal,
                 Busy=>LED0,
-                Data_OUT_RAM(7 downto 0)=>XLXN_25(7 downto 0),
-                EN_Write_Memory=>XLXN_23,
                 I2C_FIFO_DI(7 downto 0)=>FIFO_DI(7 downto 0),
                 I2C_FIFO_Push=>FIFO_PUSH,
                 I2C_Go=>GO,
-                ReadAddr(9 downto 0)=>XLXN_13(9 downto 0),
-                WriteAddr(9 downto 0)=>XLXN_26(9 downto 0));
+                ReadAddr(9 downto 0)=>XLXN_13(9 downto 0));
    
    XLXI_5 : IFD_MXILINX_schemat
       port map (C=>Clk_50MHz,
@@ -225,6 +227,13 @@ begin
                 NACK=>LED7,
                 SCL=>SCL,
                 SDA=>SDA);
+   
+   XLXI_7 : GameModule
+      port map (Clk=>Clk_50MHz,
+                Data_IN(7 downto 0)=>XLXN_30(7 downto 0),
+                Addr(9 downto 0)=>XLXN_29(9 downto 0),
+                Data_OUT(7 downto 0)=>XLXN_27(7 downto 0),
+                EnableWrite=>XLXN_28);
    
 end BEHAVIORAL;
 

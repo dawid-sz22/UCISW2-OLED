@@ -6,17 +6,13 @@ entity OLED_Ctrl is
     Port ( Clk : in  STD_LOGIC;
            Reset : in  STD_LOGIC;
            Byte : in  STD_LOGIC_VECTOR(7 downto 0);
-           WriteByte : in  STD_LOGIC;
            Busy : out  STD_LOGIC;
            I2C_Go : out  STD_LOGIC;
            I2C_FIFO_DI : out  STD_LOGIC_VECTOR (7 downto 0);
            I2C_FIFO_Push : out  STD_LOGIC;
            I2C_FIFO_Full : in   STD_LOGIC;
            I2C_Busy : in  STD_LOGIC;
-			  WriteAddr : out STD_LOGIC_VECTOR (9 downto 0);
-			  ReadAddr : out STD_LOGIC_VECTOR (9 downto 0);
-			  EN_Write_Memory : out STD_LOGIC;
-			  Data_OUT_RAM: out STD_LOGIC_VECTOR(7 downto 0));
+			  ReadAddr : out STD_LOGIC_VECTOR (9 downto 0));
 end OLED_Ctrl;
 
 architecture Behavioral of OLED_Ctrl is
@@ -34,11 +30,6 @@ architecture Behavioral of OLED_Ctrl is
          X"AF",            -- set display ON
 			X"B0", X"00", X"10" -- back to 00
          );
-	constant BYTES_RAM : t_byte_array( 0 to 7 ) := (
-		X"11",X"22",X"33",X"44",X"55",X"66",X"77",X"88"
-		);
-	-- Bytes to RAM counter
-	signal cntRAM : unsigned( 2 downto 0 )   := ( others => '0' );	
    -- Push counter:
    signal cntPush : unsigned( 3 downto 0 )   := ( others => '0' );
 
@@ -51,8 +42,6 @@ architecture Behavioral of OLED_Ctrl is
 	
 	-- Licznik adresu pamiêci
 	signal read_address_memory : unsigned(9 downto 0) := ( others=> '0' );
-	signal write_address_memory : unsigned(9 downto 0) := ( others=> '0' );
-	signal write_memory : std_logic := '0';
 begin
 
    -- The FSM - state register
@@ -68,7 +57,7 @@ begin
    end process;
 
    -- The FSM - transition function
-   process( state, cntPush, I2C_Busy, I2C_FIFO_Full, WriteByte )
+   process( state, cntPush, I2C_Busy, I2C_FIFO_Full )
    begin
       next_state <= state;  -- default
 
@@ -141,19 +130,6 @@ begin
       end if;
    end process;
 	
-	--Process to changing write_address
-	process( Clk )
-   begin
-      if rising_edge( Clk ) then
-         if state = sWait2 then
-            write_address_memory <= write_address_memory + 1;
-				-- Writing to memory bytes (repeat after 8 times/see line 37)
-				-- X"11",X"22",X"33",X"44",X"55",X"66",X"77",X"88" X"11",X"22",X"33",X"44",X"55",X"66",X"77",X"88"
-				cntRAM <= cntRAM + 1;	
-         end if;
-      end if;
-   end process;
-
    -- Outputs
    I2C_FIFO_DI <= ROM( to_integer( cntPush ) ) when state = sPush1  else   -- initialization bytes from ROM
                   X"40" when state = sSendBytes2 else           				-- WriteByte: prefix (data byte will follow)
@@ -166,9 +142,5 @@ begin
    Busy <= '0' when state = sWaitWrite  else '1';
 	
 	ReadAddr <= STD_LOGIC_VECTOR(read_address_memory);				-- Give read address to memory
-	WriteAddr <= STD_LOGIC_VECTOR(write_address_memory);			-- Give write address to memory
-	Data_OUT_RAM <= BYTES_RAM(to_integer(cntRAM));					-- Give data to save in RAM
 	
-	EN_Write_Memory <= '1' when state = sWait2 else '0';			-- Write to memory when OLED_CTRL is waiting for FIFO_FULL=0
-
 end Behavioral;

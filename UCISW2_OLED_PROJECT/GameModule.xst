@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/xst"
+elaborate
+-ifn GameModule.prj
+-ifmt mixed

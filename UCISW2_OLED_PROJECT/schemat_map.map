@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Tue Apr 30 12:56:18 2024
+Mapped Date    : Tue May 14 12:54:33 2024
 
 Mapping design into LUTs...
 Running directed packing...
@@ -18,6 +18,710 @@ WARNING:Pack:1186 - One or more I/O components have conflicting property values.
    pad.  Otherwise, the system will use the first property value read.  To view
    each occurrence, create a detailed map report (run map using the -detail
    option).
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_9_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX10_9_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_9_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_9_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_8_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_9_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_9_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX11_9_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_9_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_9_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_8_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_9_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_9_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX12_9_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_9_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_9_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_10_f5_0.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_10_f5_1.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX10_10_f5_1" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_10_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_10_f5_3.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX10_10_f5_3" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_10_f5_4.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_9_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX13_9_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_9_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_9_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_11_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX10_11_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_11_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_11_f5_2.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX10_11_f5_2" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_9_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX14_9_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_9_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_9_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_10_f5_0.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_10_f5_1.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX11_10_f5_1" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_10_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_10_f5_3.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX11_10_f5_3" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_10_f5_4.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_9_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX15_9_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_9_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_9_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_11_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX11_11_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_11_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_11_f5_2.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX11_11_f5_2" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_8_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_9_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_10_f5_0.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_10_f5_1.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX12_10_f5_1" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_8_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_10_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_10_f5_3.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX12_10_f5_3" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_10_f5_4.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_9_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_11_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX12_11_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_8_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_11_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_11_f5_2.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX12_11_f5_2" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_9_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_8_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_9_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_8_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_9_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_8_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_9_f5.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_10_f5_0.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_10_f5_1.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX13_10_f5_1" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_10_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_10_f5_3.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX13_10_f5_3" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_10_f5_4.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_11_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX13_11_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_11_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_11_f5_2.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX13_11_f5_2" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_10_f5_0.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_10_f5_1.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX14_10_f5_1" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_10_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_10_f5_3.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX14_10_f5_3" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_10_f5_4.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_11_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX14_11_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_11_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_11_f5_2.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX14_11_f5_2" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_10_f5_0.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_10_f5_1.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX15_10_f5_1" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_10_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_10_f5_3.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX15_10_f5_3" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_10_f5_4.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_11_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX15_11_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_11_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_11_f5_2.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX15_11_f5_2" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_10_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX8_10_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_11_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX8_11_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_12_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX8_12_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_10_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX9_10_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_11_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX9_11_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_12_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX9_12_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_10_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX10_10_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_11_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX10_11_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX10_12_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX10_12_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_10_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX11_10_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_11_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX11_11_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX11_12_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX11_12_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_10_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX12_10_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_11_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX12_11_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX12_12_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX12_12_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_10_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX13_10_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_11_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX13_11_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX13_12_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX13_12_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_10_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX14_10_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_11_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX14_11_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX14_12_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX14_12_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_10_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX15_10_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_11_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX15_11_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX15_12_f5.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX15_12_f5" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_10_f5_0.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_10_f5_1.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX8_10_f5_1" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_10_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_10_f5_3.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX8_10_f5_3" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_10_f5_4.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_11_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX8_11_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_11_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_11_f5_2.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX8_11_f5_2" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_10_f5_0.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_10_f5_1.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX9_10_f5_1" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_10_f5_2.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_10_f5_3.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX9_10_f5_3" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_10_f5_4.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_11_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX9_11_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_11_f5_1.  The function generator
+   XLXI_1/Mram_RAM1 is unable to be placed in the G position because the output
+   signal doesn't match other symbols' use of the G signal.  The signal
+   inst_LPM_MUX10_10 already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_11_f5_2.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX9_11_f5_2" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_9_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX8_9_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_9_f5_1.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX8_9_f5_2.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_9_f5_0.  The symbols listed below direct the
+   packer to use conflicting component types.
+   	Symbol "inst_LPM_MUX9_9_f5_0" must join a component of type SLICEL.	Symbol
+   "XLXI_1/Mram_RAM1" must join a component of type SLICEM.  The design will
+   exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_9_f5_1.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_1/Mram_RAM1 failed to merge with
+   F5 multiplexer inst_LPM_MUX9_9_f5_2.  The function generator XLXI_1/Mram_RAM1
+   is unable to be placed in the G position because the output signal doesn't
+   match other symbols' use of the G signal.  The signal inst_LPM_MUX10_10
+   already uses G.  The design will exhibit suboptimal timing.
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
@@ -27,19 +731,19 @@ Design Summary
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:  129
 Logic Utilization:
   Number of Slice Flip Flops:            65 out of   9,312    1%
-  Number of 4 input LUTs:               147 out of   9,312    1%
+  Number of 4 input LUTs:               160 out of   9,312    1%
 Logic Distribution:
-  Number of occupied Slices:             90 out of   4,656    1%
-    Number of Slices containing only related logic:      90 out of      90 100%
-    Number of Slices containing unrelated logic:          0 out of      90   0%
+  Number of occupied Slices:            225 out of   4,656    4%
+    Number of Slices containing only related logic:     225 out of     225 100%
+    Number of Slices containing unrelated logic:          0 out of     225   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         163 out of   9,312    1%
-    Number used as logic:               131
-    Number used as a route-thru:         16
-    Number used for Dual Port RAMs:      16
+  Total Number of 4 input LUTs:         432 out of   9,312    4%
+    Number used as logic:               142
+    Number used as a route-thru:        272
+    Number used for Dual Port RAMs:      18
       (Two LUTs used per Dual Port RAM)
 
   The Slice Logic Distribution report is not meaningful if the design is
@@ -47,13 +751,12 @@ Logic Distribution:
 
   Number of bonded IOBs:                  6 out of     232    2%
     IOB Flip Flops:                       1
-  Number of RAMB16s:                      1 out of      20    5%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                3.62
+Average Fanout of Non-Clock Nets:                3.32
 
 Peak Memory Usage:  4405 MB
-Total REAL time to MAP completion:  1 secs 
+Total REAL time to MAP completion:  2 secs 
 Total CPU time to MAP completion:   1 secs 
 
 NOTES:

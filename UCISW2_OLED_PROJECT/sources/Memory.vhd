@@ -34,6 +34,7 @@ entity Memory is
     Port ( WriteAddr : in  STD_LOGIC_VECTOR (9 downto 0);
 			  ReadAddr : in  STD_LOGIC_VECTOR (9 downto 0);
            Data : out  STD_LOGIC_VECTOR (7 downto 0);
+			  Data2 : out  STD_LOGIC_VECTOR (7 downto 0);
 			  DataIN : in STD_LOGIC_VECTOR (7 downto 0);
 			  WriteEnable : in std_logic;
 			  CLK : in std_logic);
@@ -41,17 +42,12 @@ end Memory;
 
 architecture Behavioral of Memory is
 	type rom_type is array (0 to 1023) of std_logic_vector (7 downto 0);                 
-	signal RAM : rom_type:= (X"81",X"42",X"24",X"18",X"18",X"18",X"24",X"42", X"81",
-									X"81",X"42",X"24",X"18",X"18",X"18",X"24",X"42", X"81",
-									X"81",X"42",X"24",X"18",X"18",X"18",X"24",X"42", X"81",
-									X"99",X"99",X"99",X"99",X"99",X"99",X"99",X"99", 
-									X"FF",X"FF",X"FF",X"FF",X"FF",X"FF",X"FF",X"FF",
-									others => X"11");
+	signal RAM : rom_type:= (others => X"00");
 begin
 	
-	process (CLK)
+	process (CLK, WriteEnable)
 	begin
-		if (CLK'event and CLK = '1') then
+		if (rising_edge(CLK)) then
 			if (WriteEnable = '1') then
 				RAM(conv_integer(WriteAddr)) <= DataIN;
 			end if;
@@ -59,6 +55,7 @@ begin
 	end process;
 	
 	Data <= RAM(conv_integer(ReadAddr));
-
+	Data2 <= RAM(conv_integer(WriteAddr));
+	
 end Behavioral;
 

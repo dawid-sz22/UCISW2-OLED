@@ -1,10 +1,7 @@
 ISim log file
-Running: C:\Users\Win7\Desktop\Projekty\UCISW2-OLED\UCISW2_OLED_PROJECT\testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/testbench_isim_beh.wdb 
-ISim P.20131013 (signature 0x8ef4fb42)
-WARNING: A WEBPACK license was found.
-WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
-WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
-This is a Lite version of ISim.
+Running: C:\Users\lab\Downloads\UCISW2-OLED-main\UCISW2_OLED_PROJECT\testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/testbench_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
@@ -14,7 +11,7 @@ at 0 ps, Instance /testbench/UUT/XLXI_1/ : Warning: There is an 'U'|'X'|'W'|'Z'|
 at 0 ps, Instance /testbench/UUT/XLXI_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 Finished circuit initialization process.
 # restart
-# run 5ms
+# run 3ms
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /testbench/UUT/XLXI_1/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 Finished circuit initialization process.
@@ -154,92 +151,3 @@ Finished circuit initialization process.
 [I2C 2951.9501 us] byte received: 55
 [I2C 2974.4501 us] byte received: 66
 [I2C 2996.9501 us] byte received: 77
-[I2C 3019.4501 us] byte received: 88
-[I2C 3041.9501 us] byte received: 11
-[I2C 3064.4501 us] byte received: 22
-[I2C 3086.9501 us] byte received: 33
-[I2C 3109.4501 us] byte received: 44
-[I2C 3131.9501 us] byte received: 55
-[I2C 3154.4501 us] byte received: 66
-[I2C 3176.9501 us] byte received: 77
-[I2C 3199.4501 us] byte received: 88
-[I2C 3221.9501 us] byte received: 11
-[I2C 3244.4501 us] byte received: 22
-[I2C 3266.9501 us] byte received: 33
-[I2C 3289.4501 us] byte received: 44
-[I2C 3311.9501 us] byte received: 55
-[I2C 3334.4501 us] byte received: 66
-[I2C 3356.9501 us] byte received: 77
-[I2C 3379.4501 us] byte received: 88
-[I2C 3401.9501 us] byte received: 11
-[I2C 3424.4501 us] byte received: 22
-[I2C 3446.9501 us] byte received: 33
-[I2C 3469.4501 us] byte received: 44
-[I2C 3491.9501 us] byte received: 55
-[I2C 3514.4501 us] byte received: 66
-[I2C 3536.9501 us] byte received: 77
-[I2C 3559.4501 us] byte received: 88
-[I2C 3581.9501 us] byte received: 11
-[I2C 3604.4501 us] byte received: 22
-[I2C 3626.9501 us] byte received: 33
-[I2C 3649.4501 us] byte received: 44
-[I2C 3671.9501 us] byte received: 55
-[I2C 3694.4501 us] byte received: 66
-[I2C 3716.9501 us] byte received: 77
-[I2C 3739.4501 us] byte received: 88
-[I2C 3761.9501 us] byte received: 11
-[I2C 3784.4501 us] byte received: 22
-[I2C 3806.9501 us] byte received: 33
-[I2C 3829.4501 us] byte received: 44
-[I2C 3851.9501 us] byte received: 55
-[I2C 3874.4501 us] byte received: 66
-[I2C 3896.9501 us] byte received: 77
-[I2C 3919.4501 us] byte received: 88
-[I2C 3941.9501 us] byte received: 11
-[I2C 3964.4501 us] byte received: 22
-[I2C 3986.9501 us] byte received: 33
-[I2C 4009.4501 us] byte received: 44
-[I2C 4031.9501 us] byte received: 55
-[I2C 4054.4501 us] byte received: 66
-[I2C 4076.9501 us] byte received: 77
-[I2C 4099.4501 us] byte received: 88
-[I2C 4121.9501 us] byte received: 11
-[I2C 4144.4501 us] byte received: 22
-[I2C 4166.9501 us] byte received: 33
-[I2C 4189.4501 us] byte received: 44
-[I2C 4211.9501 us] byte received: 55
-[I2C 4234.4501 us] byte received: 66
-[I2C 4256.9501 us] byte received: 77
-[I2C 4279.4501 us] byte received: 88
-[I2C 4301.9501 us] byte received: 11
-[I2C 4324.4501 us] byte received: 22
-[I2C 4346.9501 us] byte received: 33
-[I2C 4369.4501 us] byte received: 44
-[I2C 4391.9501 us] byte received: 55
-[I2C 4414.4501 us] byte received: 66
-[I2C 4436.9501 us] byte received: 77
-[I2C 4459.4501 us] byte received: 88
-[I2C 4481.9501 us] byte received: 11
-[I2C 4504.4501 us] byte received: 22
-[I2C 4526.9501 us] byte received: 33
-[I2C 4549.4501 us] byte received: 44
-[I2C 4571.9501 us] byte received: 55
-[I2C 4594.4501 us] byte received: 66
-[I2C 4616.9501 us] byte received: 77
-[I2C 4639.4501 us] byte received: 88
-[I2C 4661.9501 us] byte received: 11
-[I2C 4684.4501 us] byte received: 22
-[I2C 4706.9501 us] byte received: 33
-[I2C 4729.4501 us] byte received: 44
-[I2C 4751.9501 us] byte received: 55
-[I2C 4774.4501 us] byte received: 66
-[I2C 4796.9501 us] byte received: 77
-[I2C 4819.4501 us] byte received: 88
-[I2C 4841.9501 us] byte received: 11
-[I2C 4864.4501 us] byte received: 22
-[I2C 4886.9501 us] byte received: 33
-[I2C 4909.4501 us] byte received: 44
-[I2C 4931.9501 us] byte received: 55
-[I2C 4954.4501 us] byte received: 66
-[I2C 4976.9501 us] byte received: 77
-[I2C 4999.4501 us] byte received: 88

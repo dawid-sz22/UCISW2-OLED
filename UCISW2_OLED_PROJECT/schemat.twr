@@ -36,358 +36,400 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 Timing constraint: NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 1460 paths analyzed, 381 endpoints analyzed, 0 failing endpoints
+ 4512 paths analyzed, 371 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  10.788ns.
+ Minimum period is  10.734ns.
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F (SLICE_X50Y61.BY), 8 paths
+Paths for end point XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F (SLICE_X34Y67.BY), 199 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     4.606ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_1/Mrom_data_out.A (RAM)
-  Destination:          XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F (RAM)
-  Requirement:          10.000ns
-  Data Path Delay:      5.364ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.030ns (0.009 - 0.039)
-  Source Clock:         Clk_50MHz_BUFGP falling at 10.000ns
-  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: XLXI_1/Mrom_data_out.A to XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    RAMB16_X1Y6.DOA0     Tbcko                 2.812   XLXI_1/Mrom_data_out
-                                                       XLXI_1/Mrom_data_out.A
-    SLICE_X54Y54.F2      net (fanout=1)        0.392   DATA<0>
-    SLICE_X54Y54.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<0>/O
-                                                       XLXI_2/I2C_FIFO_DI<0>
-    SLICE_X50Y61.BY      net (fanout=1)        0.940   XLXI_2/I2C_FIFO_DI<0>/O
-    SLICE_X50Y61.CLK     Tds                   0.461   XLXI_6/NlwRenamedSig_OI_FIFO_DO<0>
-                                                       XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F
-    -------------------------------------------------  ---------------------------
-    Total                                      5.364ns (4.032ns logic, 1.332ns route)
-                                                       (75.2% logic, 24.8% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     14.656ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_2/state_FSM_FFd6 (FF)
-  Destination:          XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F (RAM)
-  Requirement:          20.000ns
-  Data Path Delay:      5.321ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.023ns (0.009 - 0.032)
-  Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
-  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: XLXI_2/state_FSM_FFd6 to XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X55Y54.YQ      Tcko                  0.587   XLXI_2/state_FSM_FFd6
-                                                       XLXI_2/state_FSM_FFd6
-    SLICE_X55Y52.F1      net (fanout=15)       0.805   XLXI_2/state_FSM_FFd6
-    SLICE_X55Y52.X       Tilo                  0.704   XLXI_2/N3
-                                                       XLXI_2/I2C_FIFO_DI<7>41
-    SLICE_X54Y54.G3      net (fanout=3)        0.283   XLXI_2/N3
-    SLICE_X54Y54.Y       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<0>/O
-                                                       XLXI_2/I2C_FIFO_DI<0>_SW0
-    SLICE_X54Y54.F4      net (fanout=1)        0.023   N10
-    SLICE_X54Y54.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<0>/O
-                                                       XLXI_2/I2C_FIFO_DI<0>
-    SLICE_X50Y61.BY      net (fanout=1)        0.940   XLXI_2/I2C_FIFO_DI<0>/O
-    SLICE_X50Y61.CLK     Tds                   0.461   XLXI_6/NlwRenamedSig_OI_FIFO_DO<0>
-                                                       XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F
-    -------------------------------------------------  ---------------------------
-    Total                                      5.321ns (3.270ns logic, 2.051ns route)
-                                                       (61.5% logic, 38.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     14.718ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_2/cntPush_0 (FF)
-  Destination:          XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F (RAM)
-  Requirement:          20.000ns
-  Data Path Delay:      5.257ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.025ns (0.009 - 0.034)
-  Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
-  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: XLXI_2/cntPush_0 to XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X55Y53.XQ      Tcko                  0.591   XLXI_2/cntPush<0>
-                                                       XLXI_2/cntPush_0
-    SLICE_X55Y52.F3      net (fanout=12)       0.737   XLXI_2/cntPush<0>
-    SLICE_X55Y52.X       Tilo                  0.704   XLXI_2/N3
-                                                       XLXI_2/I2C_FIFO_DI<7>41
-    SLICE_X54Y54.G3      net (fanout=3)        0.283   XLXI_2/N3
-    SLICE_X54Y54.Y       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<0>/O
-                                                       XLXI_2/I2C_FIFO_DI<0>_SW0
-    SLICE_X54Y54.F4      net (fanout=1)        0.023   N10
-    SLICE_X54Y54.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<0>/O
-                                                       XLXI_2/I2C_FIFO_DI<0>
-    SLICE_X50Y61.BY      net (fanout=1)        0.940   XLXI_2/I2C_FIFO_DI<0>/O
-    SLICE_X50Y61.CLK     Tds                   0.461   XLXI_6/NlwRenamedSig_OI_FIFO_DO<0>
-                                                       XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F
-    -------------------------------------------------  ---------------------------
-    Total                                      5.257ns (3.274ns logic, 1.983ns route)
-                                                       (62.3% logic, 37.7% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G (SLICE_X50Y61.BY), 8 paths
---------------------------------------------------------------------------------
-Slack (setup path):     4.625ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_1/Mrom_data_out.A (RAM)
-  Destination:          XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G (RAM)
-  Requirement:          10.000ns
-  Data Path Delay:      5.345ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.030ns (0.009 - 0.039)
-  Source Clock:         Clk_50MHz_BUFGP falling at 10.000ns
-  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: XLXI_1/Mrom_data_out.A to XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    RAMB16_X1Y6.DOA0     Tbcko                 2.812   XLXI_1/Mrom_data_out
-                                                       XLXI_1/Mrom_data_out.A
-    SLICE_X54Y54.F2      net (fanout=1)        0.392   DATA<0>
-    SLICE_X54Y54.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<0>/O
-                                                       XLXI_2/I2C_FIFO_DI<0>
-    SLICE_X50Y61.BY      net (fanout=1)        0.940   XLXI_2/I2C_FIFO_DI<0>/O
-    SLICE_X50Y61.CLK     Tds                   0.442   XLXI_6/NlwRenamedSig_OI_FIFO_DO<0>
-                                                       XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G
-    -------------------------------------------------  ---------------------------
-    Total                                      5.345ns (4.013ns logic, 1.332ns route)
-                                                       (75.1% logic, 24.9% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     14.675ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_2/state_FSM_FFd6 (FF)
-  Destination:          XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G (RAM)
-  Requirement:          20.000ns
-  Data Path Delay:      5.302ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.023ns (0.009 - 0.032)
-  Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
-  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: XLXI_2/state_FSM_FFd6 to XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X55Y54.YQ      Tcko                  0.587   XLXI_2/state_FSM_FFd6
-                                                       XLXI_2/state_FSM_FFd6
-    SLICE_X55Y52.F1      net (fanout=15)       0.805   XLXI_2/state_FSM_FFd6
-    SLICE_X55Y52.X       Tilo                  0.704   XLXI_2/N3
-                                                       XLXI_2/I2C_FIFO_DI<7>41
-    SLICE_X54Y54.G3      net (fanout=3)        0.283   XLXI_2/N3
-    SLICE_X54Y54.Y       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<0>/O
-                                                       XLXI_2/I2C_FIFO_DI<0>_SW0
-    SLICE_X54Y54.F4      net (fanout=1)        0.023   N10
-    SLICE_X54Y54.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<0>/O
-                                                       XLXI_2/I2C_FIFO_DI<0>
-    SLICE_X50Y61.BY      net (fanout=1)        0.940   XLXI_2/I2C_FIFO_DI<0>/O
-    SLICE_X50Y61.CLK     Tds                   0.442   XLXI_6/NlwRenamedSig_OI_FIFO_DO<0>
-                                                       XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G
-    -------------------------------------------------  ---------------------------
-    Total                                      5.302ns (3.251ns logic, 2.051ns route)
-                                                       (61.3% logic, 38.7% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     14.737ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_2/cntPush_0 (FF)
-  Destination:          XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G (RAM)
-  Requirement:          20.000ns
-  Data Path Delay:      5.238ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.025ns (0.009 - 0.034)
-  Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
-  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: XLXI_2/cntPush_0 to XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X55Y53.XQ      Tcko                  0.591   XLXI_2/cntPush<0>
-                                                       XLXI_2/cntPush_0
-    SLICE_X55Y52.F3      net (fanout=12)       0.737   XLXI_2/cntPush<0>
-    SLICE_X55Y52.X       Tilo                  0.704   XLXI_2/N3
-                                                       XLXI_2/I2C_FIFO_DI<7>41
-    SLICE_X54Y54.G3      net (fanout=3)        0.283   XLXI_2/N3
-    SLICE_X54Y54.Y       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<0>/O
-                                                       XLXI_2/I2C_FIFO_DI<0>_SW0
-    SLICE_X54Y54.F4      net (fanout=1)        0.023   N10
-    SLICE_X54Y54.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<0>/O
-                                                       XLXI_2/I2C_FIFO_DI<0>
-    SLICE_X50Y61.BY      net (fanout=1)        0.940   XLXI_2/I2C_FIFO_DI<0>/O
-    SLICE_X50Y61.CLK     Tds                   0.442   XLXI_6/NlwRenamedSig_OI_FIFO_DO<0>
-                                                       XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G
-    -------------------------------------------------  ---------------------------
-    Total                                      5.238ns (3.255ns logic, 1.983ns route)
-                                                       (62.1% logic, 37.9% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F (SLICE_X50Y54.BY), 7 paths
---------------------------------------------------------------------------------
-Slack (setup path):     4.631ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_1/Mrom_data_out.A (RAM)
-  Destination:          XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F (RAM)
-  Requirement:          10.000ns
-  Data Path Delay:      5.348ns (Levels of Logic = 2)
-  Clock Path Skew:      -0.021ns (0.018 - 0.039)
-  Source Clock:         Clk_50MHz_BUFGP falling at 10.000ns
-  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: XLXI_1/Mrom_data_out.A to XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    RAMB16_X1Y6.DOA4     Tbcko                 2.812   XLXI_1/Mrom_data_out
-                                                       XLXI_1/Mrom_data_out.A
-    SLICE_X52Y54.F3      net (fanout=1)        0.875   DATA<4>
-    SLICE_X52Y54.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>/O
-                                                       XLXI_2/I2C_FIFO_DI<4>
-    SLICE_X50Y54.BY      net (fanout=1)        0.441   XLXI_2/I2C_FIFO_DI<4>/O
-    SLICE_X50Y54.CLK     Tds                   0.461   XLXI_6/NlwRenamedSig_OI_FIFO_DO<4>
-                                                       XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F
-    -------------------------------------------------  ---------------------------
-    Total                                      5.348ns (4.032ns logic, 1.316ns route)
-                                                       (75.4% logic, 24.6% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     15.263ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_2/cntPush_2 (FF)
+Slack (setup path):     9.266ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/Mram_RAM1.SLICEM_F (RAM)
   Destination:          XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F (RAM)
   Requirement:          20.000ns
-  Data Path Delay:      4.721ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.018 - 0.034)
+  Data Path Delay:      10.726ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.008ns (0.043 - 0.051)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_2/cntPush_2 to XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F
+  Maximum Data Path: XLXI_1/Mram_RAM1.SLICEM_F to XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X54Y52.YQ      Tcko                  0.652   XLXI_2/cntPush<3>
-                                                       XLXI_2/cntPush_2
-    SLICE_X52Y54.G3      net (fanout=11)       1.300   XLXI_2/cntPush<2>
-    SLICE_X52Y54.Y       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>/O
-                                                       XLXI_2/I2C_FIFO_DI<4>_SW0
-    SLICE_X52Y54.F2      net (fanout=1)        0.349   N14
-    SLICE_X52Y54.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>/O
-                                                       XLXI_2/I2C_FIFO_DI<4>
-    SLICE_X50Y54.BY      net (fanout=1)        0.441   XLXI_2/I2C_FIFO_DI<4>/O
-    SLICE_X50Y54.CLK     Tds                   0.461   XLXI_6/NlwRenamedSig_OI_FIFO_DO<4>
+    SLICE_X36Y52.X       Tshcko                1.956   inst_LPM_MUX10_10
+                                                       XLXI_1/Mram_RAM1.WE
+                                                       XLXI_1/Mram_RAM1.SLICEM_F
+    SLICE_X37Y45.F2      net (fanout=256)      2.408   inst_LPM_MUX10_10
+    SLICE_X37Y45.F5      Tif5                  0.875   inst_LPM_MUX12_10_f5
+                                                       inst_LPM_MUX10_10_rt.55
+                                                       inst_LPM_MUX12_10_f5
+    SLICE_X37Y44.FXINB   net (fanout=1)        0.000   inst_LPM_MUX12_10_f5
+    SLICE_X37Y44.FX      Tinbfx                0.463   inst_LPM_MUX12_9_f51
+                                                       inst_LPM_MUX12_8_f6
+    SLICE_X36Y45.FXINB   net (fanout=1)        0.000   inst_LPM_MUX12_8_f6
+    SLICE_X36Y45.Y       Tif6y                 0.409   inst_LPM_MUX12_6_f7
+                                                       inst_LPM_MUX12_6_f7
+    SLICE_X36Y47.F1      net (fanout=1)        0.409   inst_LPM_MUX12_6_f7
+    SLICE_X36Y47.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>3
+                                                       XLXI_2/I2C_FIFO_DI<4>3
+    SLICE_X36Y53.F1      net (fanout=1)        0.658   XLXI_2/I2C_FIFO_DI<4>3
+    SLICE_X36Y53.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>48/O
+                                                       XLXI_2/I2C_FIFO_DI<4>48
+    SLICE_X34Y67.BY      net (fanout=1)        1.569   XLXI_2/I2C_FIFO_DI<4>48/O
+    SLICE_X34Y67.CLK     Tds                   0.461   XLXI_6/NlwRenamedSig_OI_FIFO_DO<4>
                                                        XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F
     -------------------------------------------------  ---------------------------
-    Total                                      4.721ns (2.631ns logic, 2.090ns route)
-                                                       (55.7% logic, 44.3% route)
+    Total                                     10.726ns (5.682ns logic, 5.044ns route)
+                                                       (53.0% logic, 47.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     15.308ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_2/cntPush_3 (FF)
+Slack (setup path):     9.266ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/Mram_RAM1.SLICEM_F (RAM)
   Destination:          XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F (RAM)
   Requirement:          20.000ns
-  Data Path Delay:      4.676ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.016ns (0.018 - 0.034)
+  Data Path Delay:      10.726ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.008ns (0.043 - 0.051)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_2/cntPush_3 to XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F
+  Maximum Data Path: XLXI_1/Mram_RAM1.SLICEM_F to XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X54Y52.XQ      Tcko                  0.592   XLXI_2/cntPush<3>
-                                                       XLXI_2/cntPush_3
-    SLICE_X52Y54.G1      net (fanout=9)        1.315   XLXI_2/cntPush<3>
-    SLICE_X52Y54.Y       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>/O
-                                                       XLXI_2/I2C_FIFO_DI<4>_SW0
-    SLICE_X52Y54.F2      net (fanout=1)        0.349   N14
-    SLICE_X52Y54.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>/O
-                                                       XLXI_2/I2C_FIFO_DI<4>
-    SLICE_X50Y54.BY      net (fanout=1)        0.441   XLXI_2/I2C_FIFO_DI<4>/O
-    SLICE_X50Y54.CLK     Tds                   0.461   XLXI_6/NlwRenamedSig_OI_FIFO_DO<4>
+    SLICE_X36Y52.X       Tshcko                1.956   inst_LPM_MUX10_10
+                                                       XLXI_1/Mram_RAM1.WE
+                                                       XLXI_1/Mram_RAM1.SLICEM_F
+    SLICE_X37Y44.F2      net (fanout=256)      2.408   inst_LPM_MUX10_10
+    SLICE_X37Y44.F5      Tif5                  0.875   inst_LPM_MUX12_9_f51
+                                                       inst_LPM_MUX10_10_rt.54
+                                                       inst_LPM_MUX12_9_f5_0
+    SLICE_X37Y44.FXINA   net (fanout=1)        0.000   inst_LPM_MUX12_9_f51
+    SLICE_X37Y44.FX      Tinafx                0.463   inst_LPM_MUX12_9_f51
+                                                       inst_LPM_MUX12_8_f6
+    SLICE_X36Y45.FXINB   net (fanout=1)        0.000   inst_LPM_MUX12_8_f6
+    SLICE_X36Y45.Y       Tif6y                 0.409   inst_LPM_MUX12_6_f7
+                                                       inst_LPM_MUX12_6_f7
+    SLICE_X36Y47.F1      net (fanout=1)        0.409   inst_LPM_MUX12_6_f7
+    SLICE_X36Y47.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>3
+                                                       XLXI_2/I2C_FIFO_DI<4>3
+    SLICE_X36Y53.F1      net (fanout=1)        0.658   XLXI_2/I2C_FIFO_DI<4>3
+    SLICE_X36Y53.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>48/O
+                                                       XLXI_2/I2C_FIFO_DI<4>48
+    SLICE_X34Y67.BY      net (fanout=1)        1.569   XLXI_2/I2C_FIFO_DI<4>48/O
+    SLICE_X34Y67.CLK     Tds                   0.461   XLXI_6/NlwRenamedSig_OI_FIFO_DO<4>
                                                        XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F
     -------------------------------------------------  ---------------------------
-    Total                                      4.676ns (2.571ns logic, 2.105ns route)
-                                                       (55.0% logic, 45.0% route)
+    Total                                     10.726ns (5.682ns logic, 5.044ns route)
+                                                       (53.0% logic, 47.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.285ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/Mram_RAM1.SLICEM_F (RAM)
+  Destination:          XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      10.707ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.008ns (0.043 - 0.051)
+  Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_1/Mram_RAM1.SLICEM_F to XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y52.X       Tshcko                1.956   inst_LPM_MUX10_10
+                                                       XLXI_1/Mram_RAM1.WE
+                                                       XLXI_1/Mram_RAM1.SLICEM_F
+    SLICE_X36Y44.G3      net (fanout=256)      2.330   inst_LPM_MUX10_10
+    SLICE_X36Y44.F5      Tif5                  1.033   inst_LPM_MUX12_8_f5
+                                                       inst_LPM_MUX10_10_rt_pack_1.49
+                                                       inst_LPM_MUX12_8_f5
+    SLICE_X36Y44.FXINA   net (fanout=1)        0.000   inst_LPM_MUX12_8_f5
+    SLICE_X36Y44.FX      Tinafx                0.364   inst_LPM_MUX12_8_f5
+                                                       inst_LPM_MUX12_7_f6
+    SLICE_X36Y45.FXINA   net (fanout=1)        0.000   inst_LPM_MUX12_7_f6
+    SLICE_X36Y45.Y       Tif6y                 0.409   inst_LPM_MUX12_6_f7
+                                                       inst_LPM_MUX12_6_f7
+    SLICE_X36Y47.F1      net (fanout=1)        0.409   inst_LPM_MUX12_6_f7
+    SLICE_X36Y47.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>3
+                                                       XLXI_2/I2C_FIFO_DI<4>3
+    SLICE_X36Y53.F1      net (fanout=1)        0.658   XLXI_2/I2C_FIFO_DI<4>3
+    SLICE_X36Y53.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>48/O
+                                                       XLXI_2/I2C_FIFO_DI<4>48
+    SLICE_X34Y67.BY      net (fanout=1)        1.569   XLXI_2/I2C_FIFO_DI<4>48/O
+    SLICE_X34Y67.CLK     Tds                   0.461   XLXI_6/NlwRenamedSig_OI_FIFO_DO<4>
+                                                       XLXI_6/i_FIFO_Mram_RAM5.SLICEM_F
+    -------------------------------------------------  ---------------------------
+    Total                                     10.707ns (5.741ns logic, 4.966ns route)
+                                                       (53.6% logic, 46.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_6/i_FIFO_Mram_RAM5.SLICEM_G (SLICE_X34Y67.BY), 199 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.285ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/Mram_RAM1.SLICEM_F (RAM)
+  Destination:          XLXI_6/i_FIFO_Mram_RAM5.SLICEM_G (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      10.707ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.008ns (0.043 - 0.051)
+  Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_1/Mram_RAM1.SLICEM_F to XLXI_6/i_FIFO_Mram_RAM5.SLICEM_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y52.X       Tshcko                1.956   inst_LPM_MUX10_10
+                                                       XLXI_1/Mram_RAM1.WE
+                                                       XLXI_1/Mram_RAM1.SLICEM_F
+    SLICE_X37Y45.F2      net (fanout=256)      2.408   inst_LPM_MUX10_10
+    SLICE_X37Y45.F5      Tif5                  0.875   inst_LPM_MUX12_10_f5
+                                                       inst_LPM_MUX10_10_rt.55
+                                                       inst_LPM_MUX12_10_f5
+    SLICE_X37Y44.FXINB   net (fanout=1)        0.000   inst_LPM_MUX12_10_f5
+    SLICE_X37Y44.FX      Tinbfx                0.463   inst_LPM_MUX12_9_f51
+                                                       inst_LPM_MUX12_8_f6
+    SLICE_X36Y45.FXINB   net (fanout=1)        0.000   inst_LPM_MUX12_8_f6
+    SLICE_X36Y45.Y       Tif6y                 0.409   inst_LPM_MUX12_6_f7
+                                                       inst_LPM_MUX12_6_f7
+    SLICE_X36Y47.F1      net (fanout=1)        0.409   inst_LPM_MUX12_6_f7
+    SLICE_X36Y47.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>3
+                                                       XLXI_2/I2C_FIFO_DI<4>3
+    SLICE_X36Y53.F1      net (fanout=1)        0.658   XLXI_2/I2C_FIFO_DI<4>3
+    SLICE_X36Y53.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>48/O
+                                                       XLXI_2/I2C_FIFO_DI<4>48
+    SLICE_X34Y67.BY      net (fanout=1)        1.569   XLXI_2/I2C_FIFO_DI<4>48/O
+    SLICE_X34Y67.CLK     Tds                   0.442   XLXI_6/NlwRenamedSig_OI_FIFO_DO<4>
+                                                       XLXI_6/i_FIFO_Mram_RAM5.SLICEM_G
+    -------------------------------------------------  ---------------------------
+    Total                                     10.707ns (5.663ns logic, 5.044ns route)
+                                                       (52.9% logic, 47.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.285ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/Mram_RAM1.SLICEM_F (RAM)
+  Destination:          XLXI_6/i_FIFO_Mram_RAM5.SLICEM_G (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      10.707ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.008ns (0.043 - 0.051)
+  Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_1/Mram_RAM1.SLICEM_F to XLXI_6/i_FIFO_Mram_RAM5.SLICEM_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y52.X       Tshcko                1.956   inst_LPM_MUX10_10
+                                                       XLXI_1/Mram_RAM1.WE
+                                                       XLXI_1/Mram_RAM1.SLICEM_F
+    SLICE_X37Y44.F2      net (fanout=256)      2.408   inst_LPM_MUX10_10
+    SLICE_X37Y44.F5      Tif5                  0.875   inst_LPM_MUX12_9_f51
+                                                       inst_LPM_MUX10_10_rt.54
+                                                       inst_LPM_MUX12_9_f5_0
+    SLICE_X37Y44.FXINA   net (fanout=1)        0.000   inst_LPM_MUX12_9_f51
+    SLICE_X37Y44.FX      Tinafx                0.463   inst_LPM_MUX12_9_f51
+                                                       inst_LPM_MUX12_8_f6
+    SLICE_X36Y45.FXINB   net (fanout=1)        0.000   inst_LPM_MUX12_8_f6
+    SLICE_X36Y45.Y       Tif6y                 0.409   inst_LPM_MUX12_6_f7
+                                                       inst_LPM_MUX12_6_f7
+    SLICE_X36Y47.F1      net (fanout=1)        0.409   inst_LPM_MUX12_6_f7
+    SLICE_X36Y47.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>3
+                                                       XLXI_2/I2C_FIFO_DI<4>3
+    SLICE_X36Y53.F1      net (fanout=1)        0.658   XLXI_2/I2C_FIFO_DI<4>3
+    SLICE_X36Y53.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>48/O
+                                                       XLXI_2/I2C_FIFO_DI<4>48
+    SLICE_X34Y67.BY      net (fanout=1)        1.569   XLXI_2/I2C_FIFO_DI<4>48/O
+    SLICE_X34Y67.CLK     Tds                   0.442   XLXI_6/NlwRenamedSig_OI_FIFO_DO<4>
+                                                       XLXI_6/i_FIFO_Mram_RAM5.SLICEM_G
+    -------------------------------------------------  ---------------------------
+    Total                                     10.707ns (5.663ns logic, 5.044ns route)
+                                                       (52.9% logic, 47.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.304ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/Mram_RAM1.SLICEM_F (RAM)
+  Destination:          XLXI_6/i_FIFO_Mram_RAM5.SLICEM_G (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      10.688ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.008ns (0.043 - 0.051)
+  Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_1/Mram_RAM1.SLICEM_F to XLXI_6/i_FIFO_Mram_RAM5.SLICEM_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y52.X       Tshcko                1.956   inst_LPM_MUX10_10
+                                                       XLXI_1/Mram_RAM1.WE
+                                                       XLXI_1/Mram_RAM1.SLICEM_F
+    SLICE_X36Y44.G3      net (fanout=256)      2.330   inst_LPM_MUX10_10
+    SLICE_X36Y44.F5      Tif5                  1.033   inst_LPM_MUX12_8_f5
+                                                       inst_LPM_MUX10_10_rt_pack_1.49
+                                                       inst_LPM_MUX12_8_f5
+    SLICE_X36Y44.FXINA   net (fanout=1)        0.000   inst_LPM_MUX12_8_f5
+    SLICE_X36Y44.FX      Tinafx                0.364   inst_LPM_MUX12_8_f5
+                                                       inst_LPM_MUX12_7_f6
+    SLICE_X36Y45.FXINA   net (fanout=1)        0.000   inst_LPM_MUX12_7_f6
+    SLICE_X36Y45.Y       Tif6y                 0.409   inst_LPM_MUX12_6_f7
+                                                       inst_LPM_MUX12_6_f7
+    SLICE_X36Y47.F1      net (fanout=1)        0.409   inst_LPM_MUX12_6_f7
+    SLICE_X36Y47.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>3
+                                                       XLXI_2/I2C_FIFO_DI<4>3
+    SLICE_X36Y53.F1      net (fanout=1)        0.658   XLXI_2/I2C_FIFO_DI<4>3
+    SLICE_X36Y53.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>48/O
+                                                       XLXI_2/I2C_FIFO_DI<4>48
+    SLICE_X34Y67.BY      net (fanout=1)        1.569   XLXI_2/I2C_FIFO_DI<4>48/O
+    SLICE_X34Y67.CLK     Tds                   0.442   XLXI_6/NlwRenamedSig_OI_FIFO_DO<4>
+                                                       XLXI_6/i_FIFO_Mram_RAM5.SLICEM_G
+    -------------------------------------------------  ---------------------------
+    Total                                     10.688ns (5.722ns logic, 4.966ns route)
+                                                       (53.5% logic, 46.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_6/i_FIFO_Mram_RAM2.SLICEM_F (SLICE_X34Y66.BY), 199 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     9.893ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/Mram_RAM1.SLICEM_F (RAM)
+  Destination:          XLXI_6/i_FIFO_Mram_RAM2.SLICEM_F (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      10.099ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.008ns (0.043 - 0.051)
+  Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_1/Mram_RAM1.SLICEM_F to XLXI_6/i_FIFO_Mram_RAM2.SLICEM_F
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y52.X       Tshcko                1.956   inst_LPM_MUX10_10
+                                                       XLXI_1/Mram_RAM1.WE
+                                                       XLXI_1/Mram_RAM1.SLICEM_F
+    SLICE_X38Y45.G1      net (fanout=256)      1.985   inst_LPM_MUX10_10
+    SLICE_X38Y45.F5      Tif5                  1.033   inst_LPM_MUX9_7_f7
+                                                       inst_LPM_MUX10_10_rt_pack_1.37
+                                                       inst_LPM_MUX9_10_f5_0
+    SLICE_X38Y44.FXINB   net (fanout=1)        0.000   inst_LPM_MUX9_10_f51
+    SLICE_X38Y44.FX      Tinbfx                0.364   inst_LPM_MUX9_9_f52
+                                                       inst_LPM_MUX9_8_f6_0
+    SLICE_X38Y45.FXINA   net (fanout=1)        0.000   inst_LPM_MUX9_8_f61
+    SLICE_X38Y45.Y       Tif6y                 0.409   inst_LPM_MUX9_7_f7
+                                                       inst_LPM_MUX9_7_f7
+    SLICE_X36Y47.G4      net (fanout=1)        0.410   inst_LPM_MUX9_7_f7
+    SLICE_X36Y47.Y       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>3
+                                                       XLXI_2/I2C_FIFO_DI<1>3
+    SLICE_X36Y51.F1      net (fanout=1)        0.371   XLXI_2/I2C_FIFO_DI<1>3
+    SLICE_X36Y51.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<1>32/O
+                                                       XLXI_2/I2C_FIFO_DI<1>32
+    SLICE_X34Y66.BY      net (fanout=1)        1.592   XLXI_2/I2C_FIFO_DI<1>32/O
+    SLICE_X34Y66.CLK     Tds                   0.461   XLXI_6/NlwRenamedSig_OI_FIFO_DO<1>
+                                                       XLXI_6/i_FIFO_Mram_RAM2.SLICEM_F
+    -------------------------------------------------  ---------------------------
+    Total                                     10.099ns (5.741ns logic, 4.358ns route)
+                                                       (56.8% logic, 43.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.893ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/Mram_RAM1.SLICEM_F (RAM)
+  Destination:          XLXI_6/i_FIFO_Mram_RAM2.SLICEM_F (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      10.099ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.008ns (0.043 - 0.051)
+  Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_1/Mram_RAM1.SLICEM_F to XLXI_6/i_FIFO_Mram_RAM2.SLICEM_F
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y52.X       Tshcko                1.956   inst_LPM_MUX10_10
+                                                       XLXI_1/Mram_RAM1.WE
+                                                       XLXI_1/Mram_RAM1.SLICEM_F
+    SLICE_X38Y44.G1      net (fanout=256)      1.985   inst_LPM_MUX10_10
+    SLICE_X38Y44.F5      Tif5                  1.033   inst_LPM_MUX9_9_f52
+                                                       inst_LPM_MUX10_10_rt_pack_1.36
+                                                       inst_LPM_MUX9_9_f5_1
+    SLICE_X38Y44.FXINA   net (fanout=1)        0.000   inst_LPM_MUX9_9_f52
+    SLICE_X38Y44.FX      Tinafx                0.364   inst_LPM_MUX9_9_f52
+                                                       inst_LPM_MUX9_8_f6_0
+    SLICE_X38Y45.FXINA   net (fanout=1)        0.000   inst_LPM_MUX9_8_f61
+    SLICE_X38Y45.Y       Tif6y                 0.409   inst_LPM_MUX9_7_f7
+                                                       inst_LPM_MUX9_7_f7
+    SLICE_X36Y47.G4      net (fanout=1)        0.410   inst_LPM_MUX9_7_f7
+    SLICE_X36Y47.Y       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>3
+                                                       XLXI_2/I2C_FIFO_DI<1>3
+    SLICE_X36Y51.F1      net (fanout=1)        0.371   XLXI_2/I2C_FIFO_DI<1>3
+    SLICE_X36Y51.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<1>32/O
+                                                       XLXI_2/I2C_FIFO_DI<1>32
+    SLICE_X34Y66.BY      net (fanout=1)        1.592   XLXI_2/I2C_FIFO_DI<1>32/O
+    SLICE_X34Y66.CLK     Tds                   0.461   XLXI_6/NlwRenamedSig_OI_FIFO_DO<1>
+                                                       XLXI_6/i_FIFO_Mram_RAM2.SLICEM_F
+    -------------------------------------------------  ---------------------------
+    Total                                     10.099ns (5.741ns logic, 4.358ns route)
+                                                       (56.8% logic, 43.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.898ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_1/Mram_RAM1.SLICEM_F (RAM)
+  Destination:          XLXI_6/i_FIFO_Mram_RAM2.SLICEM_F (RAM)
+  Requirement:          20.000ns
+  Data Path Delay:      10.094ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.008ns (0.043 - 0.051)
+  Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: XLXI_1/Mram_RAM1.SLICEM_F to XLXI_6/i_FIFO_Mram_RAM2.SLICEM_F
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X36Y52.X       Tshcko                1.956   inst_LPM_MUX10_10
+                                                       XLXI_1/Mram_RAM1.WE
+                                                       XLXI_1/Mram_RAM1.SLICEM_F
+    SLICE_X38Y44.F1      net (fanout=256)      1.980   inst_LPM_MUX10_10
+    SLICE_X38Y44.F5      Tif5                  1.033   inst_LPM_MUX9_9_f52
+                                                       inst_LPM_MUX10_10_rt.36
+                                                       inst_LPM_MUX9_9_f5_1
+    SLICE_X38Y44.FXINA   net (fanout=1)        0.000   inst_LPM_MUX9_9_f52
+    SLICE_X38Y44.FX      Tinafx                0.364   inst_LPM_MUX9_9_f52
+                                                       inst_LPM_MUX9_8_f6_0
+    SLICE_X38Y45.FXINA   net (fanout=1)        0.000   inst_LPM_MUX9_8_f61
+    SLICE_X38Y45.Y       Tif6y                 0.409   inst_LPM_MUX9_7_f7
+                                                       inst_LPM_MUX9_7_f7
+    SLICE_X36Y47.G4      net (fanout=1)        0.410   inst_LPM_MUX9_7_f7
+    SLICE_X36Y47.Y       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<4>3
+                                                       XLXI_2/I2C_FIFO_DI<1>3
+    SLICE_X36Y51.F1      net (fanout=1)        0.371   XLXI_2/I2C_FIFO_DI<1>3
+    SLICE_X36Y51.X       Tilo                  0.759   XLXI_2/I2C_FIFO_DI<1>32/O
+                                                       XLXI_2/I2C_FIFO_DI<1>32
+    SLICE_X34Y66.BY      net (fanout=1)        1.592   XLXI_2/I2C_FIFO_DI<1>32/O
+    SLICE_X34Y66.CLK     Tds                   0.461   XLXI_6/NlwRenamedSig_OI_FIFO_DO<1>
+                                                       XLXI_6/i_FIFO_Mram_RAM2.SLICEM_F
+    -------------------------------------------------  ---------------------------
+    Total                                     10.094ns (5.741ns logic, 4.353ns route)
+                                                       (56.9% logic, 43.1% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F (SLICE_X50Y61.G4), 1 path
+Paths for end point XLXI_6/i_FIFO_Mram_RAM6.SLICEM_F (SLICE_X36Y69.G4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.938ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               XLXI_6/i_FIFO_addrWr_3 (FF)
-  Destination:          XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F (RAM)
-  Requirement:          0.000ns
-  Data Path Delay:      0.935ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.003ns (0.002 - 0.005)
-  Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
-  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: XLXI_6/i_FIFO_addrWr_3 to XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X51Y58.XQ      Tcko                  0.473   XLXI_6/i_FIFO_addrWr<3>
-                                                       XLXI_6/i_FIFO_addrWr_3
-    SLICE_X50Y61.G4      net (fanout=10)       0.461   XLXI_6/i_FIFO_addrWr<3>
-    SLICE_X50Y61.CLK     Tah         (-Th)    -0.001   XLXI_6/NlwRenamedSig_OI_FIFO_DO<0>
-                                                       XLXI_6/i_FIFO_Mram_RAM1.SLICEM_F
-    -------------------------------------------------  ---------------------------
-    Total                                      0.935ns (0.474ns logic, 0.461ns route)
-                                                       (50.7% logic, 49.3% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G (SLICE_X50Y61.G4), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.938ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               XLXI_6/i_FIFO_addrWr_3 (FF)
-  Destination:          XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G (RAM)
-  Requirement:          0.000ns
-  Data Path Delay:      0.935ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.003ns (0.002 - 0.005)
-  Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
-  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: XLXI_6/i_FIFO_addrWr_3 to XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X51Y58.XQ      Tcko                  0.473   XLXI_6/i_FIFO_addrWr<3>
-                                                       XLXI_6/i_FIFO_addrWr_3
-    SLICE_X50Y61.G4      net (fanout=10)       0.461   XLXI_6/i_FIFO_addrWr<3>
-    SLICE_X50Y61.CLK     Tah         (-Th)    -0.001   XLXI_6/NlwRenamedSig_OI_FIFO_DO<0>
-                                                       XLXI_6/i_FIFO_Mram_RAM1.SLICEM_G
-    -------------------------------------------------  ---------------------------
-    Total                                      0.935ns (0.474ns logic, 0.461ns route)
-                                                       (50.7% logic, 49.3% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point XLXI_6/i_FIFO_Mram_RAM6.SLICEM_F (SLICE_X50Y60.G4), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.938ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.939ns (requirement - (clock path skew + uncertainty - data path))
   Source:               XLXI_6/i_FIFO_addrWr_3 (FF)
   Destination:          XLXI_6/i_FIFO_Mram_RAM6.SLICEM_F (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.935ns (Levels of Logic = 1)
-  Clock Path Skew:      -0.003ns (0.002 - 0.005)
+  Data Path Delay:      0.941ns (Levels of Logic = 1)
+  Clock Path Skew:      0.002ns (0.041 - 0.039)
   Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
@@ -396,43 +438,97 @@ Slack (hold path):      0.938ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X51Y58.XQ      Tcko                  0.473   XLXI_6/i_FIFO_addrWr<3>
+    SLICE_X39Y68.XQ      Tcko                  0.473   XLXI_6/i_FIFO_addrWr<3>
                                                        XLXI_6/i_FIFO_addrWr_3
-    SLICE_X50Y60.G4      net (fanout=10)       0.461   XLXI_6/i_FIFO_addrWr<3>
-    SLICE_X50Y60.CLK     Tah         (-Th)    -0.001   XLXI_6/NlwRenamedSig_OI_FIFO_DO<5>
+    SLICE_X36Y69.G4      net (fanout=10)       0.467   XLXI_6/i_FIFO_addrWr<3>
+    SLICE_X36Y69.CLK     Tah         (-Th)    -0.001   XLXI_6/NlwRenamedSig_OI_FIFO_DO<5>
                                                        XLXI_6/i_FIFO_Mram_RAM6.SLICEM_F
     -------------------------------------------------  ---------------------------
-    Total                                      0.935ns (0.474ns logic, 0.461ns route)
-                                                       (50.7% logic, 49.3% route)
+    Total                                      0.941ns (0.474ns logic, 0.467ns route)
+                                                       (50.4% logic, 49.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_6/i_FIFO_Mram_RAM6.SLICEM_G (SLICE_X36Y69.G4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.939ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_6/i_FIFO_addrWr_3 (FF)
+  Destination:          XLXI_6/i_FIFO_Mram_RAM6.SLICEM_G (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.941ns (Levels of Logic = 1)
+  Clock Path Skew:      0.002ns (0.041 - 0.039)
+  Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
+  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: XLXI_6/i_FIFO_addrWr_3 to XLXI_6/i_FIFO_Mram_RAM6.SLICEM_G
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y68.XQ      Tcko                  0.473   XLXI_6/i_FIFO_addrWr<3>
+                                                       XLXI_6/i_FIFO_addrWr_3
+    SLICE_X36Y69.G4      net (fanout=10)       0.467   XLXI_6/i_FIFO_addrWr<3>
+    SLICE_X36Y69.CLK     Tah         (-Th)    -0.001   XLXI_6/NlwRenamedSig_OI_FIFO_DO<5>
+                                                       XLXI_6/i_FIFO_Mram_RAM6.SLICEM_G
+    -------------------------------------------------  ---------------------------
+    Total                                      0.941ns (0.474ns logic, 0.467ns route)
+                                                       (50.4% logic, 49.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_6/i_FIFO_Mram_RAM7.SLICEM_F (SLICE_X36Y68.G4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.939ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_6/i_FIFO_addrWr_3 (FF)
+  Destination:          XLXI_6/i_FIFO_Mram_RAM7.SLICEM_F (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.941ns (Levels of Logic = 1)
+  Clock Path Skew:      0.002ns (0.041 - 0.039)
+  Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
+  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: XLXI_6/i_FIFO_addrWr_3 to XLXI_6/i_FIFO_Mram_RAM7.SLICEM_F
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y68.XQ      Tcko                  0.473   XLXI_6/i_FIFO_addrWr<3>
+                                                       XLXI_6/i_FIFO_addrWr_3
+    SLICE_X36Y68.G4      net (fanout=10)       0.467   XLXI_6/i_FIFO_addrWr<3>
+    SLICE_X36Y68.CLK     Tah         (-Th)    -0.001   XLXI_6/NlwRenamedSig_OI_FIFO_DO<6>
+                                                       XLXI_6/i_FIFO_Mram_RAM7.SLICEM_F
+    -------------------------------------------------  ---------------------------
+    Total                                      0.941ns (0.474ns logic, 0.467ns route)
+                                                       (50.4% logic, 49.6% route)
 
 --------------------------------------------------------------------------------
 
 Component Switching Limit Checks: NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
-Slack: 16.824ns (period - (min low pulse limit / (low pulse / period)))
+Slack: 18.348ns (period - (min low pulse limit / (low pulse / period)))
   Period: 20.000ns
   Low pulse: 10.000ns
-  Low pulse limit: 1.588ns (Tbpwl)
-  Physical resource: XLXI_1/Mrom_data_out/CLKA
-  Logical resource: XLXI_1/Mrom_data_out.A/CLKA
-  Location pin: RAMB16_X1Y6.CLKA
+  Low pulse limit: 0.826ns (Tcl)
+  Physical resource: LED7_OBUF/CLK
+  Logical resource: XLXI_6/NACK_12/CK
+  Location pin: SLICE_X30Y75.CLK
   Clock network: Clk_50MHz_BUFGP
 --------------------------------------------------------------------------------
-Slack: 16.824ns (period - (min high pulse limit / (high pulse / period)))
+Slack: 18.348ns (period - (min high pulse limit / (high pulse / period)))
   Period: 20.000ns
   High pulse: 10.000ns
-  High pulse limit: 1.588ns (Tbpwh)
-  Physical resource: XLXI_1/Mrom_data_out/CLKA
-  Logical resource: XLXI_1/Mrom_data_out.A/CLKA
-  Location pin: RAMB16_X1Y6.CLKA
+  High pulse limit: 0.826ns (Tch)
+  Physical resource: LED7_OBUF/CLK
+  Logical resource: XLXI_6/NACK_12/CK
+  Location pin: SLICE_X30Y75.CLK
   Clock network: Clk_50MHz_BUFGP
 --------------------------------------------------------------------------------
-Slack: 16.824ns (period - min period limit)
+Slack: 18.348ns (period - min period limit)
   Period: 20.000ns
-  Min period limit: 3.176ns (314.861MHz) (Tbp)
-  Physical resource: XLXI_1/Mrom_data_out/CLKA
-  Logical resource: XLXI_1/Mrom_data_out.A/CLKA
-  Location pin: RAMB16_X1Y6.CLKA
+  Min period limit: 1.652ns (605.327MHz) (Tcp)
+  Physical resource: LED7_OBUF/CLK
+  Logical resource: XLXI_6/NACK_12/CK
+  Location pin: SLICE_X30Y75.CLK
   Clock network: Clk_50MHz_BUFGP
 --------------------------------------------------------------------------------
 
@@ -449,7 +545,7 @@ Clock to Setup on destination clock Clk_50MHz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk_50MHz      |    8.254|    5.394|    2.600|         |
+Clk_50MHz      |   10.734|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -458,16 +554,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 1460 paths, 0 nets, and 665 connections
+Constraints cover 4512 paths, 0 nets, and 1408 connections
 
 Design statistics:
-   Minimum period:  10.788ns{1}   (Maximum frequency:  92.696MHz)
+   Minimum period:  10.734ns{1}   (Maximum frequency:  93.162MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue Apr 30 12:56:29 2024 
+Analysis completed Tue May 14 12:54:46 2024 
 --------------------------------------------------------------------------------
 
 Trace Settings:
