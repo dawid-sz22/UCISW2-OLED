@@ -53,6 +53,14 @@ architecture Behavioral of GameModule is
 
 begin
 	
+	-- The FSM - state register
+   process( Clk )
+   begin
+		if rising_edge( Clk ) then
+			state <= next_state;
+		end if;
+   end process;
+	
 	-- FSM
    process( state )
    begin
@@ -61,7 +69,7 @@ begin
       case state is
 		
 			when sWait =>
-				if (counter_delay = X"989680") then
+				if (counter_delay = X"0186A0") then
 					next_state <= sRead;
 				end if;
 				

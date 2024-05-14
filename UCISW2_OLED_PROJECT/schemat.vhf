@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : schemat.vhf
--- /___/   /\     Timestamp : 05/14/2024 11:59:41
+-- /___/   /\     Timestamp : 05/14/2024 19:13:37
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf -w C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf -w C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.sch
 --Design Name: schemat
 --Device: spartan3e
 --Purpose:
@@ -121,9 +121,9 @@ architecture BEHAVIORAL of schemat is
    signal Reset                      : std_logic;
    signal XLXN_13                    : std_logic_vector (9 downto 0);
    signal XLXN_27                    : std_logic_vector (7 downto 0);
-   signal XLXN_28                    : std_logic;
-   signal XLXN_29                    : std_logic_vector (9 downto 0);
    signal XLXN_30                    : std_logic_vector (7 downto 0);
+   signal XLXN_36                    : std_logic;
+   signal XLXN_37                    : std_logic_vector (9 downto 0);
    signal XLXI_6_FIFO_Pop_openSignal : std_logic;
    signal XLXI_6_ReadCnt_openSignal  : std_logic_vector (3 downto 0);
    component Memory
@@ -178,8 +178,8 @@ architecture BEHAVIORAL of schemat is
       port ( Clk         : in    std_logic; 
              Data_IN     : in    std_logic_vector (7 downto 0); 
              EnableWrite : out   std_logic; 
-             Data_OUT    : out   std_logic_vector (7 downto 0); 
-             Addr        : out   std_logic_vector (9 downto 0));
+             Addr        : out   std_logic_vector (9 downto 0); 
+             Data_OUT    : out   std_logic_vector (7 downto 0));
    end component;
    
    attribute HU_SET of XLXI_5 : label is "XLXI_5_0";
@@ -189,8 +189,8 @@ begin
       port map (CLK=>Clk_50MHz,
                 DataIN(7 downto 0)=>XLXN_27(7 downto 0),
                 ReadAddr(9 downto 0)=>XLXN_13(9 downto 0),
-                WriteAddr(9 downto 0)=>XLXN_29(9 downto 0),
-                WriteEnable=>XLXN_28,
+                WriteAddr(9 downto 0)=>XLXN_37(9 downto 0),
+                WriteEnable=>XLXN_36,
                 Data(7 downto 0)=>DATA(7 downto 0),
                 Data2(7 downto 0)=>XLXN_30(7 downto 0));
    
@@ -231,9 +231,9 @@ begin
    XLXI_7 : GameModule
       port map (Clk=>Clk_50MHz,
                 Data_IN(7 downto 0)=>XLXN_30(7 downto 0),
-                Addr(9 downto 0)=>XLXN_29(9 downto 0),
+                Addr(9 downto 0)=>XLXN_37(9 downto 0),
                 Data_OUT(7 downto 0)=>XLXN_27(7 downto 0),
-                EnableWrite=>XLXN_28);
+                EnableWrite=>XLXN_36);
    
 end BEHAVIORAL;
 

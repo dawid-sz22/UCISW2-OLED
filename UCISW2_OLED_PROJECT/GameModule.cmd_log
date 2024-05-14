@@ -5,3 +5,5 @@ spl2sym -intstyle ise -family spartan3e -w GameModule.spl C:/Users/lab/Downloads
 vhdtdtfi -lib work GameModule.vhd -prj UCISW2_OLED_PROJECT -o GameModule.spl -module GameModule -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e -w GameModule.spl C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/GameModule.sym 
 vhdtdtfi -prj UCISW2_OLED_PROJECT -o C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/GameModule.vhi -module GameModule -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work GameModule.vhd 
+vhdtdtfi -lib work sources/GameModule.vhd -prj UCISW2_OLED_PROJECT -o GameModule.spl -module GameModule -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w GameModule.spl C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/GameModule.sym 
