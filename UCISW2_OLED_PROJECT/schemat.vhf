@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : schemat.vhf
--- /___/   /\     Timestamp : 05/14/2024 19:13:37
+-- /___/   /\     Timestamp : 05/15/2024 22:59:24
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf -w C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.sch
+--Command: sch2hdl -sympath C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf -w C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.sch
 --Design Name: schemat
 --Device: spartan3e
 --Purpose:
@@ -101,8 +101,11 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity schemat is
-   port ( btn_south : in    std_logic; 
+   port ( btn_east  : in    std_logic; 
+          btn_south : in    std_logic; 
           Clk_50MHz : in    std_logic; 
+          PS2_Clk   : in    std_logic; 
+          PS2_Data  : in    std_logic; 
           LED0      : out   std_logic; 
           LED7      : out   std_logic; 
           SCL       : inout std_logic; 
@@ -124,6 +127,12 @@ architecture BEHAVIORAL of schemat is
    signal XLXN_30                    : std_logic_vector (7 downto 0);
    signal XLXN_36                    : std_logic;
    signal XLXN_37                    : std_logic_vector (9 downto 0);
+   signal XLXN_38                    : std_logic;
+   signal XLXN_68                    : std_logic_vector (7 downto 0);
+   signal XLXN_69                    : std_logic;
+   signal XLXN_70                    : std_logic;
+   signal XLXN_72                    : std_logic;
+   signal XLXN_74                    : std_logic_vector (2 downto 0);
    signal XLXI_6_FIFO_Pop_openSignal : std_logic;
    signal XLXI_6_ReadCnt_openSignal  : std_logic_vector (3 downto 0);
    component Memory
@@ -176,13 +185,35 @@ architecture BEHAVIORAL of schemat is
    
    component GameModule
       port ( Clk         : in    std_logic; 
+             StartButton : in    std_logic; 
              Data_IN     : in    std_logic_vector (7 downto 0); 
+             Key_kbd_in  : in    std_logic_vector (2 downto 0); 
              EnableWrite : out   std_logic; 
              Addr        : out   std_logic_vector (9 downto 0); 
              Data_OUT    : out   std_logic_vector (7 downto 0));
    end component;
    
-   attribute HU_SET of XLXI_5 : label is "XLXI_5_0";
+   component Keyboard_Decoder
+      port ( PS2_E0        : in    std_logic; 
+             PS2_DataReady : in    std_logic; 
+             PS2_F0        : in    std_logic; 
+             PS2_DO        : in    std_logic_vector (7 downto 0); 
+             Key_out       : out   std_logic_vector (2 downto 0));
+   end component;
+   
+   component PS2_Kbd
+      port ( PS2_Clk   : in    std_logic; 
+             PS2_Data  : in    std_logic; 
+             Clk_50MHz : in    std_logic; 
+             E0        : out   std_logic; 
+             F0        : out   std_logic; 
+             DO_Rdy    : out   std_logic; 
+             DO        : out   std_logic_vector (7 downto 0); 
+             Clk_Sys   : in    std_logic);
+   end component;
+   
+   attribute HU_SET of XLXI_5 : label is "XLXI_5_1";
+   attribute HU_SET of XLXI_8 : label is "XLXI_8_0";
 begin
    const(7 downto 0) <= x"78";
    XLXI_1 : Memory
@@ -231,9 +262,33 @@ begin
    XLXI_7 : GameModule
       port map (Clk=>Clk_50MHz,
                 Data_IN(7 downto 0)=>XLXN_30(7 downto 0),
+                Key_kbd_in(2 downto 0)=>XLXN_74(2 downto 0),
+                StartButton=>XLXN_38,
                 Addr(9 downto 0)=>XLXN_37(9 downto 0),
                 Data_OUT(7 downto 0)=>XLXN_27(7 downto 0),
                 EnableWrite=>XLXN_36);
+   
+   XLXI_8 : IFD_MXILINX_schemat
+      port map (C=>Clk_50MHz,
+                D=>btn_east,
+                Q=>XLXN_38);
+   
+   XLXI_16 : Keyboard_Decoder
+      port map (PS2_DataReady=>XLXN_72,
+                PS2_DO(7 downto 0)=>XLXN_68(7 downto 0),
+                PS2_E0=>XLXN_69,
+                PS2_F0=>XLXN_70,
+                Key_out(2 downto 0)=>XLXN_74(2 downto 0));
+   
+   XLXI_18 : PS2_Kbd
+      port map (Clk_Sys=>Clk_50MHz,
+                Clk_50MHz=>Clk_50MHz,
+                PS2_Clk=>PS2_Clk,
+                PS2_Data=>PS2_Data,
+                DO(7 downto 0)=>XLXN_68(7 downto 0),
+                DO_Rdy=>XLXN_72,
+                E0=>XLXN_69,
+                F0=>XLXN_70);
    
 end BEHAVIORAL;
 

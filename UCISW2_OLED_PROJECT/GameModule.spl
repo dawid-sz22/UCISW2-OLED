@@ -1,6 +1,8 @@
 [Inputs]
 Clk
+StartButton
 =Data_IN[7:0]=
+=Key_kbd_in[2:0]=
 [Outputs]
 EnableWrite
 =Addr[9:0]=

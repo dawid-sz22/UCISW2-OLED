@@ -34,11 +34,14 @@ entity GameModule is
            Addr : out  STD_LOGIC_VECTOR (9 downto 0);
 			  EnableWrite : out STD_LOGIC;
            Clk : in  STD_LOGIC;
-           Data_OUT : out  STD_LOGIC_VECTOR (7 downto 0));
+           StartButton : in  STD_LOGIC;
+           Data_OUT : out  STD_LOGIC_VECTOR (7 downto 0);
+			  Key_kbd_in : in STD_LOGIC_VECTOR (2 downto 0)
+			  );
 end GameModule;
 
 architecture Behavioral of GameModule is
-	type t_state is (sWait, sRead, sSetBit, sWrite, sGame_over);
+	type t_state is (sWait, sRead, sSetBit, sWrite, sGame_over, sReset_to_start_state);
 	type t_direction is (up, down, right, left);
 	type t_game_state is (running, collision);
 
@@ -64,14 +67,14 @@ begin
    end process;
 	
 	-- FSM
-   process( state, counter_delay )
+   process( state, counter_delay, address_memory, StartButton, game_state)
    begin
       next_state <= state;  -- default
 
       case state is
 		
 			when sWait =>
-				if (counter_delay = X"0186A0") then	-- 2ms delay (RAM reading from 0->1023, lasts in testbench ~25ms)
+				if (counter_delay = X"0186A0") then	-- 2ms delay (RAM reading from 0->1023, lasts in testbench ~25ms) 200ms - x"989680"
 					next_state <= sRead;
 				end if;
 				
@@ -84,16 +87,25 @@ begin
 				else
 					next_state <= sGame_over;
 				end if;
+				
 			when sWrite =>
 				next_state <= sWait;
 				
-			when sGame_over => -- TODO: Refresh RAM to X"00", x->0, y->0, go to state sWait or sth else
-				next_state <= sWait;
-
+			when sGame_over =>
+				if (StartButton = '1') then
+					next_state <= sReset_to_start_state;
+				end if;
+			
+			when sReset_to_start_state =>	--TODO: Check if 0 and 1023 refresh in memory
+				if (address_memory = X"1111111111") then
+					next_state <= sWait;
+				end if;
+				
       end case;
    end process;
 	
-	process(Clk)
+	-- COUNT DELAY
+	process(Clk, state)
 	begin
 		if rising_edge(Clk) then
 			if (state = sWait) then
@@ -104,30 +116,36 @@ begin
 		end if;
 	end process;
 	
-	process(Clk)
+	-- ENABLE WRITING
+	process(Clk, state)
 	begin
 		if rising_edge(Clk) then
 			if (state = sWait) then
 				EnableWrite <= '0';
-			elsif (state = sWrite) then
+			elsif (state = sWrite) or (state = sReset_to_start_state) then
 				EnableWrite <= '1';
 			end if;
 		end if;
 	end process;
 	
-	process(Clk)
+	-- KEY FROM KEYBOARD / DIRECTION CHANGE
+	process(Clk, Key_kbd_in)
 	begin
 		if rising_edge(Clk) then
-			if (state = sRead) then
-				data_signal <= Data_IN;
-			elsif (state = sSetBit) then
-				data_signal(to_integer(y(2 downto 0))) <= '1';
-				data_signal <= X"FF";
+			if (Key_kbd_in = "000") then		-- K_UP
+				direction <= up;
+			elsif (Key_kbd_in = "001") then	-- K_LEFT
+				direction <= left;
+			elsif (Key_kbd_in = "010") then	-- K_RIGHT
+				direction <= right;
+			elsif (Key_kbd_in = "011") then	-- K_DOWN
+				direction <= down;
 			end if;
 		end if;
 	end process;
 	
-	process(Clk)
+	-- CHECK COLLISION AND COUNT ADDRESS_MEMORY
+	process(Clk, direction, x, y)
 	begin
 		if rising_edge(Clk) then
 			if (state = sRead) then
@@ -152,19 +170,41 @@ begin
 						address_memory <= resize(to_integer(y(5 downto 3)) * 128 + (x + 1), address_memory'length);
 						x <= x + 1;
 					end if;
-				else -- left
+				else	-- left
 					if (x = "0000000") then
 						game_state <= collision;
 					else
 						address_memory <= resize(to_integer(y(5 downto 3)) * 128 + (x - 1), address_memory'length);
 						x <= x - 1;
 					end if;
-				end if;
+				end if; 
+			elsif (state = sGame_over) then
+				x <= (others => '0');							-- BACK TO START
+				y <= (others => '0');
+				address_memory <= ( others=> '0' );			-- CLEAR SCREEN
+				data_signal <= X"00";
+			elsif (state = sReset_to_start_state) then 	-- GO THROUGH ALL RAM TO CLEAR
+				address_memory <= address_memory + 1;
 			end if;
 		end if;
 	end process;
 	
+	-- SET BIT IN SPECIFIC BYTE
+	process(Clk, state)
+	begin
+		if rising_edge(Clk) then
+			if (state = sRead) then
+				data_signal <= Data_IN;
+			elsif (state = sSetBit) then
+				data_signal(to_integer(y(2 downto 0))) <= '1';
+			end if;
+		end if;
+	end process;
+	
+	-- ADDR TO READ (ASYNC)
 	Addr <= STD_LOGIC_VECTOR(address_memory);
+	
+	-- DATA TO WRITE (SYNC, ENABLED BY ENABLE_WRITE)
 	Data_OUT <= STD_LOGIC_VECTOR(data_signal);
 
 end Behavioral;

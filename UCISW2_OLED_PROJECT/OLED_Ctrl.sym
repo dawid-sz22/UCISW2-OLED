@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="OLED_Ctrl">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-5-14T9:2:35</timestamp>
+    <timestamp>2024-5-15T20:57:50</timestamp>
     <pin polarity="Input" x="0" y="-352" name="Clk" />
     <pin polarity="Input" x="0" y="-288" name="Reset" />
     <pin polarity="Input" x="0" y="96" name="I2C_FIFO_Full" />

@@ -1,5 +1,6 @@
 vhdl isim_temp "sources/OLED_Ctrl.vhd"
 vhdl isim_temp "sources/Memory.vhd"
+vhdl isim_temp "sources/Keyboard_Decoder.vhd"
 vhdl isim_temp "sources/I2C_Master.vhd"
-vhdl isim_temp "schemat.vhf"
+vhdl isim_temp "sources/GameModule.vhd"
 vhdl isim_temp "TEST.vhd"

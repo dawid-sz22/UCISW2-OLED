@@ -1,140 +1,17 @@
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/OLED_J4.ucf -uc sources/GenIO.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/OLED_J4.ucf -uc sources/GenIO.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/OLED_J4.ucf -uc sources/GenIO.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/OLED_J4.ucf -uc sources/GenIO.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/OLED_J4.ucf -uc sources/GenIO.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/OLED_J4.ucf -uc sources/GenIO.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/OLED_J4.ucf -uc sources/GenIO.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/OLED_J4.ucf -uc sources/GenIO.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/OLED_J4.ucf -uc sources/GenIO.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/OLED_J4.ucf -uc sources/GenIO.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/vboxuser/Desktop/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/GenIO.ucf -uc sources/OLED_J4.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/GenIO.ucf -uc sources/OLED_J4.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/GenIO.ucf -uc sources/OLED_J4.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/GenIO.ucf -uc sources/OLED_J4.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-sch2sym -intstyle ise -family spartan3e -w -refsym schemat C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.sch C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.sym 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/GenIO.ucf -uc sources/OLED_J4.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/GenIO.ucf -uc sources/OLED_J4.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/GenIO.ucf -uc sources/OLED_J4.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
-par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
-bitgen -intstyle ise -f schemat.ut schemat.ncd 
-xst -intstyle ise -ifn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc sources/GenIO.ucf -uc sources/OLED_J4.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+sch2sym -intstyle ise -family spartan3e -w -refsym schemat C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.sch C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.sym 
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd sources -nt timestamp -uc sources/OLED_J4.ucf -uc sources/GenIO.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
 map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
 par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 

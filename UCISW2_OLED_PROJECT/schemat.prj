@@ -1,5 +1,6 @@
 vhdl work "sources/OLED_Ctrl.vhd"
 vhdl work "sources/Memory.vhd"
+vhdl work "sources/Keyboard_Decoder.vhd"
 vhdl work "sources/I2C_Master.vhd"
-vhdl work "GameModule.vhd"
+vhdl work "sources/GameModule.vhd"
 vhdl work "schemat.vhf"
