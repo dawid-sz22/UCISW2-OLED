@@ -1,7 +1,7 @@
-Release 14.7 Drc P.20131013 (nt)
+Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed May 15 23:13:30 2024
+Thu May 16 10:25:21 2024
 
 drc -z schemat.ncd schemat.pcf
 

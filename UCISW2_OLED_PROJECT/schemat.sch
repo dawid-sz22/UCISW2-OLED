@@ -34,6 +34,10 @@
         <signal name="PS2_Clk" />
         <signal name="PS2_Data" />
         <signal name="XLXN_74(2:0)" />
+        <signal name="LED3" />
+        <signal name="LED4" />
+        <signal name="LED5" />
+        <signal name="LED6" />
         <port polarity="Output" name="LED0" />
         <port polarity="Input" name="btn_south" />
         <port polarity="BiDirectional" name="SDA" />
@@ -43,6 +47,10 @@
         <port polarity="Input" name="btn_east" />
         <port polarity="Input" name="PS2_Clk" />
         <port polarity="Input" name="PS2_Data" />
+        <port polarity="Output" name="LED3" />
+        <port polarity="Output" name="LED4" />
+        <port polarity="Output" name="LED5" />
+        <port polarity="Output" name="LED6" />
         <blockdef name="Memory">
             <timestamp>2024-5-14T8:54:56</timestamp>
             <rect width="64" x="320" y="276" height="24" />
@@ -114,7 +122,11 @@
             <line x2="112" y1="32" y2="32" x1="144" />
         </blockdef>
         <blockdef name="GameModule">
-            <timestamp>2024-5-15T20:57:46</timestamp>
+            <timestamp>2024-5-16T8:23:27</timestamp>
+            <line x2="432" y1="352" y2="352" x1="368" />
+            <line x2="432" y1="224" y2="224" x1="368" />
+            <line x2="432" y1="288" y2="288" x1="368" />
+            <line x2="432" y1="160" y2="160" x1="368" />
             <rect width="64" x="0" y="84" height="24" />
             <line x2="0" y1="96" y2="96" x1="64" />
             <line x2="0" y1="32" y2="32" x1="64" />
@@ -126,7 +138,7 @@
             <line x2="432" y1="-96" y2="-96" x1="368" />
             <rect width="64" x="368" y="-44" height="24" />
             <line x2="432" y1="-32" y2="-32" x1="368" />
-            <rect width="304" x="64" y="-192" height="320" />
+            <rect width="304" x="64" y="-192" height="576" />
         </blockdef>
         <blockdef name="Keyboard_Decoder">
             <timestamp>2024-5-15T20:57:53</timestamp>
@@ -204,8 +216,12 @@
             <blockpin signalname="XLXN_30(7:0)" name="Data_IN(7:0)" />
             <blockpin signalname="XLXN_74(2:0)" name="Key_kbd_in(2:0)" />
             <blockpin signalname="XLXN_36" name="EnableWrite" />
+            <blockpin signalname="LED4" name="Key_0" />
+            <blockpin signalname="LED5" name="Key_1" />
+            <blockpin signalname="LED3" name="Game_over_signal" />
             <blockpin signalname="XLXN_37(9:0)" name="Addr(9:0)" />
             <blockpin signalname="XLXN_27(7:0)" name="Data_OUT(7:0)" />
+            <blockpin signalname="LED6" name="Key_2" />
         </block>
         <block symbolname="ifd" name="XLXI_8">
             <blockpin signalname="Clk_50MHz" name="C" />
@@ -327,18 +343,17 @@
         </branch>
         <branch name="XLXN_30(7:0)">
             <wire x2="2784" y1="2464" y2="2464" x1="2720" />
-            <wire x2="2720" y1="2464" y2="2560" x1="2720" />
-            <wire x2="4064" y1="2560" y2="2560" x1="2720" />
+            <wire x2="2720" y1="2464" y2="2688" x1="2720" />
+            <wire x2="4064" y1="2688" y2="2688" x1="2720" />
             <wire x2="4064" y1="2480" y2="2480" x1="4048" />
-            <wire x2="4064" y1="2480" y2="2560" x1="4064" />
+            <wire x2="4064" y1="2480" y2="2688" x1="4064" />
         </branch>
         <branch name="Clk_50MHz">
             <wire x2="2720" y1="2064" y2="2064" x1="816" />
             <wire x2="3152" y1="2064" y2="2064" x1="2720" />
             <wire x2="2720" y1="2064" y2="2336" x1="2720" />
             <wire x2="2784" y1="2336" y2="2336" x1="2720" />
-            <wire x2="816" y1="2064" y2="2160" x1="816" />
-            <wire x2="816" y1="2160" y2="2496" x1="816" />
+            <wire x2="816" y1="2064" y2="2496" x1="816" />
             <wire x2="816" y1="2496" y2="2560" x1="816" />
             <wire x2="896" y1="2560" y2="2560" x1="816" />
             <wire x2="896" y1="2496" y2="2496" x1="816" />
@@ -378,8 +393,7 @@
         </branch>
         <instance x="2256" y="1584" name="XLXI_5" orien="R0" />
         <branch name="btn_east">
-            <wire x2="2272" y1="2864" y2="2864" x1="2080" />
-            <wire x2="2288" y1="2864" y2="2864" x1="2272" />
+            <wire x2="2288" y1="2864" y2="2864" x1="2080" />
         </branch>
         <iomarker fontsize="28" x="3104" y="1696" name="Clk_50MHz" orien="R180" />
         <iomarker fontsize="28" x="4544" y="976" name="LED0" orien="R0" />
@@ -426,5 +440,26 @@
             <wire x2="2320" y1="2368" y2="2592" x1="2320" />
             <wire x2="2784" y1="2592" y2="2592" x1="2320" />
         </branch>
+        <branch name="LED3">
+            <wire x2="3472" y1="2656" y2="2656" x1="3216" />
+            <wire x2="3472" y1="2656" y2="2960" x1="3472" />
+        </branch>
+        <branch name="LED4">
+            <wire x2="3360" y1="2720" y2="2720" x1="3216" />
+            <wire x2="3360" y1="2720" y2="2960" x1="3360" />
+        </branch>
+        <branch name="LED5">
+            <wire x2="3232" y1="2784" y2="2784" x1="3216" />
+            <wire x2="3280" y1="2784" y2="2784" x1="3232" />
+            <wire x2="3280" y1="2784" y2="2960" x1="3280" />
+        </branch>
+        <iomarker fontsize="28" x="3472" y="2960" name="LED3" orien="R90" />
+        <iomarker fontsize="28" x="3280" y="2960" name="LED5" orien="R90" />
+        <iomarker fontsize="28" x="3360" y="2960" name="LED4" orien="R90" />
+        <branch name="LED6">
+            <wire x2="3232" y1="2848" y2="2848" x1="3216" />
+            <wire x2="3232" y1="2848" y2="2960" x1="3232" />
+        </branch>
+        <iomarker fontsize="28" x="3232" y="2960" name="LED6" orien="R90" />
     </sheet>
 </drawing>

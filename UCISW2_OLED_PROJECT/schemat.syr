@@ -1,16 +1,16 @@
-Release 14.7 - xst P.20131013 (nt)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: schemat.prj
 
@@ -107,20 +107,22 @@ Cores Search Directories           : {"sources"  }
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Memory.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Memory.vhd" in Library work.
 Architecture behavioral of Entity memory is up to date.
-Compiling vhdl file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" in Library work.
 Architecture behavioral of Entity oled_ctrl is up to date.
-Compiling vhdl file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd" in Library work.
 Architecture structure of Entity i2c_master is up to date.
-Compiling vhdl file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/GameModule.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/GameModule.vhd" in Library work.
 Entity <gamemodule> compiled.
 Entity <gamemodule> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd" in Library work.
+Compiling vhdl file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd" in Library work.
 Architecture rtl of Entity keyboard_decoder is up to date.
-Compiling vhdl file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" in Library work.
-Architecture behavioral of Entity ifd_mxilinx_schemat is up to date.
-Architecture behavioral of Entity schemat is up to date.
+Compiling vhdl file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" in Library work.
+Entity <ifd_mxilinx_schemat> compiled.
+Entity <ifd_mxilinx_schemat> (Architecture <behavioral>) compiled.
+Entity <schemat> compiled.
+Entity <schemat> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -146,17 +148,17 @@ Analyzing hierarchy for entity <Keyboard_Decoder> in library <work> (architectur
 =========================================================================
 Analyzing Entity <schemat> in library <work> (Architecture <behavioral>).
     Set user-defined property "HU_SET =  XLXI_5_1" for instance <XLXI_5> in unit <schemat>.
-WARNING:Xst:753 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" line 245: Unconnected output port 'FIFO_Empty' of component 'I2C_Master'.
-WARNING:Xst:753 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" line 245: Unconnected output port 'FIFO_DO' of component 'I2C_Master'.
+WARNING:Xst:753 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" line 253: Unconnected output port 'FIFO_Empty' of component 'I2C_Master'.
+WARNING:Xst:753 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" line 253: Unconnected output port 'FIFO_DO' of component 'I2C_Master'.
     Set user-defined property "HU_SET =  XLXI_8_0" for instance <XLXI_8> in unit <schemat>.
-WARNING:Xst:2211 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" line 283: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:2211 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" line 295: Instantiating black box module <PS2_Kbd>.
 Entity <schemat> analyzed. Unit <schemat> generated.
 
 Analyzing Entity <Memory> in library <work> (Architecture <behavioral>).
 Entity <Memory> analyzed. Unit <Memory> generated.
 
 Analyzing Entity <OLED_Ctrl> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
 Entity <OLED_Ctrl> analyzed. Unit <OLED_Ctrl> generated.
 
 Analyzing generic Entity <IFD_MXILINX_schemat> in library <work> (Architecture <behavioral>).
@@ -365,7 +367,6 @@ Analyzing Entity <I2C_Master> in library <work> (Architecture <structure>).
 Entity <I2C_Master> analyzed. Unit <I2C_Master> generated.
 
 Analyzing Entity <GameModule> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <data_signal> in unit <GameModule> has a constant value of 00000000 during circuit operation. The register is replaced by logic.
 Entity <GameModule> analyzed. Unit <GameModule> generated.
 
 Analyzing Entity <Keyboard_Decoder> in library <work> (Architecture <rtl>).
@@ -379,7 +380,7 @@ Entity <Keyboard_Decoder> analyzed. Unit <Keyboard_Decoder> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <Memory>.
-    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Memory.vhd".
+    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Memory.vhd".
     Found 1024x8-bit dual-port RAM <Mram_RAM> for signal <RAM>.
     Summary:
 	inferred   1 RAM(s).
@@ -387,7 +388,7 @@ Unit <Memory> synthesized.
 
 
 Synthesizing Unit <OLED_Ctrl>.
-    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd".
+    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd".
 INFO:Xst:1799 - State swaitwrite is never reached in FSM <state>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
@@ -412,13 +413,13 @@ Unit <OLED_Ctrl> synthesized.
 
 
 Synthesizing Unit <GameModule>.
-    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/GameModule.vhd".
+    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/GameModule.vhd".
     Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 6                                              |
-    | Transitions        | 9                                              |
+    | States             | 7                                              |
+    | Transitions        | 10                                             |
     | Inputs             | 3                                              |
-    | Outputs            | 6                                              |
+    | Outputs            | 7                                              |
     | Clock              | Clk                       (rising_edge)        |
     | Power Up State     | swait                                          |
     | Encoding           | automatic                                      |
@@ -427,9 +428,9 @@ Synthesizing Unit <GameModule>.
     Using one-hot encoding for signal <direction>.
     Found 1-bit register for signal <EnableWrite>.
     Found 10-bit register for signal <address_memory>.
-    Found 7-bit adder for signal <address_memory$add0001> created at line 170.
-    Found 10-bit adder for signal <address_memory$addsub0000> created at line 187.
-    Found 7-bit subtractor for signal <address_memory$sub0001> created at line 177.
+    Found 7-bit adder for signal <address_memory$add0001> created at line 177.
+    Found 10-bit adder for signal <address_memory$addsub0000> created at line 193.
+    Found 7-bit subtractor for signal <address_memory$sub0001> created at line 184.
     Found 24-bit up counter for signal <counter_delay>.
     Found 8-bit register for signal <data_signal>.
     Found 4-bit register for signal <direction>.
@@ -446,17 +447,17 @@ Unit <GameModule> synthesized.
 
 
 Synthesizing Unit <Keyboard_Decoder>.
-    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd".
+    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd".
 Unit <Keyboard_Decoder> synthesized.
 
 
 Synthesizing Unit <IFD_MXILINX_schemat>.
-    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf".
+    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf".
 Unit <IFD_MXILINX_schemat> synthesized.
 
 
 Synthesizing Unit <I2C_Master>.
-    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd".
+    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd".
 WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM8_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM7_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM6_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -470,7 +471,7 @@ Unit <I2C_Master> synthesized.
 
 
 Synthesizing Unit <schemat>.
-    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf".
+    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf".
 WARNING:Xst:653 - Signal <XLXI_6_ReadCnt_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
 WARNING:Xst:653 - Signal <XLXI_6_FIFO_Pop_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 Unit <schemat> synthesized.
@@ -506,16 +507,17 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_1> for best encoding.
-Optimizing FSM <XLXI_7/state/FSM> on signal <state[1:6]> with one-hot encoding.
+Optimizing FSM <XLXI_7/state/FSM> on signal <state[1:7]> with one-hot encoding.
 -----------------------------------
  State                 | Encoding
 -----------------------------------
- swait                 | 000001
- sread                 | 000010
- ssetbit               | 000100
- swrite                | 001000
- sgame_over            | 010000
- sreset_to_start_state | 100000
+ swait                 | 0000001
+ sread                 | 0000100
+ saddresscount         | 0000010
+ ssetbit               | 0010000
+ swrite                | 0100000
+ sgame_over            | 0001000
+ sreset_to_start_state | 1000000
 -----------------------------------
 Analyzing FSM <FSM_0> for best encoding.
 Optimizing FSM <XLXI_2/state/FSM> on signal <state[1:8]> with one-hot encoding.
@@ -573,8 +575,8 @@ Macro Statistics
  10-bit up counter                                     : 1
  24-bit up counter                                     : 1
  4-bit up counter                                      : 1
-# Registers                                            : 82
- Flip-Flops                                            : 82
+# Registers                                            : 90
+ Flip-Flops                                            : 90
 
 =========================================================================
 
@@ -591,463 +593,15 @@ Optimizing unit <GameModule> ...
 Optimizing unit <IFD_MXILINX_schemat> ...
 
 Optimizing unit <I2C_Master> ...
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM1>, <XLXI_1/Mram_RAM65> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM1>, <XLXI_1/Mram_RAM129> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM1>, <XLXI_1/Mram_RAM193> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM1>, <XLXI_1/Mram_RAM257> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM1>, <XLXI_1/Mram_RAM321> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM1>, <XLXI_1/Mram_RAM385> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM1>, <XLXI_1/Mram_RAM449> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM2>, <XLXI_1/Mram_RAM66> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM2>, <XLXI_1/Mram_RAM130> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM2>, <XLXI_1/Mram_RAM194> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM2>, <XLXI_1/Mram_RAM258> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM2>, <XLXI_1/Mram_RAM322> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM2>, <XLXI_1/Mram_RAM386> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM2>, <XLXI_1/Mram_RAM450> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM3>, <XLXI_1/Mram_RAM67> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM3>, <XLXI_1/Mram_RAM131> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM3>, <XLXI_1/Mram_RAM195> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM3>, <XLXI_1/Mram_RAM259> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM3>, <XLXI_1/Mram_RAM323> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM3>, <XLXI_1/Mram_RAM387> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM3>, <XLXI_1/Mram_RAM451> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM4>, <XLXI_1/Mram_RAM68> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM4>, <XLXI_1/Mram_RAM132> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM4>, <XLXI_1/Mram_RAM196> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM4>, <XLXI_1/Mram_RAM260> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM4>, <XLXI_1/Mram_RAM324> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM4>, <XLXI_1/Mram_RAM388> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM4>, <XLXI_1/Mram_RAM452> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM5>, <XLXI_1/Mram_RAM69> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM5>, <XLXI_1/Mram_RAM133> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM5>, <XLXI_1/Mram_RAM197> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM5>, <XLXI_1/Mram_RAM261> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM5>, <XLXI_1/Mram_RAM325> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM5>, <XLXI_1/Mram_RAM389> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM5>, <XLXI_1/Mram_RAM453> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM6>, <XLXI_1/Mram_RAM70> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM6>, <XLXI_1/Mram_RAM134> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM6>, <XLXI_1/Mram_RAM198> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM6>, <XLXI_1/Mram_RAM262> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM6>, <XLXI_1/Mram_RAM326> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM6>, <XLXI_1/Mram_RAM390> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM6>, <XLXI_1/Mram_RAM454> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM7>, <XLXI_1/Mram_RAM71> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM7>, <XLXI_1/Mram_RAM135> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM7>, <XLXI_1/Mram_RAM199> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM7>, <XLXI_1/Mram_RAM263> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM7>, <XLXI_1/Mram_RAM327> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM7>, <XLXI_1/Mram_RAM391> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM7>, <XLXI_1/Mram_RAM455> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM8>, <XLXI_1/Mram_RAM72> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM8>, <XLXI_1/Mram_RAM136> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM8>, <XLXI_1/Mram_RAM200> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM8>, <XLXI_1/Mram_RAM264> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM8>, <XLXI_1/Mram_RAM328> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM8>, <XLXI_1/Mram_RAM392> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM8>, <XLXI_1/Mram_RAM456> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM9>, <XLXI_1/Mram_RAM73> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM9>, <XLXI_1/Mram_RAM137> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM9>, <XLXI_1/Mram_RAM201> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM9>, <XLXI_1/Mram_RAM265> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM9>, <XLXI_1/Mram_RAM329> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM9>, <XLXI_1/Mram_RAM393> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM9>, <XLXI_1/Mram_RAM457> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM10>, <XLXI_1/Mram_RAM74> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM10>, <XLXI_1/Mram_RAM138> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM10>, <XLXI_1/Mram_RAM202> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM10>, <XLXI_1/Mram_RAM266> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM10>, <XLXI_1/Mram_RAM330> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM10>, <XLXI_1/Mram_RAM394> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM10>, <XLXI_1/Mram_RAM458> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM11>, <XLXI_1/Mram_RAM75> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM11>, <XLXI_1/Mram_RAM139> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM11>, <XLXI_1/Mram_RAM203> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM11>, <XLXI_1/Mram_RAM267> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM11>, <XLXI_1/Mram_RAM331> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM11>, <XLXI_1/Mram_RAM395> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM11>, <XLXI_1/Mram_RAM459> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM14>, <XLXI_1/Mram_RAM78> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM14>, <XLXI_1/Mram_RAM142> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM14>, <XLXI_1/Mram_RAM206> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM14>, <XLXI_1/Mram_RAM270> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM14>, <XLXI_1/Mram_RAM334> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM14>, <XLXI_1/Mram_RAM398> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM14>, <XLXI_1/Mram_RAM462> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM12>, <XLXI_1/Mram_RAM76> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM12>, <XLXI_1/Mram_RAM140> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM12>, <XLXI_1/Mram_RAM204> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM12>, <XLXI_1/Mram_RAM268> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM12>, <XLXI_1/Mram_RAM332> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM12>, <XLXI_1/Mram_RAM396> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM12>, <XLXI_1/Mram_RAM460> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM13>, <XLXI_1/Mram_RAM77> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM13>, <XLXI_1/Mram_RAM141> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM13>, <XLXI_1/Mram_RAM205> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM13>, <XLXI_1/Mram_RAM269> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM13>, <XLXI_1/Mram_RAM333> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM13>, <XLXI_1/Mram_RAM397> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM13>, <XLXI_1/Mram_RAM461> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM15>, <XLXI_1/Mram_RAM79> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM15>, <XLXI_1/Mram_RAM143> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM15>, <XLXI_1/Mram_RAM207> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM15>, <XLXI_1/Mram_RAM271> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM15>, <XLXI_1/Mram_RAM335> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM15>, <XLXI_1/Mram_RAM399> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM15>, <XLXI_1/Mram_RAM463> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM16>, <XLXI_1/Mram_RAM80> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM16>, <XLXI_1/Mram_RAM144> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM16>, <XLXI_1/Mram_RAM208> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM16>, <XLXI_1/Mram_RAM272> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM16>, <XLXI_1/Mram_RAM336> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM16>, <XLXI_1/Mram_RAM400> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM16>, <XLXI_1/Mram_RAM464> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM17>, <XLXI_1/Mram_RAM81> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM17>, <XLXI_1/Mram_RAM145> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM17>, <XLXI_1/Mram_RAM209> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM17>, <XLXI_1/Mram_RAM273> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM17>, <XLXI_1/Mram_RAM337> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM17>, <XLXI_1/Mram_RAM401> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM17>, <XLXI_1/Mram_RAM465> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM18>, <XLXI_1/Mram_RAM82> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM18>, <XLXI_1/Mram_RAM146> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM18>, <XLXI_1/Mram_RAM210> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM18>, <XLXI_1/Mram_RAM274> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM18>, <XLXI_1/Mram_RAM338> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM18>, <XLXI_1/Mram_RAM402> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM18>, <XLXI_1/Mram_RAM466> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM19>, <XLXI_1/Mram_RAM83> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM19>, <XLXI_1/Mram_RAM147> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM19>, <XLXI_1/Mram_RAM211> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM19>, <XLXI_1/Mram_RAM275> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM19>, <XLXI_1/Mram_RAM339> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM19>, <XLXI_1/Mram_RAM403> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM19>, <XLXI_1/Mram_RAM467> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM20>, <XLXI_1/Mram_RAM84> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM20>, <XLXI_1/Mram_RAM148> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM20>, <XLXI_1/Mram_RAM212> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM20>, <XLXI_1/Mram_RAM276> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM20>, <XLXI_1/Mram_RAM340> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM20>, <XLXI_1/Mram_RAM404> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM20>, <XLXI_1/Mram_RAM468> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM21>, <XLXI_1/Mram_RAM85> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM21>, <XLXI_1/Mram_RAM149> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM21>, <XLXI_1/Mram_RAM213> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM21>, <XLXI_1/Mram_RAM277> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM21>, <XLXI_1/Mram_RAM341> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM21>, <XLXI_1/Mram_RAM405> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM21>, <XLXI_1/Mram_RAM469> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM22>, <XLXI_1/Mram_RAM86> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM22>, <XLXI_1/Mram_RAM150> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM22>, <XLXI_1/Mram_RAM214> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM22>, <XLXI_1/Mram_RAM278> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM22>, <XLXI_1/Mram_RAM342> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM22>, <XLXI_1/Mram_RAM406> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM22>, <XLXI_1/Mram_RAM470> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM23>, <XLXI_1/Mram_RAM87> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM23>, <XLXI_1/Mram_RAM151> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM23>, <XLXI_1/Mram_RAM215> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM23>, <XLXI_1/Mram_RAM279> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM23>, <XLXI_1/Mram_RAM343> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM23>, <XLXI_1/Mram_RAM407> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM23>, <XLXI_1/Mram_RAM471> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM24>, <XLXI_1/Mram_RAM88> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM24>, <XLXI_1/Mram_RAM152> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM24>, <XLXI_1/Mram_RAM216> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM24>, <XLXI_1/Mram_RAM280> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM24>, <XLXI_1/Mram_RAM344> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM24>, <XLXI_1/Mram_RAM408> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM24>, <XLXI_1/Mram_RAM472> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM25>, <XLXI_1/Mram_RAM89> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM25>, <XLXI_1/Mram_RAM153> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM25>, <XLXI_1/Mram_RAM217> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM25>, <XLXI_1/Mram_RAM281> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM25>, <XLXI_1/Mram_RAM345> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM25>, <XLXI_1/Mram_RAM409> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM25>, <XLXI_1/Mram_RAM473> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM26>, <XLXI_1/Mram_RAM90> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM26>, <XLXI_1/Mram_RAM154> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM26>, <XLXI_1/Mram_RAM218> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM26>, <XLXI_1/Mram_RAM282> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM26>, <XLXI_1/Mram_RAM346> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM26>, <XLXI_1/Mram_RAM410> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM26>, <XLXI_1/Mram_RAM474> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM27>, <XLXI_1/Mram_RAM91> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM27>, <XLXI_1/Mram_RAM155> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM27>, <XLXI_1/Mram_RAM219> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM27>, <XLXI_1/Mram_RAM283> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM27>, <XLXI_1/Mram_RAM347> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM27>, <XLXI_1/Mram_RAM411> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM27>, <XLXI_1/Mram_RAM475> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM28>, <XLXI_1/Mram_RAM92> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM28>, <XLXI_1/Mram_RAM156> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM28>, <XLXI_1/Mram_RAM220> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM28>, <XLXI_1/Mram_RAM284> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM28>, <XLXI_1/Mram_RAM348> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM28>, <XLXI_1/Mram_RAM412> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM28>, <XLXI_1/Mram_RAM476> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM31>, <XLXI_1/Mram_RAM95> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM31>, <XLXI_1/Mram_RAM159> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM31>, <XLXI_1/Mram_RAM223> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM31>, <XLXI_1/Mram_RAM287> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM31>, <XLXI_1/Mram_RAM351> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM31>, <XLXI_1/Mram_RAM415> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM31>, <XLXI_1/Mram_RAM479> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM29>, <XLXI_1/Mram_RAM93> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM29>, <XLXI_1/Mram_RAM157> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM29>, <XLXI_1/Mram_RAM221> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM29>, <XLXI_1/Mram_RAM285> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM29>, <XLXI_1/Mram_RAM349> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM29>, <XLXI_1/Mram_RAM413> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM29>, <XLXI_1/Mram_RAM477> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM30>, <XLXI_1/Mram_RAM94> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM30>, <XLXI_1/Mram_RAM158> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM30>, <XLXI_1/Mram_RAM222> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM30>, <XLXI_1/Mram_RAM286> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM30>, <XLXI_1/Mram_RAM350> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM30>, <XLXI_1/Mram_RAM414> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM30>, <XLXI_1/Mram_RAM478> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM32>, <XLXI_1/Mram_RAM96> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM32>, <XLXI_1/Mram_RAM160> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM32>, <XLXI_1/Mram_RAM224> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM32>, <XLXI_1/Mram_RAM288> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM32>, <XLXI_1/Mram_RAM352> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM32>, <XLXI_1/Mram_RAM416> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM32>, <XLXI_1/Mram_RAM480> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM33>, <XLXI_1/Mram_RAM97> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM33>, <XLXI_1/Mram_RAM161> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM33>, <XLXI_1/Mram_RAM225> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM33>, <XLXI_1/Mram_RAM289> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM33>, <XLXI_1/Mram_RAM353> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM33>, <XLXI_1/Mram_RAM417> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM33>, <XLXI_1/Mram_RAM481> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM34>, <XLXI_1/Mram_RAM98> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM34>, <XLXI_1/Mram_RAM162> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM34>, <XLXI_1/Mram_RAM226> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM34>, <XLXI_1/Mram_RAM290> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM34>, <XLXI_1/Mram_RAM354> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM34>, <XLXI_1/Mram_RAM418> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM34>, <XLXI_1/Mram_RAM482> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM35>, <XLXI_1/Mram_RAM99> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM35>, <XLXI_1/Mram_RAM163> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM35>, <XLXI_1/Mram_RAM227> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM35>, <XLXI_1/Mram_RAM291> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM35>, <XLXI_1/Mram_RAM355> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM35>, <XLXI_1/Mram_RAM419> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM35>, <XLXI_1/Mram_RAM483> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM36>, <XLXI_1/Mram_RAM100> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM36>, <XLXI_1/Mram_RAM164> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM36>, <XLXI_1/Mram_RAM228> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM36>, <XLXI_1/Mram_RAM292> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM36>, <XLXI_1/Mram_RAM356> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM36>, <XLXI_1/Mram_RAM420> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM36>, <XLXI_1/Mram_RAM484> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM37>, <XLXI_1/Mram_RAM101> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM37>, <XLXI_1/Mram_RAM165> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM37>, <XLXI_1/Mram_RAM229> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM37>, <XLXI_1/Mram_RAM293> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM37>, <XLXI_1/Mram_RAM357> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM37>, <XLXI_1/Mram_RAM421> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM37>, <XLXI_1/Mram_RAM485> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM38>, <XLXI_1/Mram_RAM102> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM38>, <XLXI_1/Mram_RAM166> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM38>, <XLXI_1/Mram_RAM230> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM38>, <XLXI_1/Mram_RAM294> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM38>, <XLXI_1/Mram_RAM358> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM38>, <XLXI_1/Mram_RAM422> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM38>, <XLXI_1/Mram_RAM486> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM39>, <XLXI_1/Mram_RAM103> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM39>, <XLXI_1/Mram_RAM167> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM39>, <XLXI_1/Mram_RAM231> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM39>, <XLXI_1/Mram_RAM295> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM39>, <XLXI_1/Mram_RAM359> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM39>, <XLXI_1/Mram_RAM423> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM39>, <XLXI_1/Mram_RAM487> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM40>, <XLXI_1/Mram_RAM104> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM40>, <XLXI_1/Mram_RAM168> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM40>, <XLXI_1/Mram_RAM232> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM40>, <XLXI_1/Mram_RAM296> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM40>, <XLXI_1/Mram_RAM360> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM40>, <XLXI_1/Mram_RAM424> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM40>, <XLXI_1/Mram_RAM488> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM41>, <XLXI_1/Mram_RAM105> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM41>, <XLXI_1/Mram_RAM169> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM41>, <XLXI_1/Mram_RAM233> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM41>, <XLXI_1/Mram_RAM297> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM41>, <XLXI_1/Mram_RAM361> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM41>, <XLXI_1/Mram_RAM425> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM41>, <XLXI_1/Mram_RAM489> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM42>, <XLXI_1/Mram_RAM106> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM42>, <XLXI_1/Mram_RAM170> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM42>, <XLXI_1/Mram_RAM234> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM42>, <XLXI_1/Mram_RAM298> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM42>, <XLXI_1/Mram_RAM362> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM42>, <XLXI_1/Mram_RAM426> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM42>, <XLXI_1/Mram_RAM490> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM43>, <XLXI_1/Mram_RAM107> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM43>, <XLXI_1/Mram_RAM171> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM43>, <XLXI_1/Mram_RAM235> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM43>, <XLXI_1/Mram_RAM299> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM43>, <XLXI_1/Mram_RAM363> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM43>, <XLXI_1/Mram_RAM427> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM43>, <XLXI_1/Mram_RAM491> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM44>, <XLXI_1/Mram_RAM108> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM44>, <XLXI_1/Mram_RAM172> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM44>, <XLXI_1/Mram_RAM236> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM44>, <XLXI_1/Mram_RAM300> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM44>, <XLXI_1/Mram_RAM364> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM44>, <XLXI_1/Mram_RAM428> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM44>, <XLXI_1/Mram_RAM492> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM45>, <XLXI_1/Mram_RAM109> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM45>, <XLXI_1/Mram_RAM173> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM45>, <XLXI_1/Mram_RAM237> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM45>, <XLXI_1/Mram_RAM301> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM45>, <XLXI_1/Mram_RAM365> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM45>, <XLXI_1/Mram_RAM429> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM45>, <XLXI_1/Mram_RAM493> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM46>, <XLXI_1/Mram_RAM110> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM46>, <XLXI_1/Mram_RAM174> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM46>, <XLXI_1/Mram_RAM238> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM46>, <XLXI_1/Mram_RAM302> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM46>, <XLXI_1/Mram_RAM366> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM46>, <XLXI_1/Mram_RAM430> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM46>, <XLXI_1/Mram_RAM494> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM47>, <XLXI_1/Mram_RAM111> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM47>, <XLXI_1/Mram_RAM175> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM47>, <XLXI_1/Mram_RAM239> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM47>, <XLXI_1/Mram_RAM303> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM47>, <XLXI_1/Mram_RAM367> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM47>, <XLXI_1/Mram_RAM431> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM47>, <XLXI_1/Mram_RAM495> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM48>, <XLXI_1/Mram_RAM112> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM48>, <XLXI_1/Mram_RAM176> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM48>, <XLXI_1/Mram_RAM240> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM48>, <XLXI_1/Mram_RAM304> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM48>, <XLXI_1/Mram_RAM368> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM48>, <XLXI_1/Mram_RAM432> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM48>, <XLXI_1/Mram_RAM496> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM49>, <XLXI_1/Mram_RAM113> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM49>, <XLXI_1/Mram_RAM177> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM49>, <XLXI_1/Mram_RAM241> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM49>, <XLXI_1/Mram_RAM305> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM49>, <XLXI_1/Mram_RAM369> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM49>, <XLXI_1/Mram_RAM433> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM49>, <XLXI_1/Mram_RAM497> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM50>, <XLXI_1/Mram_RAM114> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM50>, <XLXI_1/Mram_RAM178> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM50>, <XLXI_1/Mram_RAM242> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM50>, <XLXI_1/Mram_RAM306> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM50>, <XLXI_1/Mram_RAM370> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM50>, <XLXI_1/Mram_RAM434> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM50>, <XLXI_1/Mram_RAM498> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM51>, <XLXI_1/Mram_RAM115> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM51>, <XLXI_1/Mram_RAM179> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM51>, <XLXI_1/Mram_RAM243> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM51>, <XLXI_1/Mram_RAM307> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM51>, <XLXI_1/Mram_RAM371> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM51>, <XLXI_1/Mram_RAM435> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM51>, <XLXI_1/Mram_RAM499> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM52>, <XLXI_1/Mram_RAM116> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM52>, <XLXI_1/Mram_RAM180> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM52>, <XLXI_1/Mram_RAM244> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM52>, <XLXI_1/Mram_RAM308> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM52>, <XLXI_1/Mram_RAM372> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM52>, <XLXI_1/Mram_RAM436> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM52>, <XLXI_1/Mram_RAM500> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM53>, <XLXI_1/Mram_RAM117> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM53>, <XLXI_1/Mram_RAM181> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM53>, <XLXI_1/Mram_RAM245> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM53>, <XLXI_1/Mram_RAM309> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM53>, <XLXI_1/Mram_RAM373> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM53>, <XLXI_1/Mram_RAM437> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM53>, <XLXI_1/Mram_RAM501> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM54>, <XLXI_1/Mram_RAM118> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM54>, <XLXI_1/Mram_RAM182> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM54>, <XLXI_1/Mram_RAM246> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM54>, <XLXI_1/Mram_RAM310> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM54>, <XLXI_1/Mram_RAM374> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM54>, <XLXI_1/Mram_RAM438> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM54>, <XLXI_1/Mram_RAM502> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM55>, <XLXI_1/Mram_RAM119> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM55>, <XLXI_1/Mram_RAM183> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM55>, <XLXI_1/Mram_RAM247> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM55>, <XLXI_1/Mram_RAM311> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM55>, <XLXI_1/Mram_RAM375> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM55>, <XLXI_1/Mram_RAM439> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM55>, <XLXI_1/Mram_RAM503> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM56>, <XLXI_1/Mram_RAM120> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM56>, <XLXI_1/Mram_RAM184> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM56>, <XLXI_1/Mram_RAM248> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM56>, <XLXI_1/Mram_RAM312> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM56>, <XLXI_1/Mram_RAM376> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM56>, <XLXI_1/Mram_RAM440> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM56>, <XLXI_1/Mram_RAM504> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM57>, <XLXI_1/Mram_RAM121> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM57>, <XLXI_1/Mram_RAM185> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM57>, <XLXI_1/Mram_RAM249> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM57>, <XLXI_1/Mram_RAM313> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM57>, <XLXI_1/Mram_RAM377> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM57>, <XLXI_1/Mram_RAM441> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM57>, <XLXI_1/Mram_RAM505> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM58>, <XLXI_1/Mram_RAM122> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM58>, <XLXI_1/Mram_RAM186> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM58>, <XLXI_1/Mram_RAM250> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM58>, <XLXI_1/Mram_RAM314> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM58>, <XLXI_1/Mram_RAM378> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM58>, <XLXI_1/Mram_RAM442> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM58>, <XLXI_1/Mram_RAM506> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM59>, <XLXI_1/Mram_RAM123> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM59>, <XLXI_1/Mram_RAM187> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM59>, <XLXI_1/Mram_RAM251> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM59>, <XLXI_1/Mram_RAM315> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM59>, <XLXI_1/Mram_RAM379> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM59>, <XLXI_1/Mram_RAM443> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM59>, <XLXI_1/Mram_RAM507> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM60>, <XLXI_1/Mram_RAM124> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM60>, <XLXI_1/Mram_RAM188> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM60>, <XLXI_1/Mram_RAM252> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM60>, <XLXI_1/Mram_RAM316> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM60>, <XLXI_1/Mram_RAM380> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM60>, <XLXI_1/Mram_RAM444> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM60>, <XLXI_1/Mram_RAM508> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM61>, <XLXI_1/Mram_RAM125> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM61>, <XLXI_1/Mram_RAM189> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM61>, <XLXI_1/Mram_RAM253> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM61>, <XLXI_1/Mram_RAM317> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM61>, <XLXI_1/Mram_RAM381> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM61>, <XLXI_1/Mram_RAM445> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM61>, <XLXI_1/Mram_RAM509> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM64>, <XLXI_1/Mram_RAM128> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM64>, <XLXI_1/Mram_RAM192> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM64>, <XLXI_1/Mram_RAM256> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM64>, <XLXI_1/Mram_RAM320> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM64>, <XLXI_1/Mram_RAM384> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM64>, <XLXI_1/Mram_RAM448> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM64>, <XLXI_1/Mram_RAM512> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM62>, <XLXI_1/Mram_RAM126> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM62>, <XLXI_1/Mram_RAM190> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM62>, <XLXI_1/Mram_RAM254> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM62>, <XLXI_1/Mram_RAM318> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM62>, <XLXI_1/Mram_RAM382> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM62>, <XLXI_1/Mram_RAM446> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM62>, <XLXI_1/Mram_RAM510> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM63>, <XLXI_1/Mram_RAM127> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM63>, <XLXI_1/Mram_RAM191> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM63>, <XLXI_1/Mram_RAM255> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM63>, <XLXI_1/Mram_RAM319> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM63>, <XLXI_1/Mram_RAM383> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM63>, <XLXI_1/Mram_RAM447> are equivalent, second RAM is removed
-INFO:Xst:2399 - RAMs <XLXI_1/Mram_RAM63>, <XLXI_1/Mram_RAM511> are equivalent, second RAM is removed
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block schemat, actual ratio is 8.
+Found area constraint ratio of 100 (+ 5) on block schemat, actual ratio is 11.
 INFO:Xst:2260 - The FF/Latch <XLXI_2/state_FSM_FFd8> in Unit <schemat> is equivalent to the following FF/Latch : <XLXI_6/state_FSM_FFd6> 
-FlipFlop XLXI_2/read_address_memory_0 has been replicated 4 time(s)
-FlipFlop XLXI_2/read_address_memory_1 has been replicated 4 time(s)
-FlipFlop XLXI_2/read_address_memory_2 has been replicated 4 time(s)
-FlipFlop XLXI_2/read_address_memory_3 has been replicated 4 time(s)
+FlipFlop XLXI_2/read_address_memory_0 has been replicated 26 time(s)
+FlipFlop XLXI_2/read_address_memory_1 has been replicated 26 time(s)
+FlipFlop XLXI_2/read_address_memory_2 has been replicated 26 time(s)
+FlipFlop XLXI_2/read_address_memory_3 has been replicated 26 time(s)
 
 Final Macro Processing ...
 
@@ -1055,8 +609,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 150
- Flip-Flops                                            : 150
+# Registers                                            : 247
+ Flip-Flops                                            : 247
 
 =========================================================================
 
@@ -1082,46 +636,46 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 9
+# IOs                              : 13
 
 Cell Usage :
-# BELS                             : 1132
+# BELS                             : 1665
 #      GND                         : 4
 #      INV                         : 14
 #      LUT1                        : 55
-#      LUT2                        : 39
+#      LUT2                        : 41
 #      LUT2_D                      : 5
 #      LUT2_L                      : 7
-#      LUT3                        : 306
-#      LUT3_D                      : 5
+#      LUT3                        : 567
+#      LUT3_D                      : 6
 #      LUT3_L                      : 3
-#      LUT4                        : 216
-#      LUT4_D                      : 15
-#      LUT4_L                      : 24
+#      LUT4                        : 241
+#      LUT4_D                      : 11
+#      LUT4_L                      : 23
 #      MUXCY                       : 61
-#      MUXF5                       : 206
-#      MUXF6                       : 64
-#      MUXF7                       : 32
-#      MUXF8                       : 12
+#      MUXF5                       : 343
+#      MUXF6                       : 128
+#      MUXF7                       : 64
+#      MUXF8                       : 28
 #      VCC                         : 4
 #      XORCY                       : 60
-# FlipFlops/Latches                : 187
-#      FD                          : 19
+# FlipFlops/Latches                : 284
+#      FD                          : 22
 #      FDCE                        : 2
-#      FDE                         : 64
+#      FDE                         : 151
 #      FDR                         : 42
 #      FDRE                        : 39
 #      FDRS                        : 3
-#      FDS                         : 17
+#      FDS                         : 24
 #      FDSE                        : 1
-# RAMS                             : 72
-#      RAM16X1D                    : 72
+# RAMS                             : 520
+#      RAM16X1D                    : 520
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 8
+# IO Buffers                       : 12
 #      IBUF                        : 4
 #      IOBUF                       : 2
-#      OBUF                        : 2
+#      OBUF                        : 6
 =========================================================================
 
 Device utilization summary:
@@ -1129,13 +683,13 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      400  out of   4656     8%  
- Number of Slice Flip Flops:            185  out of   9312     1%  
- Number of 4 input LUTs:                833  out of   9312     8%  
-    Number used as logic:               689
-    Number used as RAMs:                144
- Number of IOs:                           9
- Number of bonded IOBs:                   9  out of    232     3%  
+ Number of Slices:                      580  out of   4656    12%  
+ Number of Slice Flip Flops:            282  out of   9312     3%  
+ Number of 4 input LUTs:               2013  out of   9312    21%  
+    Number used as logic:               973
+    Number used as RAMs:               1040
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
     IOB Flip Flops:                       2
  Number of GCLKs:                         1  out of     24     4%  
 
@@ -1160,7 +714,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk_50MHz                          | BUFGP                  | 259   |
+Clk_50MHz                          | BUFGP                  | 804   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1176,9 +730,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 9.260ns (Maximum Frequency: 107.991MHz)
+   Minimum period: 8.974ns (Maximum Frequency: 111.433MHz)
    Minimum input arrival time before clock: 4.538ns
-   Maximum output required time after clock: 4.310ns
+   Maximum output required time after clock: 9.481ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -1187,33 +741,33 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
-  Clock period: 9.260ns (frequency: 107.991MHz)
-  Total number of paths / destination ports: 7999 / 1040
+  Clock period: 8.974ns (frequency: 111.433MHz)
+  Total number of paths / destination ports: 18966 / 5775
 -------------------------------------------------------------------------
-Delay:               9.260ns (Levels of Logic = 9)
-  Source:            XLXI_2/read_address_memory_0_1 (FF)
+Delay:               8.974ns (Levels of Logic = 9)
+  Source:            XLXI_2/read_address_memory_1_5 (FF)
   Destination:       XLXI_6/i_FIFO_Mram_RAM6 (RAM)
   Source Clock:      Clk_50MHz rising
   Destination Clock: Clk_50MHz rising
 
-  Data Path: XLXI_2/read_address_memory_0_1 to XLXI_6/i_FIFO_Mram_RAM6
+  Data Path: XLXI_2/read_address_memory_1_5 to XLXI_6/i_FIFO_Mram_RAM6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             16   0.591   1.034  XLXI_2/read_address_memory_0_1 (XLXI_2/read_address_memory_0_1)
-     RAM16X1D:DPRA0->DPO    8   0.704   0.836  XLXI_1/Mram_RAM29 (N123)
-     LUT3:I1->O            1   0.704   0.000  inst_LPM_MUX13_8_f51 (inst_LPM_MUX13_8_f51)
-     MUXF5:I0->O           1   0.321   0.000  inst_LPM_MUX13_8_f5 (inst_LPM_MUX13_8_f5)
-     MUXF6:I1->O           1   0.521   0.000  inst_LPM_MUX13_7_f6 (inst_LPM_MUX13_7_f6)
-     MUXF7:I1->O           1   0.521   0.000  inst_LPM_MUX13_6_f7 (inst_LPM_MUX13_6_f7)
-     MUXF8:I1->O           1   0.521   0.455  inst_LPM_MUX13_5_f8 (inst_LPM_MUX13_5_f8)
+     FDE:C->Q             19   0.591   1.085  XLXI_2/read_address_memory_1_5 (XLXI_2/read_address_memory_1_5)
+     RAM16X1D:DPRA1->DPO    1   0.704   0.499  XLXI_1/Mram_RAM327 (N719)
+     LUT3:I1->O            1   0.704   0.000  inst_LPM_MUX13_115 (inst_LPM_MUX13_115)
+     MUXF5:I1->O           1   0.321   0.000  inst_LPM_MUX13_10_f5_1 (inst_LPM_MUX13_10_f52)
+     MUXF6:I1->O           1   0.521   0.000  inst_LPM_MUX13_9_f6 (inst_LPM_MUX13_9_f6)
+     MUXF7:I0->O           1   0.521   0.000  inst_LPM_MUX13_7_f7 (inst_LPM_MUX13_7_f7)
+     MUXF8:I0->O           1   0.521   0.455  inst_LPM_MUX13_5_f8 (inst_LPM_MUX13_5_f8)
      LUT4:I2->O            1   0.704   0.455  XLXI_2/I2C_FIFO_DI<5>62 (XLXI_2/I2C_FIFO_DI<5>62)
      LUT3_L:I2->LO         1   0.704   0.104  XLXI_2/I2C_FIFO_DI<5>65 (FIFO_DI<5>)
      LUT4:I3->O            1   0.704   0.000  XLXI_6/DI_5_1 (XLXI_6/DI<5>)
      RAM16X1D:D                0.381          XLXI_6/i_FIFO_Mram_RAM6
     ----------------------------------------
-    Total                      9.260ns (6.376ns logic, 2.884ns route)
-                                       (68.9% logic, 31.1% route)
+    Total                      8.974ns (6.376ns logic, 2.598ns route)
+                                       (71.0% logic, 29.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
@@ -1238,36 +792,41 @@ Offset:              4.538ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 3 / 3
+  Total number of paths / destination ports: 50 / 7
 -------------------------------------------------------------------------
-Offset:              4.310ns (Levels of Logic = 1)
-  Source:            XLXI_6/SDAout (FF)
-  Destination:       SDA (PAD)
+Offset:              9.481ns (Levels of Logic = 6)
+  Source:            XLXI_18/ResDORdy/prevDIn (FF)
+  Destination:       LED6 (PAD)
   Source Clock:      Clk_50MHz rising
 
-  Data Path: XLXI_6/SDAout to SDA
+  Data Path: XLXI_18/ResDORdy/prevDIn to LED6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q              2   0.591   0.447  XLXI_6/SDAout (XLXI_6/SDAout_125)
-     IOBUF:T->IO               3.272          XLXI_6/IOB1 (SDA)
+     FD:C->Q               1   0.591   0.595  ResDORdy/prevDIn (ResDORdy/prevDIn)
+     LUT2:I0->O            1   0.704   0.499  ResDORdy/Mxor_DOut_Result1 (DO_Rdy)
+     end scope: 'XLXI_18'
+     LUT4:I1->O            4   0.704   0.622  XLXI_16/Key_out_and0000 (XLXI_16/Key_out_and0000)
+     LUT4:I2->O            1   0.704   0.499  XLXI_16/Key_out<2>_SW1 (N5110)
+     LUT4:I1->O            4   0.704   0.587  XLXI_16/Key_out<2> (XLXN_74<2>)
+     OBUF:I->O                 3.272          LED6_OBUF (LED6)
     ----------------------------------------
-    Total                      4.310ns (3.863ns logic, 0.447ns route)
-                                       (89.6% logic, 10.4% route)
+    Total                      9.481ns (6.679ns logic, 2.802ns route)
+                                       (70.4% logic, 29.6% route)
 
 =========================================================================
 WARNING:Xst:616 - Invalid property "SLEW 20": Did not attach to XLXI_6/IOB2.
 WARNING:Xst:616 - Invalid property "SLEW 20": Did not attach to XLXI_6/IOB1.
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.92 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.56 secs
  
 --> 
 
-Total memory usage is 232828 kilobytes
+Total memory usage is 4565640 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   19 (   0 filtered)
-Number of infos    :  453 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

@@ -36,12 +36,16 @@ entity GameModule is
            Clk : in  STD_LOGIC;
            StartButton : in  STD_LOGIC;
            Data_OUT : out  STD_LOGIC_VECTOR (7 downto 0);
-			  Key_kbd_in : in STD_LOGIC_VECTOR (2 downto 0)
+			  Key_kbd_in : in STD_LOGIC_VECTOR (2 downto 0);
+			  Key_0 : out STD_LOGIC;
+			  Key_1 : out STD_LOGIC;
+			  Key_2 : out STD_LOGIC;
+			  Game_over_signal : out STD_LOGIC
 			  );
 end GameModule;
 
 architecture Behavioral of GameModule is
-	type t_state is (sWait, sRead, sSetBit, sWrite, sGame_over, sReset_to_start_state);
+	type t_state is (sWait, sRead, sAddressCount, sSetBit, sWrite, sGame_over, sReset_to_start_state);
 	type t_direction is (up, down, right, left);
 	type t_game_state is (running, collision);
 
@@ -74,19 +78,22 @@ begin
       case state is
 		
 			when sWait =>
-				if (counter_delay = X"0186A0") then	-- 2ms delay (RAM reading from 0->1023, lasts in testbench ~25ms) 200ms - x"989680"
+				if (counter_delay = X"989680") then	-- 2ms delay (RAM reading from 0->1023, lasts in testbench ~25ms) 200ms - x"989680"
+					next_state <= sAddressCount;
+				end if;
+			
+			when sAddressCount =>
+				if (game_state = running) then
 					next_state <= sRead;
+				else
+					next_state <= sGame_over;
 				end if;
 				
 			when sRead =>
 				next_state <= sSetBit;
 			
 			when sSetBit =>
-				if (game_state = running) then
-					next_state <= sWrite;
-				else
-					next_state <= sGame_over;
-				end if;
+				next_state <= sWrite;
 				
 			when sWrite =>
 				next_state <= sWait;
@@ -105,7 +112,7 @@ begin
    end process;
 	
 	-- COUNT DELAY
-	process(Clk, state)
+	process(Clk, state, game_state)
 	begin
 		if rising_edge(Clk) then
 			if (state = sWait) then
@@ -144,11 +151,11 @@ begin
 		end if;
 	end process;
 	
-	-- CHECK COLLISION AND COUNT ADDRESS_MEMORY
+	-- CHECK COLLISION / COUNT ADDRESS_MEMORY / GAME_OVER / CLEAR SCREEN
 	process(Clk, direction, x, y)
 	begin
 		if rising_edge(Clk) then
-			if (state = sRead) then
+			if (state = sAddressCount) then
 				if (direction = up) then
 					if (y = "000000") then
 						game_state <= collision;
@@ -179,12 +186,12 @@ begin
 					end if;
 				end if; 
 			elsif (state = sGame_over) then
-				x <= (others => '0');							-- BACK TO START
-				y <= (others => '0');
+				x <= "0000000";							-- BACK TO START
+				y <= "000000";
 				address_memory <= ( others=> '0' );			-- CLEAR SCREEN
-				data_signal <= X"00";
 			elsif (state = sReset_to_start_state) then 	-- GO THROUGH ALL RAM TO CLEAR
 				address_memory <= address_memory + 1;
+				game_state <= running;
 			end if;
 		end if;
 	end process;
@@ -196,7 +203,10 @@ begin
 			if (state = sRead) then
 				data_signal <= Data_IN;
 			elsif (state = sSetBit) then
+				--data_signal <= X"01";
 				data_signal(to_integer(y(2 downto 0))) <= '1';
+			elsif (state = sGame_over) then
+				data_signal <= X"00";
 			end if;
 		end if;
 	end process;
@@ -206,6 +216,13 @@ begin
 	
 	-- DATA TO WRITE (SYNC, ENABLED BY ENABLE_WRITE)
 	Data_OUT <= STD_LOGIC_VECTOR(data_signal);
+	
+	Game_over_signal <= '1' when (state = sGame_over) else '0';
+	Key_0 <= Key_kbd_in(0);
+	Key_1 <= Key_kbd_in(1);
+	Key_2 <= Key_kbd_in(2);
 
+	-- Wykrywanie kolizji dzia³a, delay te¿, LED3 siê pali, 
+	-- Pocz¹tek dzia³a, ale po resecie nie widaæ
 end Behavioral;
 

@@ -1,18 +1,18 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/testbench_isim_beh.exe -prj C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/testbench_beh.prj work.testbench 
-ISim P.20131013 (signature 0x8ef4fb42)
-Number of CPUs detected in this system: 1
-Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/testbench_isim_beh.exe -prj C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/testbench_beh.prj work.testbench 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Memory.vhd" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/GameModule.vhd" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/TEST.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Memory.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/GameModule.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/TEST.vhd" into library work
 Starting static elaboration
-ERROR:HDLCompiler:410 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" Line 193: Expression has 8 elements ; expected 3
-ERROR:HDLCompiler:432 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" Line 104: Formal <btn_east> has no actual or default value.
-ERROR:HDLCompiler:432 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" Line 107: Formal <ps2_clk> has no actual or default value.
-ERROR:HDLCompiler:432 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" Line 108: Formal <ps2_data> has no actual or default value.
+WARNING:HDLCompiler:89 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" Line 283: <ps2_kbd> remains a black-box since it has no binding entity.
+ERROR:HDLCompiler:432 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" Line 104: Formal <btn_east> has no actual or default value.
+ERROR:HDLCompiler:432 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" Line 107: Formal <ps2_clk> has no actual or default value.
+ERROR:HDLCompiler:432 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" Line 108: Formal <ps2_data> has no actual or default value.
 ERROR:Simulator:777 - Static elaboration of top level VHDL design unit testbench in library work failed

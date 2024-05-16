@@ -5,28 +5,28 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">XLXI_1/Mram_RAM1/SPO</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">XLXI_6/i_FIFO_Mram_RAM1/SPO</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">72</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">XLXI_1/Mram_RAM2/SPO,
-XLXI_1/Mram_RAM3/SPO,
-XLXI_1/Mram_RAM4/SPO,
-XLXI_1/Mram_RAM5/SPO,
-XLXI_1/Mram_RAM6/SPO</arg>
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">8</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">XLXI_6/i_FIFO_Mram_RAM2/SPO,
+XLXI_6/i_FIFO_Mram_RAM3/SPO,
+XLXI_6/i_FIFO_Mram_RAM4/SPO,
+XLXI_6/i_FIFO_Mram_RAM5/SPO,
+XLXI_6/i_FIFO_Mram_RAM6/SPO</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>
 
-<msg type="info" file="MapLib" num="562" delta="new" >No environment variables are currently set.
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
 </msg>
 
-<msg type="info" file="MapLib" num="159" delta="new" >Net Timing constraints on signal <arg fmt="%s" index="1">Clk_50MHz</arg> are pushed forward through input buffer.
+<msg type="info" file="MapLib" num="159" delta="old" >Net Timing constraints on signal <arg fmt="%s" index="1">Clk_50MHz</arg> are pushed forward through input buffer.
 </msg>
 
-<msg type="info" file="LIT" num="244" delta="new" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+<msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
 </msg>
 
-<msg type="warning" file="Pack" num="1186" delta="new" >One or more I/O components have conflicting property values.  For each occurrence, the system will use the property value attached to the pad.  Otherwise, the system will use the first property value read.  To view each occurrence, create a detailed map report (run map using the -detail option).
+<msg type="warning" file="Pack" num="1186" delta="old" >One or more I/O components have conflicting property values.  For each occurrence, the system will use the property value attached to the pad.  Otherwise, the system will use the first property value read.  To view each occurrence, create a detailed map report (run map using the -detail option).
 </msg>
 
 </messages>
