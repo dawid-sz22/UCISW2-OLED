@@ -35,14 +35,14 @@ static void work_a_2903167986_3212880686_p_0(char *t0)
     char *t7;
     char *t8;
 
-LAB0:    xsi_set_current_line(187, ng0);
+LAB0:    xsi_set_current_line(225, ng0);
 
-LAB3:    t1 = (t0 + 7269);
+LAB3:    t1 = (t0 + 9842);
     t3 = (8U != 8U);
     if (t3 == 1)
         goto LAB5;
 
-LAB6:    t4 = (t0 + 3324);
+LAB6:    t4 = (t0 + 4428);
     t5 = (t4 + 32U);
     t6 = *((char **)t5);
     t7 = (t6 + 40U);

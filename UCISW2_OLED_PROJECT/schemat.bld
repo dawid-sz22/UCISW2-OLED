@@ -1,18 +1,18 @@
-Release 14.7 ngdbuild P.20131013 (nt64)
+Release 14.7 ngdbuild P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
--intstyle ise -dd _ngo -sd sources -nt timestamp -uc sources/GenIO.ucf -uc
-sources/OLED_J4.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -sd sources -nt timestamp -uc sources/OLED_J4.ucf -uc
+sources/GenIO.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd
 
 Reading NGO file
-"C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.ngc" ...
+"C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.ngc" ...
 Loading design module "sources/PS2_Kbd.ngc"...
 Gathering constraint information from source properties...
 Done.
 
-Annotating constraints to design from ucf file "sources/GenIO.ucf" ...
 Annotating constraints to design from ucf file "sources/OLED_J4.ucf" ...
+Annotating constraints to design from ucf file "sources/GenIO.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 INFO:ConstraintSystem - The Period constraint <PERIOD = 20.0ns HIGH 50%;>
@@ -34,10 +34,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 4398760 kilobytes
+Total memory usage is 123420 kilobytes
 
 Writing NGD file "schemat.ngd" ...
-Total REAL time to NGDBUILD completion:  2 sec
-Total CPU time to NGDBUILD completion:   2 sec
+Total REAL time to NGDBUILD completion:  1 sec
+Total CPU time to NGDBUILD completion:   1 sec
 
 Writing NGDBUILD log file "schemat.bld"...

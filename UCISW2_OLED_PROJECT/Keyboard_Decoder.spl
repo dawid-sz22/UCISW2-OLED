@@ -2,7 +2,8 @@
 PS2_E0
 PS2_DataReady
 PS2_F0
+CLK
 =PS2_DO[7:0]=
 [Outputs]
-=Key_out[2:0]=
+=Key_out[1:0]=
 [BiDir]

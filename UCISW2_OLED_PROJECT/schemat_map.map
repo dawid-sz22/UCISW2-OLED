@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Map Application Log File for Design 'schemat'
 
 Design Information
@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu May 16 10:24:56 2024
+Mapped Date    : Thu May 16 20:28:39 2024
 
 Mapping design into LUTs...
 Running directed packing...
@@ -29,15 +29,15 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:           273 out of   9,312    2%
-  Number of 4 input LUTs:             1,996 out of   9,312   21%
+  Number of Slice Flip Flops:           360 out of   9,312    3%
+  Number of 4 input LUTs:             1,998 out of   9,312   21%
 Logic Distribution:
-  Number of occupied Slices:          1,160 out of   4,656   24%
-    Number of Slices containing only related logic:   1,160 out of   1,160 100%
-    Number of Slices containing unrelated logic:          0 out of   1,160   0%
+  Number of occupied Slices:          1,245 out of   4,656   26%
+    Number of Slices containing only related logic:   1,245 out of   1,245 100%
+    Number of Slices containing unrelated logic:          0 out of   1,245   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,051 out of   9,312   22%
-    Number used as logic:               956
+  Total Number of 4 input LUTs:       2,053 out of   9,312   22%
+    Number used as logic:               958
     Number used as a route-thru:         55
     Number used for Dual Port RAMs:   1,040
       (Two LUTs used per Dual Port RAM)
@@ -45,13 +45,13 @@ Logic Distribution:
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 13 out of     232    5%
+  Number of bonded IOBs:                 12 out of     232    5%
     IOB Flip Flops:                       2
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                4.33
+Average Fanout of Non-Clock Nets:                4.23
 
-Peak Memory Usage:  4421 MB
+Peak Memory Usage:  211 MB
 Total REAL time to MAP completion:  1 secs 
 Total CPU time to MAP completion:   1 secs 
 

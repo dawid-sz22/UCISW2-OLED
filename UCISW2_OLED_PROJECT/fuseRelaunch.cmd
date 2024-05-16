@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/testbench_isim_beh.exe" -prj "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/testbench_beh.prj" "work.testbench" 
+-intstyle "ise" -incremental -o "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/testbench_isim_beh.exe" -prj "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/testbench_beh.prj" "work.testbench" 

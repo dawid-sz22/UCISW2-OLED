@@ -1,7 +1,7 @@
-Release 14.7 - par P.20131013 (nt64)
+Release 14.7 - par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu May 16 10:25:13 2024
+Thu May 16 20:28:58 2024
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -99,7 +99,7 @@ E5|||VCCINT||||||||1.2||||
 E6|||NC||||||||||||
 E7||DIFFS|IO_L19N_0/VREF_0|UNUSED||0|||||||||
 E8|SCL|IOB|IO_L17P_0|TRISTATE|LVTTL|0|6|SLOW|NONE**|||LOCATED|NO|NONE|
-E9|LED6|IOB|IO_L15P_0|OUTPUT|LVTTL|0|4|SLOW|NONE**|||LOCATED|NO|NONE|
+E9||DIFFM|IO_L15P_0|UNUSED||0|||||||||
 E10||DIFFS|IO_L11N_0/GCLK5|UNUSED||0|||||||||
 E11||DIFFM|IO_L08P_0|UNUSED||0|||||||||
 E12||DIFFS|IO_L06N_0|UNUSED||0|||||||||

@@ -30,7 +30,10 @@ ARCHITECTURE behavioral OF testbench IS
           SCL	:	INOUT	STD_LOGIC; 
           LED7	:	OUT	STD_LOGIC; 
           btn_south	:	IN	STD_LOGIC; 
+          btn_east	:	IN	STD_LOGIC;
           Clk_50MHz	:	IN	STD_LOGIC; 
+          PS2_CLK	:	IN	STD_LOGIC; 
+          PS2_DATA	:	IN	STD_LOGIC; 
           LED0	:	OUT	STD_LOGIC);
    END COMPONENT;
 
@@ -38,6 +41,9 @@ ARCHITECTURE behavioral OF testbench IS
    SIGNAL SCL	:	STD_LOGIC;
    SIGNAL LED7	:	STD_LOGIC;
    SIGNAL btn_south	:	STD_LOGIC;
+   SIGNAL btn_east	:	STD_LOGIC;
+   SIGNAL PS2_CLK	:	STD_LOGIC;
+   SIGNAL PS2_DATA	:	STD_LOGIC;
    SIGNAL Clk_50MHz	:	STD_LOGIC :='0';
    SIGNAL LED0	:	STD_LOGIC;
 
@@ -47,14 +53,16 @@ BEGIN
 		SDA => SDA, 
 		SCL => SCL, 
 		LED7 => LED7, 
-		btn_south => btn_south, 
+		btn_south => btn_south,
+		btn_east => btn_east,
+		PS2_CLK => PS2_CLK,
+		PS2_DATA => PS2_DATA,  		
 		Clk_50MHz => Clk_50MHz, 
 		LED0 => LED0
    );
 	
 	Clk_50MHz <= not Clk_50MHz after 10 ns;
-
---------------------------------------------------------------------
+	--------------------------------------------------------------------
    --------------------------------------------------------------------
 	-- I2C bus behaviour
    SDA <= 'H';

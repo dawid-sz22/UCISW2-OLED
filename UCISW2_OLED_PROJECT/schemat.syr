@@ -1,16 +1,16 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: schemat.prj
 
@@ -107,22 +107,20 @@ Cores Search Directories           : {"sources"  }
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Memory.vhd" in Library work.
+Compiling vhdl file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Memory.vhd" in Library work.
 Architecture behavioral of Entity memory is up to date.
-Compiling vhdl file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" in Library work.
+Compiling vhdl file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" in Library work.
 Architecture behavioral of Entity oled_ctrl is up to date.
-Compiling vhdl file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd" in Library work.
+Compiling vhdl file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd" in Library work.
 Architecture structure of Entity i2c_master is up to date.
-Compiling vhdl file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/GameModule.vhd" in Library work.
+Compiling vhdl file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/GameModule.vhd" in Library work.
 Entity <gamemodule> compiled.
 Entity <gamemodule> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd" in Library work.
+Compiling vhdl file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd" in Library work.
 Architecture rtl of Entity keyboard_decoder is up to date.
-Compiling vhdl file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" in Library work.
-Entity <ifd_mxilinx_schemat> compiled.
-Entity <ifd_mxilinx_schemat> (Architecture <behavioral>) compiled.
-Entity <schemat> compiled.
-Entity <schemat> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" in Library work.
+Architecture behavioral of Entity ifd_mxilinx_schemat is up to date.
+Architecture behavioral of Entity schemat is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -148,17 +146,17 @@ Analyzing hierarchy for entity <Keyboard_Decoder> in library <work> (architectur
 =========================================================================
 Analyzing Entity <schemat> in library <work> (Architecture <behavioral>).
     Set user-defined property "HU_SET =  XLXI_5_1" for instance <XLXI_5> in unit <schemat>.
-WARNING:Xst:753 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" line 253: Unconnected output port 'FIFO_Empty' of component 'I2C_Master'.
-WARNING:Xst:753 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" line 253: Unconnected output port 'FIFO_DO' of component 'I2C_Master'.
+WARNING:Xst:753 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" line 253: Unconnected output port 'FIFO_Empty' of component 'I2C_Master'.
+WARNING:Xst:753 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" line 253: Unconnected output port 'FIFO_DO' of component 'I2C_Master'.
     Set user-defined property "HU_SET =  XLXI_8_0" for instance <XLXI_8> in unit <schemat>.
-WARNING:Xst:2211 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" line 295: Instantiating black box module <PS2_Kbd>.
+WARNING:Xst:2211 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" line 296: Instantiating black box module <PS2_Kbd>.
 Entity <schemat> analyzed. Unit <schemat> generated.
 
 Analyzing Entity <Memory> in library <work> (Architecture <behavioral>).
 Entity <Memory> analyzed. Unit <Memory> generated.
 
 Analyzing Entity <OLED_Ctrl> in library <work> (Architecture <behavioral>).
-WARNING:Xst:790 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" line 134: Index value(s) does not match array range, simulation mismatch.
 Entity <OLED_Ctrl> analyzed. Unit <OLED_Ctrl> generated.
 
 Analyzing generic Entity <IFD_MXILINX_schemat> in library <work> (Architecture <behavioral>).
@@ -380,7 +378,7 @@ Entity <Keyboard_Decoder> analyzed. Unit <Keyboard_Decoder> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <Memory>.
-    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Memory.vhd".
+    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Memory.vhd".
     Found 1024x8-bit dual-port RAM <Mram_RAM> for signal <RAM>.
     Summary:
 	inferred   1 RAM(s).
@@ -388,7 +386,7 @@ Unit <Memory> synthesized.
 
 
 Synthesizing Unit <OLED_Ctrl>.
-    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd".
+    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd".
 INFO:Xst:1799 - State swaitwrite is never reached in FSM <state>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
@@ -413,24 +411,28 @@ Unit <OLED_Ctrl> synthesized.
 
 
 Synthesizing Unit <GameModule>.
-    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/GameModule.vhd".
+    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/GameModule.vhd".
     Found finite state machine <FSM_1> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 7                                              |
-    | Transitions        | 10                                             |
-    | Inputs             | 3                                              |
-    | Outputs            | 7                                              |
+    | States             | 8                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 8                                              |
     | Clock              | Clk                       (rising_edge)        |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | sresetvaluestodefault                          |
     | Power Up State     | swait                                          |
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Using one-hot encoding for signal <direction>.
+    Found 4x4-bit ROM for signal <direction$mux0000>.
     Found 1-bit register for signal <EnableWrite>.
     Found 10-bit register for signal <address_memory>.
-    Found 7-bit adder for signal <address_memory$add0001> created at line 177.
-    Found 10-bit adder for signal <address_memory$addsub0000> created at line 193.
-    Found 7-bit subtractor for signal <address_memory$sub0001> created at line 184.
+    Found 7-bit adder for signal <address_memory$add0001> created at line 184.
+    Found 10-bit adder for signal <address_memory$addsub0000> created at line 201.
+    Found 7-bit subtractor for signal <address_memory$sub0001> created at line 191.
     Found 24-bit up counter for signal <counter_delay>.
     Found 8-bit register for signal <data_signal>.
     Found 4-bit register for signal <direction>.
@@ -440,6 +442,7 @@ Synthesizing Unit <GameModule>.
     Found 6-bit addsub for signal <y$share0000>.
     Summary:
 	inferred   1 Finite State Machine(s).
+	inferred   1 ROM(s).
 	inferred   1 Counter(s).
 	inferred  37 D-type flip-flop(s).
 	inferred   4 Adder/Subtractor(s).
@@ -447,17 +450,20 @@ Unit <GameModule> synthesized.
 
 
 Synthesizing Unit <Keyboard_Decoder>.
-    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd".
+    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd".
+    Found 2-bit register for signal <Key_out>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
 Unit <Keyboard_Decoder> synthesized.
 
 
 Synthesizing Unit <IFD_MXILINX_schemat>.
-    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf".
+    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf".
 Unit <IFD_MXILINX_schemat> synthesized.
 
 
 Synthesizing Unit <I2C_Master>.
-    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd".
+    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd".
 WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM8_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM7_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM6_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -471,7 +477,7 @@ Unit <I2C_Master> synthesized.
 
 
 Synthesizing Unit <schemat>.
-    Related source file is "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf".
+    Related source file is "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf".
 WARNING:Xst:653 - Signal <XLXI_6_ReadCnt_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
 WARNING:Xst:653 - Signal <XLXI_6_FIFO_Pop_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 Unit <schemat> synthesized.
@@ -484,6 +490,8 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 1
  1024x8-bit dual-port RAM                              : 1
+# ROMs                                                 : 1
+ 4x4-bit ROM                                           : 1
 # Adders/Subtractors                                   : 4
  10-bit adder                                          : 1
  6-bit addsub                                          : 1
@@ -493,9 +501,10 @@ Macro Statistics
  10-bit up counter                                     : 1
  24-bit up counter                                     : 1
  4-bit up counter                                      : 1
-# Registers                                            : 14
+# Registers                                            : 15
  1-bit register                                        : 10
  10-bit register                                       : 1
+ 2-bit register                                        : 1
  4-bit register                                        : 1
  6-bit register                                        : 1
  7-bit register                                        : 1
@@ -507,17 +516,18 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_1> for best encoding.
-Optimizing FSM <XLXI_7/state/FSM> on signal <state[1:7]> with one-hot encoding.
+Optimizing FSM <XLXI_7/state/FSM> on signal <state[1:8]> with one-hot encoding.
 -----------------------------------
  State                 | Encoding
 -----------------------------------
- swait                 | 0000001
- sread                 | 0000100
- saddresscount         | 0000010
- ssetbit               | 0010000
- swrite                | 0100000
- sgame_over            | 0001000
- sreset_to_start_state | 1000000
+ swait                 | 00000001
+ sread                 | 00001000
+ saddresscount         | 00000100
+ ssetbit               | 00100000
+ swrite                | 01000000
+ sgameover             | 00010000
+ sresetvaluestodefault | 00000010
+ sresetram             | 10000000
 -----------------------------------
 Analyzing FSM <FSM_0> for best encoding.
 Optimizing FSM <XLXI_2/state/FSM> on signal <state[1:8]> with one-hot encoding.
@@ -537,6 +547,10 @@ Optimizing FSM <XLXI_2/state/FSM> on signal <state[1:8]> with one-hot encoding.
 Reading core <sources/PS2_Kbd.ngc>.
 Loading core <PS2_Kbd> for timing and area information for instance <XLXI_18>.
 WARNING:Xst:2677 - Node <direction_3> of sequential type is unconnected in block <XLXI_7>.
+
+Synthesizing (advanced) Unit <GameModule>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_direction_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <GameModule> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Memory>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RAM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -566,6 +580,8 @@ Macro Statistics
 # FSMs                                                 : 2
 # RAMs                                                 : 1
  1024x8-bit dual-port distributed RAM                  : 1
+# ROMs                                                 : 1
+ 4x4-bit ROM                                           : 1
 # Adders/Subtractors                                   : 4
  10-bit adder                                          : 1
  6-bit addsub                                          : 1
@@ -575,8 +591,8 @@ Macro Statistics
  10-bit up counter                                     : 1
  24-bit up counter                                     : 1
  4-bit up counter                                      : 1
-# Registers                                            : 90
- Flip-Flops                                            : 90
+# Registers                                            : 92
+ Flip-Flops                                            : 92
 
 =========================================================================
 
@@ -596,12 +612,12 @@ Optimizing unit <I2C_Master> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block schemat, actual ratio is 11.
+Found area constraint ratio of 100 (+ 5) on block schemat, actual ratio is 12.
 INFO:Xst:2260 - The FF/Latch <XLXI_2/state_FSM_FFd8> in Unit <schemat> is equivalent to the following FF/Latch : <XLXI_6/state_FSM_FFd6> 
-FlipFlop XLXI_2/read_address_memory_0 has been replicated 26 time(s)
-FlipFlop XLXI_2/read_address_memory_1 has been replicated 26 time(s)
-FlipFlop XLXI_2/read_address_memory_2 has been replicated 26 time(s)
-FlipFlop XLXI_2/read_address_memory_3 has been replicated 26 time(s)
+FlipFlop XLXI_2/read_address_memory_0 has been replicated 47 time(s)
+FlipFlop XLXI_2/read_address_memory_1 has been replicated 47 time(s)
+FlipFlop XLXI_2/read_address_memory_2 has been replicated 47 time(s)
+FlipFlop XLXI_2/read_address_memory_3 has been replicated 47 time(s)
 
 Final Macro Processing ...
 
@@ -609,8 +625,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 247
- Flip-Flops                                            : 247
+# Registers                                            : 334
+ Flip-Flops                                            : 334
 
 =========================================================================
 
@@ -636,46 +652,46 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 13
+# IOs                              : 12
 
 Cell Usage :
-# BELS                             : 1665
+# BELS                             : 1673
 #      GND                         : 4
-#      INV                         : 14
+#      INV                         : 15
 #      LUT1                        : 55
-#      LUT2                        : 41
+#      LUT2                        : 45
 #      LUT2_D                      : 5
 #      LUT2_L                      : 7
-#      LUT3                        : 567
-#      LUT3_D                      : 6
-#      LUT3_L                      : 3
-#      LUT4                        : 241
+#      LUT3                        : 566
+#      LUT3_D                      : 5
+#      LUT3_L                      : 4
+#      LUT4                        : 240
 #      LUT4_D                      : 11
-#      LUT4_L                      : 23
+#      LUT4_L                      : 21
 #      MUXCY                       : 61
-#      MUXF5                       : 343
+#      MUXF5                       : 346
 #      MUXF6                       : 128
 #      MUXF7                       : 64
-#      MUXF8                       : 28
+#      MUXF8                       : 32
 #      VCC                         : 4
 #      XORCY                       : 60
-# FlipFlops/Latches                : 284
-#      FD                          : 22
+# FlipFlops/Latches                : 371
+#      FD                          : 18
 #      FDCE                        : 2
-#      FDE                         : 151
-#      FDR                         : 42
+#      FDE                         : 235
+#      FDR                         : 49
 #      FDRE                        : 39
-#      FDRS                        : 3
-#      FDS                         : 24
-#      FDSE                        : 1
+#      FDRS                        : 4
+#      FDRSE                       : 1
+#      FDS                         : 23
 # RAMS                             : 520
 #      RAM16X1D                    : 520
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 12
+# IO Buffers                       : 11
 #      IBUF                        : 4
 #      IOBUF                       : 2
-#      OBUF                        : 6
+#      OBUF                        : 5
 =========================================================================
 
 Device utilization summary:
@@ -683,13 +699,13 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      580  out of   4656    12%  
- Number of Slice Flip Flops:            282  out of   9312     3%  
- Number of 4 input LUTs:               2013  out of   9312    21%  
-    Number used as logic:               973
+ Number of Slices:                      633  out of   4656    13%  
+ Number of Slice Flip Flops:            369  out of   9312     3%  
+ Number of 4 input LUTs:               2014  out of   9312    21%  
+    Number used as logic:               974
     Number used as RAMs:               1040
- Number of IOs:                          13
- Number of bonded IOBs:                  13  out of    232     5%  
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of    232     5%  
     IOB Flip Flops:                       2
  Number of GCLKs:                         1  out of     24     4%  
 
@@ -714,7 +730,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk_50MHz                          | BUFGP                  | 804   |
+Clk_50MHz                          | BUFGP                  | 891   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -730,9 +746,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 8.974ns (Maximum Frequency: 111.433MHz)
+   Minimum period: 8.815ns (Maximum Frequency: 113.443MHz)
    Minimum input arrival time before clock: 4.538ns
-   Maximum output required time after clock: 9.481ns
+   Maximum output required time after clock: 4.496ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -741,33 +757,33 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
-  Clock period: 8.974ns (frequency: 111.433MHz)
-  Total number of paths / destination ports: 18966 / 5775
+  Clock period: 8.815ns (frequency: 113.443MHz)
+  Total number of paths / destination ports: 19268 / 5954
 -------------------------------------------------------------------------
-Delay:               8.974ns (Levels of Logic = 9)
-  Source:            XLXI_2/read_address_memory_1_5 (FF)
-  Destination:       XLXI_6/i_FIFO_Mram_RAM6 (RAM)
+Delay:               8.815ns (Levels of Logic = 9)
+  Source:            XLXI_2/read_address_memory_0_6 (FF)
+  Destination:       XLXI_6/i_FIFO_Mram_RAM2 (RAM)
   Source Clock:      Clk_50MHz rising
   Destination Clock: Clk_50MHz rising
 
-  Data Path: XLXI_2/read_address_memory_1_5 to XLXI_6/i_FIFO_Mram_RAM6
+  Data Path: XLXI_2/read_address_memory_0_6 to XLXI_6/i_FIFO_Mram_RAM2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             19   0.591   1.085  XLXI_2/read_address_memory_1_5 (XLXI_2/read_address_memory_1_5)
-     RAM16X1D:DPRA1->DPO    1   0.704   0.499  XLXI_1/Mram_RAM327 (N719)
-     LUT3:I1->O            1   0.704   0.000  inst_LPM_MUX13_115 (inst_LPM_MUX13_115)
-     MUXF5:I1->O           1   0.321   0.000  inst_LPM_MUX13_10_f5_1 (inst_LPM_MUX13_10_f52)
-     MUXF6:I1->O           1   0.521   0.000  inst_LPM_MUX13_9_f6 (inst_LPM_MUX13_9_f6)
-     MUXF7:I0->O           1   0.521   0.000  inst_LPM_MUX13_7_f7 (inst_LPM_MUX13_7_f7)
-     MUXF8:I0->O           1   0.521   0.455  inst_LPM_MUX13_5_f8 (inst_LPM_MUX13_5_f8)
-     LUT4:I2->O            1   0.704   0.455  XLXI_2/I2C_FIFO_DI<5>62 (XLXI_2/I2C_FIFO_DI<5>62)
-     LUT3_L:I2->LO         1   0.704   0.104  XLXI_2/I2C_FIFO_DI<5>65 (FIFO_DI<5>)
-     LUT4:I3->O            1   0.704   0.000  XLXI_6/DI_5_1 (XLXI_6/DI<5>)
-     RAM16X1D:D                0.381          XLXI_6/i_FIFO_Mram_RAM6
+     FDE:C->Q             10   0.591   0.882  XLXI_2/read_address_memory_0_6 (XLXI_2/read_address_memory_0_6)
+     RAM16X1D:DPRA0->DPO    1   0.704   0.499  XLXI_1/Mram_RAM83 (N231)
+     LUT3:I1->O            1   0.704   0.000  inst_LPM_MUX9_112 (inst_LPM_MUX9_112)
+     MUXF5:I1->O           1   0.321   0.000  inst_LPM_MUX9_10_f5 (inst_LPM_MUX9_10_f5)
+     MUXF6:I0->O           1   0.521   0.000  inst_LPM_MUX9_8_f6 (inst_LPM_MUX9_8_f6)
+     MUXF7:I0->O           1   0.521   0.000  inst_LPM_MUX9_6_f7 (inst_LPM_MUX9_6_f7)
+     MUXF8:I1->O           1   0.521   0.499  inst_LPM_MUX9_5_f8 (inst_LPM_MUX9_5_f8)
+     LUT3:I1->O            1   0.704   0.455  XLXI_2/I2C_FIFO_DI<1>7 (XLXI_2/I2C_FIFO_DI<1>7)
+     LUT3_L:I2->LO         1   0.704   0.104  XLXI_2/I2C_FIFO_DI<1>31 (FIFO_DI<1>)
+     LUT4:I3->O            1   0.704   0.000  XLXI_6/DI_1_1 (XLXI_6/DI<1>)
+     RAM16X1D:D                0.381          XLXI_6/i_FIFO_Mram_RAM2
     ----------------------------------------
-    Total                      8.974ns (6.376ns logic, 2.598ns route)
-                                       (71.0% logic, 29.0% route)
+    Total                      8.815ns (6.376ns logic, 2.439ns route)
+                                       (72.3% logic, 27.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
@@ -792,27 +808,22 @@ Offset:              4.538ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 50 / 7
+  Total number of paths / destination ports: 6 / 6
 -------------------------------------------------------------------------
-Offset:              9.481ns (Levels of Logic = 6)
-  Source:            XLXI_18/ResDORdy/prevDIn (FF)
-  Destination:       LED6 (PAD)
+Offset:              4.496ns (Levels of Logic = 1)
+  Source:            XLXI_16/Key_out_0 (FF)
+  Destination:       LED4 (PAD)
   Source Clock:      Clk_50MHz rising
 
-  Data Path: XLXI_18/ResDORdy/prevDIn to LED6
+  Data Path: XLXI_16/Key_out_0 to LED4
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.591   0.595  ResDORdy/prevDIn (ResDORdy/prevDIn)
-     LUT2:I0->O            1   0.704   0.499  ResDORdy/Mxor_DOut_Result1 (DO_Rdy)
-     end scope: 'XLXI_18'
-     LUT4:I1->O            4   0.704   0.622  XLXI_16/Key_out_and0000 (XLXI_16/Key_out_and0000)
-     LUT4:I2->O            1   0.704   0.499  XLXI_16/Key_out<2>_SW1 (N5110)
-     LUT4:I1->O            4   0.704   0.587  XLXI_16/Key_out<2> (XLXN_74<2>)
-     OBUF:I->O                 3.272          LED6_OBUF (LED6)
+     FD:C->Q               5   0.591   0.633  XLXI_16/Key_out_0 (XLXI_16/Key_out_0)
+     OBUF:I->O                 3.272          LED4_OBUF (LED4)
     ----------------------------------------
-    Total                      9.481ns (6.679ns logic, 2.802ns route)
-                                       (70.4% logic, 29.6% route)
+    Total                      4.496ns (3.863ns logic, 0.633ns route)
+                                       (85.9% logic, 14.1% route)
 
 =========================================================================
 WARNING:Xst:616 - Invalid property "SLEW 20": Did not attach to XLXI_6/IOB2.
@@ -820,13 +831,13 @@ WARNING:Xst:616 - Invalid property "SLEW 20": Did not attach to XLXI_6/IOB1.
 
 
 Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.56 secs
+Total CPU time to Xst completion: 10.28 secs
  
 --> 
 
-Total memory usage is 4565640 kilobytes
+Total memory usage is 234812 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   19 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

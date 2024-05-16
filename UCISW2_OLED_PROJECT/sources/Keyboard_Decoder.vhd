@@ -34,32 +34,34 @@ entity Keyboard_Decoder is
            PS2_E0 : in  STD_LOGIC;
            PS2_DataReady : in  STD_LOGIC;
            PS2_F0 : in  STD_LOGIC;
-           Key_out : out  STD_LOGIC_VECTOR (2 downto 0));
+           Key_out : out  STD_LOGIC_VECTOR (1 downto 0);
+			  CLK : in STD_LOGIC);
 end Keyboard_Decoder;
 
 architecture RTL of Keyboard_Decoder is
 begin
 
-  process( PS2_DO, PS2_E0, PS2_DataReady, PS2_F0 )
+  process( CLK, PS2_DO, PS2_E0, PS2_DataReady, PS2_F0 )
   begin
-    case PS2_DataReady & PS2_F0 & PS2_E0 & PS2_DO is
+	if rising_edge(CLK) then
+		case PS2_DataReady & PS2_F0 & PS2_E0 & PS2_DO is
 
-      when "101" & X"48" => -- K_UP
-        Key_out <= "000";
+		when "101" & X"48" => -- K_UP
+		  Key_out <= "00";
 
-      when "101" & X"4B" => -- K_LEFT
-        Key_out <= "001";
+		when "101" & X"4B" => -- K_LEFT
+		  Key_out <= "01";
 
-      when "101" & X"4D" => -- K_RIGHT
-        Key_out <= "010";
+		when "101" & X"4D" => -- K_RIGHT
+		  Key_out <= "10";
 
-      when "101" & X"50" => -- K_DOWN
-        Key_out <= "011";
+		when "101" & X"50" => -- K_DOWN
+		  Key_out <= "11";
 
-      when others =>			 -- REST KEYS
-        Key_out <= "111";
+		when others =>	null;		 -- REST KEYS
 
-    end case;
+		end case;
+	end if;
   end process;
 
 end RTL;

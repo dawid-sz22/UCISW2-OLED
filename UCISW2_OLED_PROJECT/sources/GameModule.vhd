@@ -35,17 +35,17 @@ entity GameModule is
 			  EnableWrite : out STD_LOGIC;
            Clk : in  STD_LOGIC;
            StartButton : in  STD_LOGIC;
+			  Reset : in  STD_LOGIC;
            Data_OUT : out  STD_LOGIC_VECTOR (7 downto 0);
-			  Key_kbd_in : in STD_LOGIC_VECTOR (2 downto 0);
+			  Key_kbd_in : in STD_LOGIC_VECTOR (1 downto 0);
 			  Key_0 : out STD_LOGIC;
 			  Key_1 : out STD_LOGIC;
-			  Key_2 : out STD_LOGIC;
 			  Game_over_signal : out STD_LOGIC
 			  );
 end GameModule;
 
 architecture Behavioral of GameModule is
-	type t_state is (sWait, sRead, sAddressCount, sSetBit, sWrite, sGame_over, sReset_to_start_state);
+	type t_state is (sWait, sRead, sAddressCount, sSetBit, sWrite, sGameOver, sResetValuesToDefault, sResetRAM);
 	type t_direction is (up, down, right, left);
 	type t_game_state is (running, collision);
 
@@ -63,10 +63,14 @@ architecture Behavioral of GameModule is
 begin
 	
 	-- The FSM - state register
-   process( Clk )
+   process( Clk, Reset )
    begin
       if rising_edge( Clk ) then
-			state <= next_state;
+			if (Reset = '0') then
+				state <= next_state;
+			else
+				state <= sResetValuesToDefault;	-- Reset game
+			end if;
       end if;
    end process;
 	
@@ -78,7 +82,7 @@ begin
       case state is
 		
 			when sWait =>
-				if (counter_delay = X"989680") then	-- 2ms delay (RAM reading from 0->1023, lasts in testbench ~25ms) 200ms - x"989680"
+				if (counter_delay = X"000440") then	-- 2ms 0F4240 delay (RAM reading from 0->1023, lasts in testbench ~25ms) 200ms - x"989680"
 					next_state <= sAddressCount;
 				end if;
 			
@@ -86,7 +90,7 @@ begin
 				if (game_state = running) then
 					next_state <= sRead;
 				else
-					next_state <= sGame_over;
+					next_state <= sGameOver;
 				end if;
 				
 			when sRead =>
@@ -98,13 +102,16 @@ begin
 			when sWrite =>
 				next_state <= sWait;
 				
-			when sGame_over =>
+			when sGameOver =>
 				if (StartButton = '1') then
-					next_state <= sReset_to_start_state;
+					next_state <= sResetValuesToDefault;
 				end if;
-			
-			when sReset_to_start_state =>	--TODO: Check if 0 and 1023 refresh in memory
-				if (address_memory = X"1111111111") then
+				
+			when sResetValuesToDefault =>	
+				next_state <= sResetRAM;
+				
+			when sResetRAM =>	--TODO: Check if 0 and 1023 refresh in memory
+				if (address_memory = "1111111111") then
 					next_state <= sWait;
 				end if;
 				
@@ -127,10 +134,10 @@ begin
 	process(Clk, state)
 	begin
 		if rising_edge(Clk) then
-			if (state = sWait) then
-				EnableWrite <= '0';
-			elsif (state = sWrite) or (state = sReset_to_start_state) then
+			if (state = sWrite) or (state = sResetRAM) then
 				EnableWrite <= '1';
+			else
+				EnableWrite <= '0';
 			end if;
 		end if;
 	end process;
@@ -139,13 +146,13 @@ begin
 	process(Clk, Key_kbd_in)
 	begin
 		if rising_edge(Clk) then
-			if (Key_kbd_in = "000") then		-- K_UP
+			if (Key_kbd_in = "00") then		-- K_UP
 				direction <= up;
-			elsif (Key_kbd_in = "001") then	-- K_LEFT
+			elsif (Key_kbd_in = "01") then	-- K_LEFT
 				direction <= left;
-			elsif (Key_kbd_in = "010") then	-- K_RIGHT
+			elsif (Key_kbd_in = "10") then	-- K_RIGHT
 				direction <= right;
-			elsif (Key_kbd_in = "011") then	-- K_DOWN
+			elsif (Key_kbd_in = "11") then	-- K_DOWN
 				direction <= down;
 			end if;
 		end if;
@@ -185,13 +192,13 @@ begin
 						x <= x - 1;
 					end if;
 				end if; 
-			elsif (state = sGame_over) then
-				x <= "0000000";							-- BACK TO START
+			elsif (state = sResetValuesToDefault) then
+				x <= "0000000";									-- BACK TO START
 				y <= "000000";
 				address_memory <= ( others=> '0' );			-- CLEAR SCREEN
-			elsif (state = sReset_to_start_state) then 	-- GO THROUGH ALL RAM TO CLEAR
-				address_memory <= address_memory + 1;
 				game_state <= running;
+			elsif (state = sResetRAM) then 					-- GO THROUGH ALL RAM TO CLEAR
+				address_memory <= address_memory + 1;
 			end if;
 		end if;
 	end process;
@@ -204,8 +211,8 @@ begin
 				data_signal <= Data_IN;
 			elsif (state = sSetBit) then
 				--data_signal <= X"01";
-				data_signal(to_integer(y(2 downto 0))) <= '1';
-			elsif (state = sGame_over) then
+				data_signal(to_integer(y(2 downto 0))) <= '1'; -- sprawdziæ inny y
+			elsif (state = sResetValuesToDefault) then
 				data_signal <= X"00";
 			end if;
 		end if;
@@ -215,14 +222,19 @@ begin
 	Addr <= STD_LOGIC_VECTOR(address_memory);
 	
 	-- DATA TO WRITE (SYNC, ENABLED BY ENABLE_WRITE)
-	Data_OUT <= STD_LOGIC_VECTOR(data_signal);
+	Data_OUT <= data_signal;
 	
-	Game_over_signal <= '1' when (state = sGame_over) else '0';
+	-- GAME STATE ON LED
+	Game_over_signal <= '1' when (state = sGameOver) else '0';
+	
+	-- DEBUG KEYS ON LEDS
 	Key_0 <= Key_kbd_in(0);
 	Key_1 <= Key_kbd_in(1);
-	Key_2 <= Key_kbd_in(2);
 
 	-- Wykrywanie kolizji dzia³a, delay te¿, LED3 siê pali, 
 	-- Pocz¹tek dzia³a, ale po resecie nie widaæ
+	-- Sug: Sk¹d ten pasek na samym pocz¹tku, nigdzie nie jest ustawiany XX?? (Testbench git)
+	-- Sug: Wsm to po co to IFD w schemacie?
+
 end Behavioral;
 
