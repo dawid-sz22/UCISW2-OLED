@@ -5,16 +5,22 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">253</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FIFO_Empty</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">230</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Busy</arg>&apos; of component &apos;<arg fmt="%s" index="4">OLED_Ctrl</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">253</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FIFO_DO</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">247</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">NACK</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">296</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">PS2_Kbd</arg>&gt;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">247</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FIFO_Empty</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd</arg>&quot; line <arg fmt="%d" index="2">134</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">247</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FIFO_DO</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">288</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">PS2_Kbd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd</arg>&quot; line <arg fmt="%d" index="2">134</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">swaitwrite</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">state</arg>&gt;.
@@ -53,19 +59,10 @@
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">XLXI_6_FIFO_Pop_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0</arg>.
 </msg>
 
-<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">direction_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">XLXI_7</arg>&gt;.
-</msg>
-
 <msg type="info" file="Xst" num="3034" delta="old" >In order to maximize performance and save block RAM resources, the small ROM &lt;<arg fmt="%s" index="1">Mrom_direction_mux0000</arg>&gt; will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
 </msg>
 
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_RAM</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">direction_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GameModule</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">XLXI_2/state_FSM_FFd8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">schemat</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;XLXI_6/state_FSM_FFd6&gt; </arg>

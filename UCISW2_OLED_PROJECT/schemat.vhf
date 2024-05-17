@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : schemat.vhf
--- /___/   /\     Timestamp : 05/16/2024 20:25:11
+-- /___/   /\     Timestamp : 05/17/2024 12:45:39
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf -w C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.sch
+--Command: sch2hdl -sympath C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf -w C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.sch
 --Design Name: schemat
 --Device: spartan3e
 --Purpose:
@@ -106,11 +106,7 @@ entity schemat is
           Clk_50MHz : in    std_logic; 
           PS2_Clk   : in    std_logic; 
           PS2_Data  : in    std_logic; 
-          LED0      : out   std_logic; 
-          LED3      : out   std_logic; 
-          LED4      : out   std_logic; 
-          LED5      : out   std_logic; 
-          LED7      : out   std_logic; 
+          LED       : out   std_logic_vector (7 downto 0); 
           SCL       : inout std_logic; 
           SDA       : inout std_logic);
 end schemat;
@@ -187,17 +183,15 @@ architecture BEHAVIORAL of schemat is
    end component;
    
    component GameModule
-      port ( Clk              : in    std_logic; 
-             StartButton      : in    std_logic; 
-             Data_IN          : in    std_logic_vector (7 downto 0); 
-             Key_kbd_in       : in    std_logic_vector (1 downto 0); 
-             EnableWrite      : out   std_logic; 
-             Key_0            : out   std_logic; 
-             Key_1            : out   std_logic; 
-             Game_over_signal : out   std_logic; 
-             Addr             : out   std_logic_vector (9 downto 0); 
-             Data_OUT         : out   std_logic_vector (7 downto 0); 
-             Reset            : in    std_logic);
+      port ( Clk         : in    std_logic; 
+             StartButton : in    std_logic; 
+             Reset       : in    std_logic; 
+             Data_IN     : in    std_logic_vector (7 downto 0); 
+             Key_kbd_in  : in    std_logic_vector (1 downto 0); 
+             EnableWrite : out   std_logic; 
+             Addr        : out   std_logic_vector (9 downto 0); 
+             Data_OUT    : out   std_logic_vector (7 downto 0); 
+             LED         : out   std_logic_vector (7 downto 0));
    end component;
    
    component Keyboard_Decoder
@@ -239,7 +233,7 @@ begin
                 I2C_Busy=>BUSY,
                 I2C_FIFO_Full=>FIFO_FULL,
                 Reset=>Reset,
-                Busy=>LED0,
+                Busy=>open,
                 I2C_FIFO_DI(7 downto 0)=>FIFO_DI(7 downto 0),
                 I2C_FIFO_Push=>FIFO_PUSH,
                 I2C_Go=>GO,
@@ -263,7 +257,7 @@ begin
                 FIFO_DO=>open,
                 FIFO_Empty=>open,
                 FIFO_Full=>FIFO_FULL,
-                NACK=>LED7,
+                NACK=>open,
                 SCL=>SCL,
                 SDA=>SDA);
    
@@ -276,9 +270,7 @@ begin
                 Addr(9 downto 0)=>XLXN_37(9 downto 0),
                 Data_OUT(7 downto 0)=>XLXN_27(7 downto 0),
                 EnableWrite=>XLXN_36,
-                Game_over_signal=>LED3,
-                Key_0=>LED4,
-                Key_1=>LED5);
+                LED(7 downto 0)=>LED(7 downto 0));
    
    XLXI_8 : IFD_MXILINX_schemat
       port map (C=>Clk_50MHz,

@@ -1,21 +1,19 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/testbench_isim_beh.exe -prj C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/testbench_beh.prj work.testbench 
-ISim P.20131013 (signature 0x8ef4fb42)
-Number of CPUs detected in this system: 1
-Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/testbench_isim_beh.exe -prj C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/testbench_beh.prj work.testbench 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Memory.vhd" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/GameModule.vhd" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" into library work
-Parsing VHDL file "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/TEST.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Memory.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/GameModule.vhd" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" into library work
+Parsing VHDL file "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/TEST.vhd" into library work
 Starting static elaboration
-WARNING:HDLCompiler:89 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" Line 294: <ps2_kbd> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" Line 296: <ps2_kbd> remains a black-box since it has no binding entity.
 Completed static elaboration
-Fuse Memory Usage: 130072 KB
-Fuse CPU Usage: 296 ms
-WARNING:Simulator:648 - "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf" Line 294. Instance ps2_kbd is unbound
+WARNING:Simulator:648 - "C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf" Line 296. Instance ps2_kbd is unbound
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -61,7 +59,8 @@ Compiling architecture rtl of entity Keyboard_Decoder [keyboard_decoder_default]
 Compiling architecture behavioral of entity schemat [schemat_default]
 Compiling architecture behavioral of entity testbench
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 202 VHDL Units
-Built simulation executable C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/testbench_isim_beh.exe
-Fuse Memory Usage: 163208 KB
-Fuse CPU Usage: 593 ms
+Built simulation executable C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/testbench_isim_beh.exe
+Fuse Memory Usage: 65820 KB
+Fuse CPU Usage: 1406 ms

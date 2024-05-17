@@ -38,9 +38,7 @@ entity GameModule is
 			  Reset : in  STD_LOGIC;
            Data_OUT : out  STD_LOGIC_VECTOR (7 downto 0);
 			  Key_kbd_in : in STD_LOGIC_VECTOR (1 downto 0);
-			  Key_0 : out STD_LOGIC;
-			  Key_1 : out STD_LOGIC;
-			  Game_over_signal : out STD_LOGIC
+			  LED : out STD_LOGIC_VECTOR (7 downto 0)
 			  );
 end GameModule;
 
@@ -50,13 +48,15 @@ architecture Behavioral of GameModule is
 	type t_game_state is (running, collision);
 
    signal state, next_state : t_state;
-	signal direction : t_direction := right;
+	signal direction : t_direction := down;
 	signal game_state : t_game_state := running;
 
 	-- Address memory
 	signal address_memory : unsigned(9 downto 0) := ( others=> '0' );
 	signal x : unsigned(6 downto 0) := (others=> '0');
 	signal y : unsigned(5 downto 0) := (others=> '0');
+	signal x_help : unsigned(6 downto 0) := (others=> '0');
+	signal y_help : unsigned(5 downto 0) := (others=> '0');
 	signal counter_delay : unsigned(23 downto 0) := (others=> '0');
 	signal data_signal : STD_LOGIC_VECTOR ( 7 downto 0);
 
@@ -66,10 +66,10 @@ begin
    process( Clk, Reset )
    begin
       if rising_edge( Clk ) then
-			if (Reset = '0') then
-				state <= next_state;
-			else
+			if (Reset = '1') then
 				state <= sResetValuesToDefault;	-- Reset game
+			else
+				state <= next_state;	
 			end if;
       end if;
    end process;
@@ -82,7 +82,7 @@ begin
       case state is
 		
 			when sWait =>
-				if (counter_delay = X"000440") then	-- 2ms 0F4240 delay (RAM reading from 0->1023, lasts in testbench ~25ms) 200ms - x"989680"
+				if (counter_delay = X"989680") then	-- 20ms 0F4240 delay (RAM reading from 0->1023, lasts in testbench ~25ms) 200ms - x"989680"
 					next_state <= sAddressCount;
 				end if;
 			
@@ -167,28 +167,28 @@ begin
 					if (y = "000000") then
 						game_state <= collision;
 					else
-						address_memory <= resize((to_integer(y(5 downto 3)) - 1) * 128 + (x), address_memory'length);
+						address_memory <= y_help(5 downto 3) & x_help;
 						y <= y - 1;
 					end if;
 				elsif (direction = down) then
 					if (y = "111111") then
 						game_state <= collision;
 					else
-						address_memory <= resize((to_integer(y(5 downto 3)) + 1) * 128 + (x), address_memory'length);
+						address_memory <= y_help(5 downto 3) & x_help;
 						y <= y + 1;
 					end if;
 				elsif (direction = right) then
 					if (x = "1111111") then
 						game_state <= collision;
 					else
-						address_memory <= resize(to_integer(y(5 downto 3)) * 128 + (x + 1), address_memory'length);
+						address_memory <= y_help(5 downto 3) & x_help;
 						x <= x + 1;
 					end if;
 				else	-- left
 					if (x = "0000000") then
 						game_state <= collision;
 					else
-						address_memory <= resize(to_integer(y(5 downto 3)) * 128 + (x - 1), address_memory'length);
+						address_memory <= y_help(5 downto 3) & x_help;
 						x <= x - 1;
 					end if;
 				end if; 
@@ -211,7 +211,7 @@ begin
 				data_signal <= Data_IN;
 			elsif (state = sSetBit) then
 				--data_signal <= X"01";
-				data_signal(to_integer(y(2 downto 0))) <= '1'; -- sprawdziæ inny y
+				data_signal(to_integer(y(2 downto 0))) <= '1';
 			elsif (state = sResetValuesToDefault) then
 				data_signal <= X"00";
 			end if;
@@ -225,16 +225,20 @@ begin
 	Data_OUT <= data_signal;
 	
 	-- GAME STATE ON LED
-	Game_over_signal <= '1' when (state = sGameOver) else '0';
+	--Game_over_signal <= '1' when (state = sGameOver) else '0';
 	
 	-- DEBUG KEYS ON LEDS
-	Key_0 <= Key_kbd_in(0);
-	Key_1 <= Key_kbd_in(1);
-
-	-- Wykrywanie kolizji dzia³a, delay te¿, LED3 siê pali, 
-	-- Pocz¹tek dzia³a, ale po resecie nie widaæ
-	-- Sug: Sk¹d ten pasek na samym pocz¹tku, nigdzie nie jest ustawiany XX?? (Testbench git)
-	-- Sug: Wsm to po co to IFD w schemacie?
+	--Key_0 <= Key_kbd_in(0); 
+	--Key_1 <= Key_kbd_in(1);
+	
+	--Game_over_signal <= y_help(3); 
+	--Key_0 <= y_help(4); 
+	--Key_1 <= y_help(5);
+	
+	LED <= "00" & STD_LOGIC_VECTOR(y_help);
+	
+	x_help <= (x+1) when direction = right else (x-1) when direction = left else x;
+	y_help <= (y+1) when direction = down else (y-1) when direction = up else y;
 
 end Behavioral;
 

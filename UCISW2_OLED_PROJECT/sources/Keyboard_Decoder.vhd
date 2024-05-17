@@ -34,7 +34,7 @@ entity Keyboard_Decoder is
            PS2_E0 : in  STD_LOGIC;
            PS2_DataReady : in  STD_LOGIC;
            PS2_F0 : in  STD_LOGIC;
-           Key_out : out  STD_LOGIC_VECTOR (1 downto 0);
+           Key_out : out  STD_LOGIC_VECTOR (1 downto 0) := "11";
 			  CLK : in STD_LOGIC);
 end Keyboard_Decoder;
 
@@ -46,16 +46,16 @@ begin
 	if rising_edge(CLK) then
 		case PS2_DataReady & PS2_F0 & PS2_E0 & PS2_DO is
 
-		when "101" & X"48" => -- K_UP
+		when "101" & X"75" => -- K_UP
 		  Key_out <= "00";
 
-		when "101" & X"4B" => -- K_LEFT
+		when "101" & X"6B" => -- K_LEFT
 		  Key_out <= "01";
 
-		when "101" & X"4D" => -- K_RIGHT
+		when "101" & X"74" => -- K_RIGHT
 		  Key_out <= "10";
 
-		when "101" & X"50" => -- K_DOWN
+		when "101" & X"72" => -- K_DOWN
 		  Key_out <= "11";
 
 		when others =>	null;		 -- REST KEYS
