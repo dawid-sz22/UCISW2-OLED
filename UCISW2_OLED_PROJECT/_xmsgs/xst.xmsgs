@@ -5,25 +5,79 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">230</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Busy</arg>&apos; of component &apos;<arg fmt="%s" index="4">OLED_Ctrl</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/IFD_MXILINX_schemat</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">247</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">NACK</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/IFD_MXILINX_schemat/BEHAVIORAL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">247</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FIFO_Empty</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/schemat</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">247</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FIFO_DO</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/schemat/BEHAVIORAL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">288</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">PS2_Kbd</arg>&gt;.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/GameModule</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/GameModule.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/GameModule.vhd</arg>&quot;.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd</arg>&quot; line <arg fmt="%d" index="2">134</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/GameModule/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/GameModule.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/GameModule.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/I2C_Master</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/I2C_Master/STRUCTURE</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/I2C_Master.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Keyboard_Decoder</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Keyboard_Decoder/RTL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Keyboard_Decoder.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Memory</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Memory.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Memory.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/Memory/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/Memory.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/Memory.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/OLED_Ctrl</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/OLED_Ctrl/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">257</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">Busy</arg>&apos; of component &apos;<arg fmt="%s" index="4">OLED_Ctrl</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">274</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">NACK</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">274</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FIFO_Empty</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">274</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">FIFO_DO</arg>&apos; of component &apos;<arg fmt="%s" index="4">I2C_Master</arg>&apos;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">319</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">PS2_Kbd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf</arg>&quot; line <arg fmt="%d" index="2">329</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">LCD2x64</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources/OLED_Ctrl.vhd</arg>&quot; line <arg fmt="%d" index="2">134</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
 <msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">swaitwrite</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">Debug_LCD_Blank_2</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1305" delta="new" >Output &lt;<arg fmt="%s" index="1">Debug_LCD_Line_2</arg>&gt; is never assigned. Tied to value <arg fmt="%s" index="2">0000000000000000000000000000000000000000000000000000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">y_help&lt;2:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">NLW_i_FIFO_Mram_RAM8_SPO_UNCONNECTED</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -66,6 +120,24 @@
 </msg>
 
 <msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">XLXI_2/state_FSM_FFd8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">schemat</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;XLXI_6/state_FSM_FFd6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">State_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_20</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;State_16_1&gt; &lt;State_16_2&gt; &lt;State_16_3&gt; &lt;State_16_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">cntDigit_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_20</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;cntDigit_0_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">cntDigit_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_20</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;cntDigit_1_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">State_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_20</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;State_16_1&gt; &lt;State_16_2&gt; &lt;State_16_3&gt; &lt;State_16_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">cntDigit_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_20</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;cntDigit_0_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">cntDigit_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">XLXI_20</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;cntDigit_1_1&gt; </arg>
 </msg>
 
 <msg type="warning" file="Xst" num="616" delta="old" >Invalid property &quot;<arg fmt="%s" index="1">SLEW</arg> <arg fmt="%s" index="2">20</arg>&quot;: Did not attach to <arg fmt="%s" index="3">XLXI_6/IOB2</arg>.

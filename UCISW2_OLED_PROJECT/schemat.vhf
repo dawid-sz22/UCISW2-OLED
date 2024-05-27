@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : schemat.vhf
--- /___/   /\     Timestamp : 05/17/2024 12:45:39
+-- /___/   /\     Timestamp : 05/27/2024 22:15:50
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/sources -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.vhf -w C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/schemat.sch
+--Command: sch2hdl -sympath C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/sources -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.vhf -w C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.sch
 --Design Name: schemat
 --Device: spartan3e
 --Purpose:
@@ -101,14 +101,19 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity schemat is
-   port ( btn_east  : in    std_logic; 
-          btn_south : in    std_logic; 
-          Clk_50MHz : in    std_logic; 
-          PS2_Clk   : in    std_logic; 
-          PS2_Data  : in    std_logic; 
-          LED       : out   std_logic_vector (7 downto 0); 
-          SCL       : inout std_logic; 
-          SDA       : inout std_logic);
+   port ( btn_east    : in    std_logic; 
+          btn_south   : in    std_logic; 
+          Clk_50MHz   : in    std_logic; 
+          PS2_Clk     : in    std_logic; 
+          PS2_Data    : in    std_logic; 
+          LCD_E       : out   std_logic; 
+          LCD_RS      : out   std_logic; 
+          LCD_RW      : out   std_logic; 
+          LEDGameOver : out   std_logic; 
+          SF_CE       : out   std_logic; 
+          LCD_D       : inout std_logic_vector (3 downto 0); 
+          SCL         : inout std_logic; 
+          SDA         : inout std_logic);
 end schemat;
 
 architecture BEHAVIORAL of schemat is
@@ -132,6 +137,10 @@ architecture BEHAVIORAL of schemat is
    signal XLXN_70                    : std_logic;
    signal XLXN_72                    : std_logic;
    signal XLXN_74                    : std_logic_vector (1 downto 0);
+   signal XLXN_75                    : std_logic_vector (63 downto 0);
+   signal XLXN_76                    : std_logic_vector (63 downto 0);
+   signal XLXN_77                    : std_logic_vector (15 downto 0);
+   signal XLXN_78                    : std_logic_vector (15 downto 0);
    signal XLXI_6_FIFO_Pop_openSignal : std_logic;
    signal XLXI_6_ReadCnt_openSignal  : std_logic_vector (3 downto 0);
    component Memory
@@ -183,15 +192,19 @@ architecture BEHAVIORAL of schemat is
    end component;
    
    component GameModule
-      port ( Clk         : in    std_logic; 
-             StartButton : in    std_logic; 
-             Reset       : in    std_logic; 
-             Data_IN     : in    std_logic_vector (7 downto 0); 
-             Key_kbd_in  : in    std_logic_vector (1 downto 0); 
-             EnableWrite : out   std_logic; 
-             Addr        : out   std_logic_vector (9 downto 0); 
-             Data_OUT    : out   std_logic_vector (7 downto 0); 
-             LED         : out   std_logic_vector (7 downto 0));
+      port ( Clk               : in    std_logic; 
+             StartButton       : in    std_logic; 
+             Reset             : in    std_logic; 
+             Data_IN           : in    std_logic_vector (7 downto 0); 
+             Key_kbd_in        : in    std_logic_vector (1 downto 0); 
+             EnableWrite       : out   std_logic; 
+             Game_over_signal  : out   std_logic; 
+             Addr              : out   std_logic_vector (9 downto 0); 
+             Data_OUT          : out   std_logic_vector (7 downto 0); 
+             Debug_LCD_Line_1  : out   std_logic_vector (63 downto 0); 
+             Debug_LCD_Blank_1 : out   std_logic_vector (15 downto 0); 
+             Debug_LCD_Line_2  : out   std_logic_vector (63 downto 0); 
+             Debug_LCD_Blank_2 : out   std_logic_vector (15 downto 0));
    end component;
    
    component Keyboard_Decoder
@@ -212,6 +225,20 @@ architecture BEHAVIORAL of schemat is
              DO_Rdy    : out   std_logic; 
              DO        : out   std_logic_vector (7 downto 0); 
              Clk_Sys   : in    std_logic);
+   end component;
+   
+   component LCD2x64
+      port ( Line1     : in    std_logic_vector (63 downto 0); 
+             Blank1    : in    std_logic_vector (15 downto 0); 
+             Line2     : in    std_logic_vector (63 downto 0); 
+             Blank2    : in    std_logic_vector (15 downto 0); 
+             LCD_D     : inout std_logic_vector (3 downto 0); 
+             LCD_E     : out   std_logic; 
+             LCD_RW    : out   std_logic; 
+             LCD_RS    : out   std_logic; 
+             SF_CE     : out   std_logic; 
+             Reset     : in    std_logic; 
+             Clk_50MHz : in    std_logic);
    end component;
    
    attribute HU_SET of XLXI_5 : label is "XLXI_5_1";
@@ -269,8 +296,12 @@ begin
                 StartButton=>XLXN_38,
                 Addr(9 downto 0)=>XLXN_37(9 downto 0),
                 Data_OUT(7 downto 0)=>XLXN_27(7 downto 0),
+                Debug_LCD_Blank_1(15 downto 0)=>XLXN_77(15 downto 0),
+                Debug_LCD_Blank_2(15 downto 0)=>XLXN_78(15 downto 0),
+                Debug_LCD_Line_1(63 downto 0)=>XLXN_75(63 downto 0),
+                Debug_LCD_Line_2(63 downto 0)=>XLXN_76(63 downto 0),
                 EnableWrite=>XLXN_36,
-                LED(7 downto 0)=>LED(7 downto 0));
+                Game_over_signal=>LEDGameOver);
    
    XLXI_8 : IFD_MXILINX_schemat
       port map (C=>Clk_50MHz,
@@ -294,6 +325,19 @@ begin
                 DO_Rdy=>XLXN_72,
                 E0=>XLXN_69,
                 F0=>XLXN_70);
+   
+   XLXI_20 : LCD2x64
+      port map (Blank1(15 downto 0)=>XLXN_77(15 downto 0),
+                Blank2(15 downto 0)=>XLXN_78(15 downto 0),
+                Clk_50MHz=>Clk_50MHz,
+                Line1(63 downto 0)=>XLXN_75(63 downto 0),
+                Line2(63 downto 0)=>XLXN_76(63 downto 0),
+                Reset=>Reset,
+                LCD_E=>LCD_E,
+                LCD_RS=>LCD_RS,
+                LCD_RW=>LCD_RW,
+                SF_CE=>SF_CE,
+                LCD_D(3 downto 0)=>LCD_D(3 downto 0));
    
 end BEHAVIORAL;
 

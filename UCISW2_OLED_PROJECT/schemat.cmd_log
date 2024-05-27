@@ -119,3 +119,9 @@ map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat
 par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
 bitgen -intstyle ise -f schemat.ut schemat.ncd 
+xst -intstyle ise -ifn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.xst" -ofn "C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/schemat.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd sources -nt timestamp -uc sources/OLED_J4.ucf -uc sources/GenIO.ucf -uc sources/LCD.ucf -p xc3s500e-fg320-4 schemat.ngc schemat.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o schemat_map.ncd schemat.ngd schemat.pcf 
+par -w -intstyle ise -ol high -t 1 schemat_map.ncd schemat.ncd schemat.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml schemat.twx schemat.ncd -o schemat.twr schemat.pcf 
+bitgen -intstyle ise -f schemat.ut schemat.ncd 

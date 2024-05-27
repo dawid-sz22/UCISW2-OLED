@@ -100,7 +100,11 @@ begin
 				next_state <= sSetBit;
 			
 			when sSetBit =>
-				next_state <= sWrite;
+				if (game_state = running) then
+					next_state <= sWrite;
+				else
+					next_state <= sGameOver;
+				end if;
 				
 			when sWrite =>
 				next_state <= sWait;
@@ -194,7 +198,12 @@ begin
 						address_memory <= y_help(5 downto 3) & x_help;
 						x <= x - 1;
 					end if;
-				end if; 
+				end if;
+			elsif (state = sSetBit) then
+				-- CHECK COLLISION WITH SNAKE
+				if (data_signal(to_integer(y(2 downto 0))) = '1') then
+					game_state <= collision;
+				end if;
 			elsif (state = sResetValuesToDefault) then
 				x <= "0000000";									-- BACK TO START
 				y <= "000000";

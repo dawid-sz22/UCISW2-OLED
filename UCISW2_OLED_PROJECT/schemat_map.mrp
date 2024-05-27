@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Mapping Report File for Design 'schemat'
 
 Design Information
@@ -9,36 +9,36 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Fri May 17 12:54:22 2024
+Mapped Date    : Mon May 27 22:17:59 2024
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:           356 out of   9,312    3%
-  Number of 4 input LUTs:             2,043 out of   9,312   21%
+  Number of Slice Flip Flops:           458 out of   9,312    4%
+  Number of 4 input LUTs:             2,210 out of   9,312   23%
 Logic Distribution:
-  Number of occupied Slices:          1,263 out of   4,656   27%
-    Number of Slices containing only related logic:   1,263 out of   1,263 100%
-    Number of Slices containing unrelated logic:          0 out of   1,263   0%
+  Number of occupied Slices:          1,387 out of   4,656   29%
+    Number of Slices containing only related logic:   1,387 out of   1,387 100%
+    Number of Slices containing unrelated logic:          0 out of   1,387   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,098 out of   9,312   22%
-    Number used as logic:             1,003
-    Number used as a route-thru:         55
+  Total Number of 4 input LUTs:       2,294 out of   9,312   24%
+    Number used as logic:             1,170
+    Number used as a route-thru:         84
     Number used for Dual Port RAMs:   1,040
       (Two LUTs used per Dual Port RAM)
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 15 out of     232    6%
+  Number of bonded IOBs:                 16 out of     232    6%
     IOB Flip Flops:                       2
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                4.23
+Average Fanout of Non-Clock Nets:                4.14
 
-Peak Memory Usage:  4421 MB
+Peak Memory Usage:  211 MB
 Total REAL time to MAP completion:  2 secs 
 Total CPU time to MAP completion:   1 secs 
 
@@ -89,14 +89,14 @@ WARNING:Pack:1186 - One or more I/O components have conflicting property values.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network XLXI_6/i_FIFO_Mram_RAM1/SPO has no load.
-INFO:LIT:395 - The above info message is repeated 8 more times for the following
-   (max. 5 shown):
-   XLXI_6/i_FIFO_Mram_RAM2/SPO,
-   XLXI_6/i_FIFO_Mram_RAM3/SPO,
-   XLXI_6/i_FIFO_Mram_RAM4/SPO,
-   XLXI_6/i_FIFO_Mram_RAM5/SPO,
-   XLXI_6/i_FIFO_Mram_RAM6/SPO
+INFO:LIT:243 - Logical network N1601 has no load.
+INFO:LIT:395 - The above info message is repeated 15 more times for the
+   following (max. 5 shown):
+   N1611,
+   N1621,
+   N1631,
+   XLXI_6/i_FIFO_Mram_RAM1/SPO,
+   XLXI_6/i_FIFO_Mram_RAM2/SPO
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:MapLib:159 - Net Timing constraints on signal Clk_50MHz are pushed forward
@@ -107,9 +107,9 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  16 block(s) removed
-  15 block(s) optimized away
-  19 signal(s) removed
+  19 block(s) removed
+  96 block(s) optimized away
+  22 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -138,6 +138,9 @@ The signal "XLXI_8/XLXN_2" is sourceless and has been removed.
 The signal "XLXI_5/XLXN_1" is sourceless and has been removed.
 The signal "XLXI_5/XLXN_2" is sourceless and has been removed.
 The signal "XLXI_6/IOB2/O" is sourceless and has been removed.
+The signal "XLXI_20/genIOBUF[0].instIOBUF/O" is sourceless and has been removed.
+The signal "XLXI_20/genIOBUF[1].instIOBUF/O" is sourceless and has been removed.
+The signal "XLXI_20/genIOBUF[2].instIOBUF/O" is sourceless and has been removed.
 
 The trimmed logic reported below is either:
    1. part of a cycle
@@ -164,12 +167,175 @@ The signal "XLXI_6/sregIn<6>" is unused and has been removed.
  Unused block "XLXI_6/sregIn_6" (FF) removed.
 The signal "XLXI_6/sregIn<7>" is unused and has been removed.
  Unused block "XLXI_6/sregIn_7" (FF) removed.
+Unused block "XLXI_20/genIOBUF[0].instIOBUF/IBUF" (BUF) removed.
+Unused block "XLXI_20/genIOBUF[1].instIOBUF/IBUF" (BUF) removed.
+Unused block "XLXI_20/genIOBUF[2].instIOBUF/IBUF" (BUF) removed.
 Unused block "XLXI_6/IOB2/IBUF" (BUF) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XLXI_18/XST_GND
 VCC 		XLXI_18/XST_VCC
+LUT3 		XLXI_20/Line<0>1
+   optimized to 0
+LUT3 		XLXI_20/Line<10>1
+   optimized to 0
+LUT3 		XLXI_20/Line<11>1
+   optimized to 0
+LUT3 		XLXI_20/Line<12>1
+   optimized to 0
+LUT3 		XLXI_20/Line<13>1
+   optimized to 0
+LUT3 		XLXI_20/Line<14>1
+   optimized to 0
+LUT3 		XLXI_20/Line<15>1
+   optimized to 0
+LUT3 		XLXI_20/Line<16>1
+   optimized to 0
+LUT3 		XLXI_20/Line<17>1
+   optimized to 0
+LUT3 		XLXI_20/Line<18>1
+   optimized to 0
+LUT3 		XLXI_20/Line<19>1
+   optimized to 0
+LUT3 		XLXI_20/Line<1>1
+   optimized to 0
+LUT3 		XLXI_20/Line<20>1
+   optimized to 0
+LUT3 		XLXI_20/Line<21>1
+   optimized to 0
+LUT3 		XLXI_20/Line<22>1
+   optimized to 0
+LUT3 		XLXI_20/Line<23>1
+   optimized to 0
+LUT3 		XLXI_20/Line<24>1
+   optimized to 0
+LUT3 		XLXI_20/Line<25>1
+   optimized to 0
+LUT3 		XLXI_20/Line<26>1
+   optimized to 0
+LUT3 		XLXI_20/Line<27>1
+   optimized to 0
+LUT3 		XLXI_20/Line<29>1
+   optimized to 0
+LUT3 		XLXI_20/Line<2>1
+   optimized to 0
+LUT3 		XLXI_20/Line<30>1
+   optimized to 0
+LUT3 		XLXI_20/Line<31>1
+   optimized to 0
+LUT3 		XLXI_20/Line<32>1
+   optimized to 0
+LUT3 		XLXI_20/Line<33>1
+   optimized to 0
+LUT3 		XLXI_20/Line<34>1
+   optimized to 0
+LUT3 		XLXI_20/Line<35>1
+   optimized to 0
+LUT3 		XLXI_20/Line<38>1
+   optimized to 0
+LUT3 		XLXI_20/Line<39>1
+   optimized to 0
+LUT3 		XLXI_20/Line<3>1
+   optimized to 0
+LUT3 		XLXI_20/Line<40>1
+   optimized to 0
+LUT3 		XLXI_20/Line<41>1
+   optimized to 0
+LUT3 		XLXI_20/Line<42>1
+   optimized to 0
+LUT3 		XLXI_20/Line<43>1
+   optimized to 0
+LUT3 		XLXI_20/Line<4>1
+   optimized to 0
+LUT3 		XLXI_20/Line<50>1
+   optimized to 0
+LUT3 		XLXI_20/Line<51>1
+   optimized to 0
+LUT3 		XLXI_20/Line<52>1
+   optimized to 0
+LUT3 		XLXI_20/Line<53>1
+   optimized to 0
+LUT3 		XLXI_20/Line<54>1
+   optimized to 0
+LUT3 		XLXI_20/Line<55>1
+   optimized to 0
+LUT3 		XLXI_20/Line<5>1
+   optimized to 0
+LUT3 		XLXI_20/Line<63>1
+   optimized to 0
+LUT3 		XLXI_20/Line<6>1
+   optimized to 0
+LUT3 		XLXI_20/Line<7>1
+   optimized to 0
+LUT3 		XLXI_20/Line<8>1
+   optimized to 0
+LUT3 		XLXI_20/Line<9>1
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Blank1_mux0000_5
+   optimized to 1
+LUT3 		XLXI_20/Mmux_Blank1_mux0000_71
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Blank1_mux0000_72
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Blank1_mux0000_8
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Blank2_mux0000_5
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Blank2_mux0000_6
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Blank2_mux0000_61
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Blank2_mux0000_62
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Blank2_mux0000_7
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Blank2_mux0000_71
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Blank2_mux0000_72
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Blank2_mux0000_8
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_611
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_65
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_66
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_68
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_69
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_71
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_710
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_711
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_72
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_74
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_75
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_76
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_77
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_78
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_79
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_8
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_81
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_82
+   optimized to 0
+LUT3 		XLXI_20/Mmux_Digit_83
+   optimized to 0
+GND 		XLXI_20/XST_GND
+VCC 		XLXI_20/XST_VCC
 VCC 		XLXI_5/I_36_26
 GND 		XLXI_5/I_36_29
 FDE 		XLXI_6/RdNotWr
@@ -200,18 +366,19 @@ Section 6 - IOB Properties
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Clk_50MHz                          | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
-| LED<0>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
-| LED<1>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
-| LED<2>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
-| LED<3>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
-| LED<4>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
-| LED<5>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
-| LED<6>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
-| LED<7>                             | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_D<0>                           | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_D<1>                           | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_D<2>                           | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_D<3>                           | IOB              | BIDIR     | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_E                              | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_RS                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LCD_RW                             | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| LEDGameOver                        | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
 | PS2_Clk                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | PS2_Data                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | SCL                                | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW |              |          | 0 / 0    |
 | SDA                                | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW |              |          | 0 / 0    |
+| SF_CE                              | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
 | btn_east                           | IBUF             | INPUT     | LVTTL                |       |          |      | IFF1         | PULLDOWN | 0 / 3    |
 | btn_south                          | IBUF             | INPUT     | LVTTL                |       |          |      | IFF1         | PULLDOWN | 0 / 3    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
