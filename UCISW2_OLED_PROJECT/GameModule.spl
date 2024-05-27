@@ -6,7 +6,11 @@ Reset
 =Key_kbd_in[1:0]=
 [Outputs]
 EnableWrite
+Game_over_signal
 =Addr[9:0]=
 =Data_OUT[7:0]=
-=LED[7:0]=
+=Debug_LCD_Line_1[63:0]=
+=Debug_LCD_Blank_1[15:0]=
+=Debug_LCD_Line_2[63:0]=
+=Debug_LCD_Blank_2[15:0]=
 [BiDir]

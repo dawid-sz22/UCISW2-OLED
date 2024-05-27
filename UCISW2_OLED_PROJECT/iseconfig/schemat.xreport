@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2024-05-17T10:42:36</DateModified>
+  <DateModified>2024-05-27T21:15:58</DateModified>
   <ModuleName>schemat</ModuleName>
   <SummaryTimeStamp>2024-05-17T10:41:13</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT/iseconfig/schemat.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/lab/Downloads/UCISW2-OLED-main/UCISW2_OLED_PROJECT\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT/iseconfig/schemat.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Win7/Desktop/Projekty/UCISW2-OLED/UCISW2_OLED_PROJECT\</ImplementationReportsDirectory>
   <DateInitialized>2024-05-09T18:01:40</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

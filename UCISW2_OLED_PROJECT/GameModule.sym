@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="GameModule">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-5-17T10:44:13</timestamp>
+    <timestamp>2024-5-27T20:1:31</timestamp>
     <pin polarity="Input" x="0" y="-160" name="Clk" />
     <pin polarity="Input" x="0" y="32" name="StartButton" />
     <pin polarity="Input" x="0" y="352" name="Reset" />
     <pin polarity="Input" x="0" y="-32" name="Data_IN(7:0)" />
     <pin polarity="Input" x="0" y="96" name="Key_kbd_in(1:0)" />
     <pin polarity="Output" x="432" y="-160" name="EnableWrite" />
+    <pin polarity="Output" x="432" y="736" name="Game_over_signal" />
     <pin polarity="Output" x="432" y="-96" name="Addr(9:0)" />
     <pin polarity="Output" x="432" y="-32" name="Data_OUT(7:0)" />
-    <pin polarity="Output" x="432" y="416" name="LED(7:0)" />
+    <pin polarity="Output" x="432" y="480" name="Debug_LCD_Line_1(63:0)" />
+    <pin polarity="Output" x="432" y="608" name="Debug_LCD_Blank_1(15:0)" />
+    <pin polarity="Output" x="432" y="544" name="Debug_LCD_Line_2(63:0)" />
+    <pin polarity="Output" x="432" y="672" name="Debug_LCD_Blank_2(15:0)" />
     <graph>
         <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="216" y="-200" type="symbol" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin Clk" />
@@ -19,11 +23,22 @@
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin Data_IN(7:0)" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="96" type="pin Key_kbd_in(1:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="-160" type="pin EnableWrite" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="736" type="pin Game_over_signal" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="-96" type="pin Addr(9:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="-32" type="pin Data_OUT(7:0)" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="416" type="pin LED(7:0)" />
-        <rect width="64" x="368" y="404" height="24" />
-        <line x2="432" y1="416" y2="416" x1="368" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="480" type="pin Debug_LCD_Line_1(63:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="608" type="pin Debug_LCD_Blank_1(15:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="544" type="pin Debug_LCD_Line_2(63:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="672" type="pin Debug_LCD_Blank_2(15:0)" />
+        <line x2="432" y1="736" y2="736" x1="368" />
+        <rect width="64" x="368" y="468" height="24" />
+        <line x2="432" y1="480" y2="480" x1="368" />
+        <rect width="64" x="368" y="532" height="24" />
+        <line x2="432" y1="544" y2="544" x1="368" />
+        <rect width="64" x="368" y="596" height="24" />
+        <line x2="432" y1="608" y2="608" x1="368" />
+        <rect width="64" x="368" y="660" height="24" />
+        <line x2="432" y1="672" y2="672" x1="368" />
         <line x2="0" y1="352" y2="352" x1="64" />
         <rect width="64" x="0" y="84" height="24" />
         <line x2="0" y1="96" y2="96" x1="64" />
@@ -36,6 +51,6 @@
         <line x2="432" y1="-96" y2="-96" x1="368" />
         <rect width="64" x="368" y="-44" height="24" />
         <line x2="432" y1="-32" y2="-32" x1="368" />
-        <rect width="304" x="64" y="-192" height="704" />
+        <rect width="304" x="64" y="-192" height="1024" />
     </graph>
 </symbol>

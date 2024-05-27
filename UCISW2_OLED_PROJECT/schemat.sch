@@ -32,7 +32,16 @@
         <signal name="PS2_Clk" />
         <signal name="PS2_Data" />
         <signal name="XLXN_74(1:0)" />
-        <signal name="LED(7:0)" />
+        <signal name="XLXN_75(63:0)" />
+        <signal name="XLXN_76(63:0)" />
+        <signal name="XLXN_77(15:0)" />
+        <signal name="XLXN_78(15:0)" />
+        <signal name="LCD_E" />
+        <signal name="LCD_RS" />
+        <signal name="LCD_RW" />
+        <signal name="LCD_D(3:0)" />
+        <signal name="SF_CE" />
+        <signal name="LEDGameOver" />
         <port polarity="Input" name="btn_south" />
         <port polarity="BiDirectional" name="SDA" />
         <port polarity="BiDirectional" name="SCL" />
@@ -40,7 +49,12 @@
         <port polarity="Input" name="btn_east" />
         <port polarity="Input" name="PS2_Clk" />
         <port polarity="Input" name="PS2_Data" />
-        <port polarity="Output" name="LED(7:0)" />
+        <port polarity="Output" name="LCD_E" />
+        <port polarity="Output" name="LCD_RS" />
+        <port polarity="Output" name="LCD_RW" />
+        <port polarity="BiDirectional" name="LCD_D(3:0)" />
+        <port polarity="Output" name="SF_CE" />
+        <port polarity="Output" name="LEDGameOver" />
         <blockdef name="Memory">
             <timestamp>2024-5-14T8:54:56</timestamp>
             <rect width="64" x="320" y="276" height="24" />
@@ -112,9 +126,16 @@
             <line x2="112" y1="32" y2="32" x1="144" />
         </blockdef>
         <blockdef name="GameModule">
-            <timestamp>2024-5-17T10:44:13</timestamp>
-            <rect width="64" x="368" y="404" height="24" />
-            <line x2="432" y1="416" y2="416" x1="368" />
+            <timestamp>2024-5-27T20:1:31</timestamp>
+            <line x2="432" y1="736" y2="736" x1="368" />
+            <rect width="64" x="368" y="468" height="24" />
+            <line x2="432" y1="480" y2="480" x1="368" />
+            <rect width="64" x="368" y="532" height="24" />
+            <line x2="432" y1="544" y2="544" x1="368" />
+            <rect width="64" x="368" y="596" height="24" />
+            <line x2="432" y1="608" y2="608" x1="368" />
+            <rect width="64" x="368" y="660" height="24" />
+            <line x2="432" y1="672" y2="672" x1="368" />
             <line x2="0" y1="352" y2="352" x1="64" />
             <rect width="64" x="0" y="84" height="24" />
             <line x2="0" y1="96" y2="96" x1="64" />
@@ -127,7 +148,7 @@
             <line x2="432" y1="-96" y2="-96" x1="368" />
             <rect width="64" x="368" y="-44" height="24" />
             <line x2="432" y1="-32" y2="-32" x1="368" />
-            <rect width="304" x="64" y="-192" height="704" />
+            <rect width="304" x="64" y="-192" height="1024" />
         </blockdef>
         <blockdef name="Keyboard_Decoder">
             <timestamp>2024-5-16T9:40:47</timestamp>
@@ -153,6 +174,26 @@
             <line x2="384" y1="-224" y2="-224" x1="320" />
             <rect width="256" x="64" y="-256" height="256" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
+        </blockdef>
+        <blockdef name="LCD2x64">
+            <timestamp>2008-9-19T11:22:46</timestamp>
+            <line x2="432" y1="-288" y2="-288" x1="368" />
+            <line x2="432" y1="-224" y2="-224" x1="368" />
+            <line x2="432" y1="-160" y2="-160" x1="368" />
+            <rect width="64" x="368" y="-108" height="24" />
+            <line x2="432" y1="-96" y2="-96" x1="368" />
+            <line x2="432" y1="-32" y2="-32" x1="368" />
+            <rect width="64" x="0" y="-300" height="24" />
+            <line x2="0" y1="-288" y2="-288" x1="64" />
+            <rect width="64" x="0" y="-236" height="24" />
+            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <rect width="64" x="0" y="-172" height="24" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <rect width="64" x="0" y="-108" height="24" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="304" x="64" y="-320" height="384" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="0" y1="32" y2="32" x1="64" />
         </blockdef>
         <block symbolname="OLED_Ctrl" name="XLXI_2">
             <blockpin signalname="Clk_50MHz" name="Clk" />
@@ -207,9 +248,13 @@
             <blockpin signalname="XLXN_30(7:0)" name="Data_IN(7:0)" />
             <blockpin signalname="XLXN_74(1:0)" name="Key_kbd_in(1:0)" />
             <blockpin signalname="XLXN_36" name="EnableWrite" />
+            <blockpin signalname="LEDGameOver" name="Game_over_signal" />
             <blockpin signalname="XLXN_37(9:0)" name="Addr(9:0)" />
             <blockpin signalname="XLXN_27(7:0)" name="Data_OUT(7:0)" />
-            <blockpin signalname="LED(7:0)" name="LED(7:0)" />
+            <blockpin signalname="XLXN_75(63:0)" name="Debug_LCD_Line_1(63:0)" />
+            <blockpin signalname="XLXN_77(15:0)" name="Debug_LCD_Blank_1(15:0)" />
+            <blockpin signalname="XLXN_76(63:0)" name="Debug_LCD_Line_2(63:0)" />
+            <blockpin signalname="XLXN_78(15:0)" name="Debug_LCD_Blank_2(15:0)" />
         </block>
         <block symbolname="ifd" name="XLXI_8">
             <blockpin signalname="Clk_50MHz" name="C" />
@@ -239,8 +284,21 @@
             <blockpin signalname="XLXN_68(7:0)" name="DO(7:0)" />
             <blockpin signalname="Clk_50MHz" name="Clk_Sys" />
         </block>
+        <block symbolname="LCD2x64" name="XLXI_20">
+            <blockpin signalname="XLXN_75(63:0)" name="Line1(63:0)" />
+            <blockpin signalname="XLXN_77(15:0)" name="Blank1(15:0)" />
+            <blockpin signalname="XLXN_76(63:0)" name="Line2(63:0)" />
+            <blockpin signalname="XLXN_78(15:0)" name="Blank2(15:0)" />
+            <blockpin signalname="LCD_D(3:0)" name="LCD_D(3:0)" />
+            <blockpin signalname="LCD_E" name="LCD_E" />
+            <blockpin signalname="LCD_RW" name="LCD_RW" />
+            <blockpin signalname="LCD_RS" name="LCD_RS" />
+            <blockpin signalname="SF_CE" name="SF_CE" />
+            <blockpin signalname="Reset" name="Reset" />
+            <blockpin signalname="Clk_50MHz" name="Clk_50MHz" />
+        </block>
     </netlist>
-    <sheet sheetnum="1" width="5440" height="3520">
+    <sheet sheetnum="1" width="5440" height="7040">
         <instance x="3568" y="1328" name="XLXI_2" orien="R0">
         </instance>
         <branch name="GO">
@@ -318,11 +376,11 @@
             <wire x2="3664" y1="2288" y2="2288" x1="3424" />
         </branch>
         <branch name="XLXN_30(7:0)">
-            <wire x2="2688" y1="2464" y2="3136" x1="2688" />
-            <wire x2="4096" y1="3136" y2="3136" x1="2688" />
             <wire x2="2784" y1="2464" y2="2464" x1="2688" />
-            <wire x2="4096" y1="2480" y2="2480" x1="4048" />
-            <wire x2="4096" y1="2480" y2="3136" x1="4096" />
+            <wire x2="2688" y1="2464" y2="3376" x1="2688" />
+            <wire x2="4256" y1="3376" y2="3376" x1="2688" />
+            <wire x2="4256" y1="2480" y2="2480" x1="4048" />
+            <wire x2="4256" y1="2480" y2="3376" x1="4256" />
         </branch>
         <branch name="Clk_50MHz">
             <wire x2="2720" y1="2064" y2="2064" x1="816" />
@@ -344,6 +402,8 @@
             <wire x2="3664" y1="2032" y2="2032" x1="3424" />
             <wire x2="2160" y1="1584" y2="2992" x1="2160" />
             <wire x2="2192" y1="2992" y2="2992" x1="2160" />
+            <wire x2="2160" y1="2992" y2="3424" x1="2160" />
+            <wire x2="3360" y1="3424" y2="3424" x1="2160" />
             <wire x2="3152" y1="1696" y2="1696" x1="3104" />
             <wire x2="3200" y1="1696" y2="1696" x1="3152" />
             <wire x2="3152" y1="1696" y2="2064" x1="3152" />
@@ -351,6 +411,8 @@
             <wire x2="3568" y1="976" y2="976" x1="3200" />
             <wire x2="3200" y1="976" y2="1584" x1="3200" />
             <wire x2="3600" y1="288" y2="288" x1="3200" />
+            <wire x2="3360" y1="3296" y2="3424" x1="3360" />
+            <wire x2="3424" y1="3296" y2="3296" x1="3360" />
         </branch>
         <instance x="2784" y="2496" name="XLXI_7" orien="R0">
         </instance>
@@ -416,18 +478,65 @@
         <branch name="Reset">
             <wire x2="2640" y1="1328" y2="1328" x1="2576" />
             <wire x2="2640" y1="1328" y2="2848" x1="2640" />
-            <wire x2="2784" y1="2848" y2="2848" x1="2640" />
+            <wire x2="2736" y1="2848" y2="2848" x1="2640" />
+            <wire x2="2784" y1="2848" y2="2848" x1="2736" />
+            <wire x2="2736" y1="2848" y2="3344" x1="2736" />
+            <wire x2="3328" y1="3344" y2="3344" x1="2736" />
             <wire x2="2976" y1="1328" y2="1328" x1="2640" />
             <wire x2="2976" y1="416" y2="1040" x1="2976" />
             <wire x2="3568" y1="1040" y2="1040" x1="2976" />
             <wire x2="2976" y1="1040" y2="1328" x1="2976" />
             <wire x2="3600" y1="416" y2="416" x1="2976" />
+            <wire x2="3424" y1="3232" y2="3232" x1="3328" />
+            <wire x2="3328" y1="3232" y2="3344" x1="3328" />
         </branch>
         <instance x="2192" y="1584" name="XLXI_5" orien="R0" />
         <instance x="2192" y="3120" name="XLXI_8" orien="R0" />
-        <branch name="LED(7:0)">
-            <wire x2="3440" y1="2912" y2="2912" x1="3216" />
+        <instance x="3424" y="3264" name="XLXI_20" orien="R0">
+        </instance>
+        <branch name="XLXN_75(63:0)">
+            <wire x2="3424" y1="2976" y2="2976" x1="3216" />
         </branch>
-        <iomarker fontsize="28" x="3440" y="2912" name="LED(7:0)" orien="R0" />
+        <branch name="XLXN_76(63:0)">
+            <wire x2="3312" y1="3040" y2="3040" x1="3216" />
+            <wire x2="3312" y1="3040" y2="3104" x1="3312" />
+            <wire x2="3424" y1="3104" y2="3104" x1="3312" />
+        </branch>
+        <branch name="XLXN_77(15:0)">
+            <wire x2="3280" y1="3104" y2="3104" x1="3216" />
+            <wire x2="3280" y1="3072" y2="3104" x1="3280" />
+            <wire x2="3344" y1="3072" y2="3072" x1="3280" />
+            <wire x2="3424" y1="3040" y2="3040" x1="3344" />
+            <wire x2="3344" y1="3040" y2="3072" x1="3344" />
+        </branch>
+        <branch name="XLXN_78(15:0)">
+            <wire x2="3424" y1="3168" y2="3168" x1="3216" />
+        </branch>
+        <branch name="LCD_E">
+            <wire x2="3920" y1="2976" y2="2976" x1="3856" />
+        </branch>
+        <branch name="LCD_RS">
+            <wire x2="3920" y1="3040" y2="3040" x1="3856" />
+        </branch>
+        <branch name="LCD_RW">
+            <wire x2="3920" y1="3104" y2="3104" x1="3856" />
+        </branch>
+        <branch name="LCD_D(3:0)">
+            <wire x2="3920" y1="3168" y2="3168" x1="3856" />
+        </branch>
+        <branch name="SF_CE">
+            <wire x2="3920" y1="3232" y2="3232" x1="3856" />
+        </branch>
+        <iomarker fontsize="28" x="3920" y="2976" name="LCD_E" orien="R0" />
+        <iomarker fontsize="28" x="3920" y="3040" name="LCD_RS" orien="R0" />
+        <iomarker fontsize="28" x="3920" y="3104" name="LCD_RW" orien="R0" />
+        <iomarker fontsize="28" x="3920" y="3168" name="LCD_D(3:0)" orien="R0" />
+        <iomarker fontsize="28" x="3920" y="3232" name="SF_CE" orien="R0" />
+        <branch name="LEDGameOver">
+            <wire x2="3232" y1="3232" y2="3232" x1="3216" />
+            <wire x2="3248" y1="3232" y2="3232" x1="3232" />
+            <wire x2="3248" y1="3232" y2="3504" x1="3248" />
+        </branch>
+        <iomarker fontsize="28" x="3248" y="3504" name="LEDGameOver" orien="R90" />
     </sheet>
 </drawing>

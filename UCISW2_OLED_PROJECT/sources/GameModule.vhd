@@ -38,7 +38,11 @@ entity GameModule is
 			  Reset : in  STD_LOGIC;
            Data_OUT : out  STD_LOGIC_VECTOR (7 downto 0);
 			  Key_kbd_in : in STD_LOGIC_VECTOR (1 downto 0);
-			  LED : out STD_LOGIC_VECTOR (7 downto 0)
+			  Game_over_signal : out  STD_LOGIC;
+			  Debug_LCD_Line_1 : out STD_LOGIC_VECTOR (63 downto 0);
+			  Debug_LCD_Blank_1 : out STD_LOGIC_VECTOR (15 downto 0);
+			  Debug_LCD_Line_2 : out STD_LOGIC_VECTOR (63 downto 0):= (others => '0');
+			  Debug_LCD_Blank_2 : out STD_LOGIC_VECTOR (15 downto 0):= (others => '0')
 			  );
 end GameModule;
 
@@ -50,8 +54,7 @@ architecture Behavioral of GameModule is
    signal state, next_state : t_state;
 	signal direction : t_direction := down;
 	signal game_state : t_game_state := running;
-
-	-- Address memory
+	signal game_state_out : STD_LOGIC;
 	signal address_memory : unsigned(9 downto 0) := ( others=> '0' );
 	signal x : unsigned(6 downto 0) := (others=> '0');
 	signal y : unsigned(5 downto 0) := (others=> '0');
@@ -210,7 +213,6 @@ begin
 			if (state = sRead) then
 				data_signal <= Data_IN;
 			elsif (state = sSetBit) then
-				--data_signal <= X"01";
 				data_signal(to_integer(y(2 downto 0))) <= '1';
 			elsif (state = sResetValuesToDefault) then
 				data_signal <= X"00";
@@ -225,17 +227,12 @@ begin
 	Data_OUT <= data_signal;
 	
 	-- GAME STATE ON LED
-	--Game_over_signal <= '1' when (state = sGameOver) else '0';
+	game_state_out <= '1' when (state = sGameOver) else '0';
+	Game_over_signal <= game_state_out;
 	
-	-- DEBUG KEYS ON LEDS
-	--Key_0 <= Key_kbd_in(0); 
-	--Key_1 <= Key_kbd_in(1);
-	
-	--Game_over_signal <= y_help(3); 
-	--Key_0 <= y_help(4); 
-	--Key_1 <= y_help(5);
-	
-	LED <= "00" & STD_LOGIC_VECTOR(y_help);
+	-- DEBUG ON LCD (4 BITS -> 1 DIGIT IN HEX)
+	Debug_LCD_Line_1 <= "0" & STD_LOGIC_VECTOR(x) & X"0" & "00" & STD_LOGIC_VECTOR(y) & X"0" & "00" & Key_kbd_in & X"0" & "000" & game_state_out & X"0000000";
+	Debug_LCD_Blank_1 <= "1101101010000000";
 	
 	x_help <= (x+1) when direction = right else (x-1) when direction = left else x;
 	y_help <= (y+1) when direction = down else (y-1) when direction = up else y;

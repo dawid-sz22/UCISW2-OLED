@@ -58,6 +58,12 @@
     <file xil_pn:name="sources/PS2_Kbd.ngc" xil_pn:type="FILE_NGC">
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
+    <file xil_pn:name="sources/LCD2x64.ngc" xil_pn:type="FILE_NGC">
+      <association xil_pn:name="Implementation" xil_pn:seqID="86"/>
+    </file>
+    <file xil_pn:name="sources/LCD.ucf" xil_pn:type="FILE_UCF">
+      <association xil_pn:name="Implementation" xil_pn:seqID="87"/>
+    </file>
   </files>
 
   <properties>
@@ -368,6 +374,7 @@
   <bindings>
     <binding xil_pn:location="/schemat" xil_pn:name="sources/GenIO.ucf"/>
     <binding xil_pn:location="/schemat" xil_pn:name="sources/OLED_J4.ucf"/>
+    <binding xil_pn:location="/schemat" xil_pn:name="sources/LCD.ucf"/>
   </bindings>
 
   <libraries/>
