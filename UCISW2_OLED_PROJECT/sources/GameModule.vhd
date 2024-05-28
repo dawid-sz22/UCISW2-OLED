@@ -42,27 +42,30 @@ entity GameModule is
 			  Debug_LCD_Line_1 : out STD_LOGIC_VECTOR (63 downto 0);
 			  Debug_LCD_Blank_1 : out STD_LOGIC_VECTOR (15 downto 0);
 			  Debug_LCD_Line_2 : out STD_LOGIC_VECTOR (63 downto 0):= (others => '0');
-			  Debug_LCD_Blank_2 : out STD_LOGIC_VECTOR (15 downto 0):= (others => '0')
+			  Debug_LCD_Blank_2 : out STD_LOGIC_VECTOR (15 downto 0):= (others => '1')
 			  );
 end GameModule;
 
 architecture Behavioral of GameModule is
 	type t_state is (sWait, sRead, sAddressCount, sSetBit, sWrite, sGameOver, sResetValuesToDefault, sResetRAM);
 	type t_direction is (up, down, right, left);
-	type t_game_state is (running, collision);
+	type t_game_state is (running, collision, win);
 
    signal state, next_state : t_state;
 	signal direction : t_direction := down;
 	signal game_state : t_game_state := running;
 	signal game_state_out : STD_LOGIC;
 	signal address_memory : unsigned(9 downto 0) := ( others=> '0' );
+	signal display_counter : unsigned(12 downto 0) := ( others=> '0' );
+	signal best_score : unsigned(12 downto 0) := ( others=> '0' );
 	signal x : unsigned(6 downto 0) := (others=> '0');
 	signal y : unsigned(5 downto 0) := (others=> '0');
 	signal x_help : unsigned(6 downto 0) := (others=> '0');
 	signal y_help : unsigned(5 downto 0) := (others=> '0');
 	signal counter_delay : unsigned(23 downto 0) := (others=> '0');
 	signal data_signal : STD_LOGIC_VECTOR ( 7 downto 0);
-
+	signal delay : unsigned(23 downto 0):= X"7270E0";
+	
 begin
 	
 	-- The FSM - state register
@@ -78,14 +81,14 @@ begin
    end process;
 	
 	-- FSM
-   process( state, counter_delay, address_memory, StartButton, game_state)
+   process( state, counter_delay, address_memory, StartButton, game_state, delay)
    begin
       next_state <= state;  -- default
 
       case state is
 		
 			when sWait =>
-				if (counter_delay = X"989680") then	-- 20ms 0F4240 delay (RAM reading from 0->1023, lasts in testbench ~25ms) 200ms - x"989680"
+				if (counter_delay = delay) then	-- 20ms 0F4240 delay (RAM reading from 0->1023, lasts in testbench ~25ms) 200ms - x"989680"
 					next_state <= sAddressCount;
 				end if;
 			
@@ -125,6 +128,38 @@ begin
       end case;
    end process;
 	
+	-- SET DELAY
+	process(Clk, state, game_state, display_counter)
+	begin
+		if rising_edge(Clk) then
+			if state = sSetBit then
+				if display_counter = X"0100" then
+					delay <= X"4C4B40"; --100ms after 256
+				elsif display_counter = X"0200" then
+					delay <= X"3D0900"; --80ms after 512
+				elsif display_counter = X"0600" then
+					delay <= X"3567E0"; --70ms after 1536
+				elsif display_counter = X"0C00" then
+					delay <= X"2DC6C0"; --60ms after 3072
+				end if;
+			elsif (state = sResetValuesToDefault) then
+				delay <= X"7270E0";	-- 150ms at start
+			end if;
+		end if;
+	end process;
+	
+	-- SET BEST SCORE
+	process(Clk, state, game_state, display_counter)
+	begin
+		if rising_edge(Clk) then
+			if game_state = collision then
+				if best_score < display_counter then
+					best_score <= display_counter;
+				end if;
+			end if;
+		end if;
+	end process;
+	
 	-- COUNT DELAY
 	process(Clk, state, game_state)
 	begin
@@ -154,13 +189,21 @@ begin
 	begin
 		if rising_edge(Clk) then
 			if (Key_kbd_in = "00") then		-- K_UP
-				direction <= up;
+				if (direction /= down) then	
+					direction <= up;
+				end if;
 			elsif (Key_kbd_in = "01") then	-- K_LEFT
-				direction <= left;
+				if (direction /= right) then	
+					direction <= left;
+				end if;
 			elsif (Key_kbd_in = "10") then	-- K_RIGHT
-				direction <= right;
+				if (direction /= left) then	
+					direction <= right;
+				end if;
 			elsif (Key_kbd_in = "11") then	-- K_DOWN
-				direction <= down;
+				if (direction /= up) then	
+					direction <= down;
+				end if;
 			end if;
 		end if;
 	end process;
@@ -203,12 +246,19 @@ begin
 				-- CHECK COLLISION WITH SNAKE
 				if (data_signal(to_integer(y(2 downto 0))) = '1') then
 					game_state <= collision;
+				else
+					if (display_counter < X"1F00") then
+						display_counter <= display_counter + 1;
+					else
+						game_state <= win;
+					end if;
 				end if;
 			elsif (state = sResetValuesToDefault) then
 				x <= "0000000";									-- BACK TO START
 				y <= "000000";
 				address_memory <= ( others=> '0' );			-- CLEAR SCREEN
 				game_state <= running;
+				display_counter <= (others => '0');
 			elsif (state = sResetRAM) then 					-- GO THROUGH ALL RAM TO CLEAR
 				address_memory <= address_memory + 1;
 			end if;
@@ -240,9 +290,11 @@ begin
 	Game_over_signal <= game_state_out;
 	
 	-- DEBUG ON LCD (4 BITS -> 1 DIGIT IN HEX)
-	Debug_LCD_Line_1 <= "0" & STD_LOGIC_VECTOR(x) & X"0" & "00" & STD_LOGIC_VECTOR(y) & X"0" & "00" & Key_kbd_in & X"0" & "000" & game_state_out & X"0000000";
-	Debug_LCD_Blank_1 <= "1101101010000000";
-	
+	Debug_LCD_Line_1 <= "0" & STD_LOGIC_VECTOR(x) & X"0" & "00" & STD_LOGIC_VECTOR(y) & X"0" & "00" & Key_kbd_in & X"0" & "000" & game_state_out & X"0" & STD_LOGIC_VECTOR(delay);
+	Debug_LCD_Blank_1 <= "0010010101000000";
+	Debug_LCD_Line_2 <= "000" & STD_LOGIC_VECTOR(display_counter) & X"0" & "000" & STD_LOGIC_VECTOR(best_score)& X"0000000";
+	Debug_LCD_Blank_2 <= "0000100001111111";
+
 	x_help <= (x+1) when direction = right else (x-1) when direction = left else x;
 	y_help <= (y+1) when direction = down else (y-1) when direction = up else y;
 
